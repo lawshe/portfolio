@@ -1,0 +1,255 @@
+<head>
+  <title>JLawshe</title>
+</head>
+
+<template name="layout">
+	{{>menu}}
+	{{>fullpage}}
+</template>
+
+<template name="loading">
+	<div class="loading">
+		<h4>Loading</h4>
+		<img src="img/loading.gif" alt="loading" id="loading">
+	</div>
+</template>
+
+<template name="fullpage">
+	<div id="fullpage">
+		{{>yield}}
+	</div>
+</template>
+
+<template name="menu">
+	<div class="menu_wrap">
+		<div id="main_menu">
+			<a class="menu_item {{ isActiveRoute 'home'}}" href="{{pathFor 'home'}}">JL</a>
+			<a class="menu_item {{ isActiveRoute 'about'}}" href="{{pathFor 'about'}}">About</a>
+			<a class="menu_item {{ isActiveRoute 'work'}}" href="{{pathFor 'work'}}">Work</a>
+		</div>
+	</div>
+	<a class="mobile_menu_toggle" href=""><img src="img/icons/list.png" class="mobile_icon"></a>
+</template>
+
+<template name="home">
+	<div class="home">
+		<div section="home" class="section" tooltip="Home">
+			<h1 class="myname">Jessica Lawshe</h1>
+			<a class="imagepop" rel="gallery" href="img/jessica.jpg" data-title="Jessica"><img src="img/jessica.jpg"></a>
+		</div>
+		<div section="science" class="section" tooltip="Science">
+			<h3>Once ...</h3>
+			<h4 class="centered">I was a scientist.</h4>
+			<a class="imagepop" rel="gallery" href="img/lab.JPG" data-caption="Jessica in the lab">
+				<img src="img/lab.JPG" alt="lab">
+			</a>
+		</div>
+		<div section="developer" class="section" tooltip="Developer">
+			<h3>Now ...</h3>
+			<h4 class="centered">I'm a developer!</h4>
+			<a class="imagepop" rel="gallery" href="img/jessica.png" data-caption="Jessica at the computer">
+				<img src="img/jessica.png" alt="Jessica at the computer">
+			</a>
+		</div>
+		<div section="contact" class="section" tooltip="Contact">
+			{{>footer}}
+		</div>
+	</div>
+</template>
+
+<template name="about">
+	<div class="about">
+		<div section="about" class="section" tooltip="Jessica">
+			<div class="section_sub">
+				<h1 itemprop="name">Jessica Lawshe</h1>
+				<h3 itemprop="role">Web Designer & Developer</h3>
+				<div class="half">
+					<a class="imagepop" rel="gallery" href="img/me.png" data-caption="Hiking the Rio Grande">
+						<img id="first_image" alt="Hiking the Rio Grande" src="img/me.png">
+					</a>
+				</div>
+				<div class="half">
+					<span class="always_hide" itemprop="organization">Landes Bioscience</span>
+					<p>I went from research scientist to full stack developer. I'm now seeking a creative development team to join full time in <span itemprop="locality">Austin, Texas</span>. I'm self motivated with a passion for learning new web technologies. I enjoy buidling sites from the front end & back end and enhancing the user experience.</p>
+				</div>
+			</div>
+		</div>
+		<div section="education" class="section" tooltip="Education">
+			<div class="section_header">Education</div>
+			<div class="section_sub">
+				<div class="half">
+					<h3>Biochemistry B.S. Honors</h3>
+				</div>
+				<div class="half">
+					<h4 itemprop="alumni">The University of Texas</h4>
+					<p>
+						2010<br>
+						Publication in the <a href="http://www.jbc.org/content/285/30/22840.long" target="_BLANK">Journal of Biological Chemistry</a>
+					</p>
+				</div>
+				<div class="half">
+					<h3>Spanish B.A.</h3>
+				</div>
+				<div class="half">
+					<h4 itemprop="alumni">The University of Texas</h4>
+					<p>
+						2010<br>
+						Study abroad in Córdoba, Argentina
+					</p>
+				</div>
+			</div>
+		</div>
+		<div section="employment" class="section" tooltip="Employment">
+			<div class="section_header">Employment</div>
+			<div class="slide"><div class="section_sub">
+				<div class="half"><h3>Designer & Developer</h3></div>
+				<div class="half">
+					<h4 itemprop="name">Landes Bioscience</h4>
+					<p>2012 &mdash; present</p>
+				</div>
+
+				<div class="clearfix"></div>
+				<div class="half"><h3>Web Master</h3></div>
+				<div class="half">
+					<h4>Freelance</h4>
+					<p>2012 &mdash; present</p>
+				</div>
+
+				<div class="clearfix"></div>
+				<div class="half"><h3>Lab Manager & Research Scientist</h3></div>
+				<div class="half">
+					<h4 itemprop="name">The University of Texas</h4>
+					<p>2011 &mdash; 2013</p>
+				</div>
+			</div></div>
+			<div class="slide"><div class="section_sub">
+				<div class="half"><h3>Chemistry Specialist</h3></div>
+				<div class="half">
+					<h4 itemprop="name">The University of Texas</h4>
+					<p>2011</p>
+				</div>
+
+				<div class="clearfix"></div>
+				<div class="half"><h3>Research Assistant</h3></div>
+				<div class="half">
+					<h4 itemprop="name">The University of Texas</h4>
+					<p>2009 &mdash; 2010</p>
+				</div>
+
+				<div class="clearfix"></div>
+				<div class="half"><h3>Teaching Assistant</h3></div>
+				<div class="half">
+					<h4 itemprop="name">The University of Texas</h4>
+					<p>2009 &mdash; 2010</p>
+				</div>
+			</div></div>
+		</div>
+		<div section="web" class="section" tooltip="Web Skills">
+			<div class="section_header">Web Skills</div>
+			<div class="slide"><div class="section_sub">
+				<div class="third">
+					<h4>Advanced</h4>
+					<div class="skillbar skill_a" data-percent="100%">
+						<div class="skillbar-title"><span itemprop="itemListElement">HTML</span></div>
+						<div class="skillbar-bar"></div>
+					</div>
+					<div class="skillbar skill_a" data-percent="100%">
+						<div class="skillbar-title"><span itemprop="itemListElement">CSS, Less</span></div>
+						<div class="skillbar-bar"></div>
+					</div>
+					<div class="skillbar skill_a" data-percent="100%">
+						<div class="skillbar-title"><span itemprop="itemListElement">JavaScript</span></div>
+						<div class="skillbar-bar"></div>
+					</div>
+					<div class="skillbar skill_a" data-percent="100%">
+						<div class="skillbar-title"><span itemprop="itemListElement">XML</span></div>
+						<div class="skillbar-bar"></div>
+					</div>
+				</div>
+				<div class="third">
+					<h4>Proficient</h4>
+					<div class="skillbar skill_b" data-percent="90%">
+						<div class="skillbar-title"><span itemprop="itemListElement">PHP</span></div>
+						<div class="skillbar-bar"></div>
+					</div>
+					<div class="skillbar skill_b" data-percent="90%">
+						<div class="skillbar-title"><span itemprop="itemListElement">MySQL</span></div>
+						<div class="skillbar-bar"></div>
+					</div>
+					<div class="skillbar skill_b" data-percent="90%">
+						<div class="skillbar-title"><span itemprop="itemListElement">MongoDB</span></div>
+						<div class="skillbar-bar"></div>
+					</div>
+					<div class="skillbar skill_b" data-percent="90%">
+						<div class="skillbar-title"><span itemprop="itemListElement">MeteorJS</span></div>
+						<div class="skillbar-bar"></div>
+					</div>
+					<div class="skillbar skill_b" data-percent="90%">
+						<div class="skillbar-title"><span itemprop="itemListElement">Photoshop</span></div>
+						<div class="skillbar-bar"></div>
+					</div>
+				</div>
+				<div class="third">
+					<h4>Learning</h4>
+					<div class="skillbar skill_c" data-percent="45%">
+						<div class="skillbar-title"><span itemprop="itemListElement">NodeJS</span></div>
+						<div class="skillbar-bar"></div>
+					</div>
+					<div class="skillbar skill_c" data-percent="30%">
+						<div class="skillbar-title"><span itemprop="itemListElement">Ruby</span></div>
+						<div class="skillbar-bar"></div>
+					</div>
+				</div>
+			</div></div>
+			<div class="slide"><div class="section_sub">
+				<div class="half">
+					<h4>APIs</h4>
+					<ul class="list">
+						<li>Facebook</li>
+						<li>Authorize.net</li>
+						<li>Twitter</li>
+						<li>PubMed Central</li>
+					</ul>
+				</div>
+				<div class="half">
+					<h4>Experience</h4>
+					<ul class="list">
+						<li>Git</li>
+						<li>Unix shell scripting</li>
+					</ul>
+				</div>
+				<div class="half">
+					<h4>Libraries & Templating</h4>
+					<ul class="list">
+						<li><a href="http://jquery.com/" target="_BLANK">jQuery</a></li>
+						<li><a href="http://grafico.kilianvalkhof.com/" target="_BLANK">Grafico.js</a></li>
+						<li><a href="http://akdubya.github.io/dustjs/" target="_BLANK">Dust.js</a></li>
+						<li><a href="http://getbootstrap.com/" target="_BLANK">Twitter Bootstrap</a></li>
+					</ul>
+				</div>
+			</div></div>
+			<div class="slide"><div class="section_sub">
+				<h3>User Experience & Interface Design</h3>
+				<div class="half">
+					<p class="flow_box">User goal</p>
+					<div class="arrow">↓</div>
+					<p class="flow_box">Mockup</p>
+					<div class="arrow">↓</div>
+					<p class="flow_box">In browser development</p>
+					<div class="arrow">↓</div>
+					<p class="flow_box">Compatibility testing</p>
+				</div>
+				<div class="half">
+					<p>My approach is to begin with the user goal and create the path of least resistance to obtain that goal. Mockups & in browser development to ensure a clean & accesible application. I use several tools to test platform compatibility.</p>
+				</div>
+			</div></div>
+		</div>
+		<div section="contact" class="section" tooltip="Contact">
+			<span class="always_hide" itemprop="name">Jessica Lawshe</span>
+			<div class="half">
+				{{>footer}}
+			</div>
+		</div>
+	</div>
+
+</template>
