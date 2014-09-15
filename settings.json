@@ -1,7 +1,15 @@
 {
     "public": {
         "ga": {
-            "id": "UA-54824500-1"
+            "id": "UA-54824500-1",
+            "set": {
+                "forceSSL": true,
+                "anonymizeIp": true
+            },
+            "require": {
+                "displayfeatures": true,
+                "linkid": "linkid.js"
+            }
         }
     }
 }

@@ -6,10 +6,10 @@
 standard-app-packages
 insecure
 less
-cmather:iron-router
-mrt:iron-router-active
 lawshe:full-page
 gabrielengel:konecty-magnific-popup
 natestrauser:font-awesome
+iron:router
+zimme:iron-router-active
 reywood:iron-router-ga
 
