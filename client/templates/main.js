@@ -46,12 +46,12 @@ if (Meteor.isClient) {
 		}
 	}
 	Template.landes.events = {
-		'click .internal_link': function(){
+		'click .link_internal': function(){
 		    $.fn.fullpage.destroy('all');
 		}
 	}
 	Template.bpb.events = {
-		'click .internal_link': function(){
+		'click .link_internal': function(){
 		    $.fn.fullpage.destroy('all');
 		}
 	}
