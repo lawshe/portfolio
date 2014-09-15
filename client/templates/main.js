@@ -41,7 +41,7 @@ if (Meteor.isClient) {
 		}
 	}
 	Template.work.events = {
-		'click .internal_link': function(){
+		'click .link_internal': function(){
 		    $.fn.fullpage.destroy('all');
 		}
 	}
