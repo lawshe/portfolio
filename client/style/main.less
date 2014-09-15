@@ -146,6 +146,8 @@
 			margin-top: 10px; }
 
 		li {
+			font-size: @font-base;
+			text-align: left;
 			margin: 0px 0px 10px 0px; }
 	/*--text align--*/
 		.centered {
@@ -251,6 +253,7 @@
 		}
 	/*--first section--*/
 		.section:nth-child(1){
+			padding-top: 0px!important;
 			background-color: @blue;
 			.imagepop{
 				float: right;
@@ -439,8 +442,6 @@
 /* ----- LISTS ------ */
 	.list{
 		margin-left: 30px;
-		font-size: @font-base;
-		text-align: left;
 	}
 	/*--project list--*/
 		.project_list{
@@ -728,6 +729,10 @@
 	/*--text align--*/
 		.txt_right {
 			text-align: left !important; }
+	/*--mobile list--*/
+		li {
+			font-size: @mobile-font-xs;
+		}
 /* ----- FULL PAGE ----- */
 	#fullpage {
 		margin-left: 0%;
@@ -771,11 +776,18 @@
 		#fp-nav li{
 			width: 100%;
 			margin:10px 0px;
+			height: @mobile-font-base*1.5;
+			line-height:@mobile-font-base*1.5;
+			font-size:@mobile-font-base;
+		}
+		#fp-nav li:last-child{
+			margin-bottom: 0px!important;
 		}
 		#fp-nav span{
 			font-size: @font-xs!important;
 			color: @link-text-color;
 			padding-left: 5px;
+			width: 100%;
 		}
 		#fp-nav .active{
 			border-right: 0px;
@@ -799,9 +811,6 @@
 			margin-top:10px;
 		}
 /* ----- LISTS ------ */
-	.list{
-		font-size: @mobile-font-base;
-	}
 	/*--project list--*/
 		.project_list > li{
 			float: left!important;
@@ -811,6 +820,11 @@
 			margin:10px 10px 0px 0px;
 		}
 /* ----- MENU ----- */
+
+	/*--main menu--*/
+		.menu_item {
+			padding: 15px 0px;
+		}
 	/*--menu wrap--*/
 		.menu_wrap{
 			width: 0%;
