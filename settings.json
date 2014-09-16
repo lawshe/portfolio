@@ -2,6 +2,11 @@
     "public": {
         "ga": {
             "id": "UA-54824500-1",
+            "create": {
+                "cookieDomain": "jelawshe.com",
+                "cookieName": "lawshe_cookie",
+                "cookieExpires": 3600
+            },
             "set": {
                 "forceSSL": true,
                 "anonymizeIp": true
