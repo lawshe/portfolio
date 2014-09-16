@@ -16,10 +16,10 @@ Router.map(function() {
 		path: 'work'
 	});
 	this.route('bpb', {
-		path: 'bpb'
+		path: 'work/bpb'
 	});
 	this.route('landes', {
-		path: 'landes'
+		path: 'work/landes'
 	});
 });
 

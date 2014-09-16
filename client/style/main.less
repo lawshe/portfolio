@@ -162,7 +162,7 @@
 	}
 	.section{
 		background-color: @gray;
-		border-left: 5px solid @blue;
+		border-left: 5px solid @link-color;
 		/*--links--*/
 		a{
 			color: @link-color;
@@ -523,6 +523,27 @@
 			display: none;
 		}
 /* ----- MISC ----- */
+	hr{
+		padding: 0;
+		border: none;
+		border-top: medium double @black2;
+		color: @black2;
+		background: none;
+		text-align: center;
+		margin: 10px 0 10px 0;
+		display: inline-block;
+		width: 100%;
+	}
+	hr:after {
+		content: "□";
+		background: none;
+		display: inline-block;
+		position: relative;
+		top: -0.7em;
+		font-size: 1.5em;
+		padding: 0 0.25em;
+		background: @gray;
+	}
 	.float_r{
 		float: right;
 	}
@@ -696,6 +717,7 @@
 @media only screen and (max-width: 650px) {
 /* ----- VARIABLES ----- */
 	@section-header-height:52px;
+	@menu-hidden-width:20px;
 /* ----- CONTAINERS ----- */
 	.half{
 		width: 100%;
@@ -756,7 +778,7 @@
 		}
 /* ----- FULL PAGE ----- */
 	#fullpage {
-		margin-left: 0%;
+		margin-left: @menu-hidden-width;
 	}
 	.section{
 		border-left: 0px;
@@ -845,10 +867,13 @@
 	/*--main menu--*/
 		.menu_item {
 			padding: 15px 0px;
+			overflow: hidden;
+			display: block;
+			width: 0%;
 		}
 	/*--menu wrap--*/
 		.menu_wrap{
-			width: 0%;
+			width: @menu-hidden-width;
 			padding-top:@mobile-font-l*2;
 			overflow: hidden;
 		}
@@ -857,15 +882,15 @@
 			color: @link-color!important;
 			position: fixed;
 			top: 0px;
-			padding: 0 5px;
+			padding:10px;
 			left: 0;
 			display: block;
 			cursor: pointer;
 			z-index: 100000000;
-			font-size: @mobile-font-l;
-			line-height:@mobile-font-l*1.5;
-			height:@mobile-font-l*1.5;
-			color: @gray!important;
+			width: @menu-hidden-width;
+			font-size: @mobile-font-base;
+			color: @link-text-color!important;
+			background: @link-color;
 		}
 		.mobile_menu_toggle:hover {
 			color: @link-color-hover!important;
@@ -875,9 +900,12 @@
 		}
 		.menu_visible{
 			transition: all 2s ease;
+			border-right: 5px solid @link-color;
 			visibility: visible;
 			width: 70% !important;
-			border-right: 2px solid @black1;
+			.menu_item{
+				width: 100%;
+			}
 		}
 /* ----- PAGES ----- */
 	/* ----- About ----- */
