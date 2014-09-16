@@ -717,7 +717,7 @@
 @media only screen and (max-width: 650px) {
 /* ----- VARIABLES ----- */
 	@section-header-height:52px;
-	@menu-hidden-width:20px;
+	@menu-hidden-width:0px;
 /* ----- CONTAINERS ----- */
 	.half{
 		width: 100%;
@@ -887,10 +887,16 @@
 			display: block;
 			cursor: pointer;
 			z-index: 100000000;
-			width: @menu-hidden-width;
+			width: @mobile-font-l;
+			height: @mobile-font-l;
 			font-size: @mobile-font-base;
 			color: @link-text-color!important;
 			background: @link-color;
+			.fa{
+				line-height: @mobile-font-l!important;
+				width: 100%;
+				text-align: center;
+			}
 		}
 		.mobile_menu_toggle:hover {
 			color: @link-color-hover!important;
