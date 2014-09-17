@@ -33,7 +33,6 @@ if (Meteor.isClient) {
 	Template.fullpage.events = {
 		'click .fullpage_covered': function(){
 			Meteor.myFunctions.checkMenu();
-			console.log("click!");
 		}
 	}
 	Template.home.events = {
