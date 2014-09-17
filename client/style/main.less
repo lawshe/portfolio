@@ -215,9 +215,7 @@
 		}
 		#fp-nav .active{
 			background: @link-color-active!important;
-			border:1px solid @link-color;
-			border-right: 0px;
-			margin-left: -1px;
+			border: 0px;
 		}
 		/*--hover--*/
 			.fp-tooltip{
@@ -753,11 +751,13 @@
 			line-height: @mobile-font-s;
 			margin-top: 10px;
 			text-align: left;
+			text-transform: none;
 		}
 		p{
 			font-size: @mobile-font-base;
 			line-height: @mobile-font-base*1.3;
 			padding-bottom: 0px;
+			margin-bottom: 0px;
 		}
 		.section_header{
 			font-size: @mobile-font-l;
@@ -842,7 +842,7 @@
 			display: block;
 		}
 		#fp-nav .active{
-			border-right: 0px;
+			border: 0px;
 		}
 		/*--hover--*/
 			.fp-tooltip.left{

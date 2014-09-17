@@ -25,10 +25,9 @@ if (Meteor.isClient) {
 		'click .mobile_menu_toggle': function(){
 		    Meteor.myFunctions.toggleMobileMenu();
 		},
-		/*'click .page_anchor': function(){
-			console.log('clicked anchor');
-			console.log($(this));
-		},*/
+		'click .menu_item.active': function(){
+    		location.reload();
+		},
 	}
 	Template.fullpage.events = {
 		'click .fullpage_covered': function(){
