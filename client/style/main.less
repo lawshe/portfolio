@@ -819,11 +819,17 @@
 			overflow: hidden;
 		}
 		#fp-nav li{
-			width: 100%;
+			width: 45%;
+			clear: none;
 			margin:10px 0px;
 			height: @mobile-font-base*1.5;
 			line-height:@mobile-font-base*1.5;
 			font-size:@mobile-font-base;
+			display: inline-block;
+			float: left;
+		}
+		#fp-nav li:nth-child(even){
+			float: right;
 		}
 		#fp-nav li:last-child{
 			margin-bottom: 0px!important;
