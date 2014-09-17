@@ -762,10 +762,10 @@
 		.section_header{
 			font-size: @mobile-font-l;
 			line-height: @mobile-font-l;
-			padding-left:  @mobile-font-l;
+			padding-left:  10px;
+			text-align: left;
 		}
 		.section_header:after{
-			/*top: @section-header-height;*/
 			display: none;
 		}
 	/*--text align--*/
@@ -882,7 +882,7 @@
 	/*--menu wrap--*/
 		.menu_wrap{
 			width: @menu-hidden-width;
-			padding-top:@mobile-font-l*2;
+			/*padding-top:@mobile-font-l*2;*/
 			overflow: hidden;
 		}
 	/*--toggle--*/
@@ -891,7 +891,7 @@
 			position: fixed;
 			top: 0px;
 			padding:9px;
-			left: 0;
+			right: 0;
 			display: block;
 			cursor: pointer;
 			z-index: 100000000;

@@ -30,6 +30,12 @@ if (Meteor.isClient) {
 			console.log($(this));
 		},*/
 	}
+	Template.fullpage.events = {
+		'click .fullpage_covered': function(){
+			Meteor.myFunctions.checkMenu();
+			console.log("click!");
+		}
+	}
 	Template.home.events = {
 		'click .internal_link': function(){
 		    $.fn.fullpage.destroy('all');
