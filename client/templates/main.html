@@ -1,10 +1,16 @@
 <head>
-	<title>JELawshe</title>
+	<title>JLawshe</title>
 	<meta name="author" content="Jessica Lawshe" />
 	<meta name="copyright" content="Jessica Lawshe" />
+
 	<link rel="shortcut icon" href="/img/favicon.ico" />
 	<link rel="icon" type="image/ico" href="/img/favicon.ico" />
 	<link rel="apple-touch-icon" href="/img/apple_icon.png" />
+	<link rel="apple-touch-startup-image" href="/img/loading.gif">
+
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 	<meta name="keywords" content="web developer, web design, full stack developer, Jessica Lawshe">
 	<meta name="viewport" content="width=device-width,maximum-scale=1,initial-scale=1,maximum-scale=1, user-scalable=0,minimal-ui">
 	<meta name="description" content="Jessica Lawshe is a full stack developer based in Austin, Texas.">
@@ -12,6 +18,7 @@
 
 <template name="layout">
 	{{>menu}}
+	{{>loading}}
 	{{>fullpage}}
 </template>
 
@@ -39,6 +46,20 @@
 	<a class="mobile_menu_toggle" href=""><i class="fa fa-list"></i></a>
 </template>
 
+<template name="footer">
+	<a class="thumbnail" href="/img/jessica_lawshe_resume.pdf" target="_BLANK"><p>
+		<i class="fa fa-file-o"></i> Resume
+	</p></a>
+	<a class="thumbnail" itemprop="url" href="https://www.linkedin.com/in/lawshe" target="_BLANK"><p>
+		<i class="fa fa-linkedin-square"></i> LinkedIn
+	</p></a>
+	<a class="email thumbnail">
+		moc [ dot ] liamg [ at ] ehswalej
+	</a>
+	<a class="thumbnail" itemprop="url" href="https://github.com/lawshe" target="_BLANK"><p>
+		<i class="fa fa-github"></i> GitHub
+	</p></a>
+</template>
 <template name="home">
 	<div class="home">
 		<div section="home" class="section" tooltip="Home">
@@ -48,19 +69,22 @@
 		<div section="science" class="section" tooltip="Science">
 			<div class="section_header">Once ...</div>
 			<h4 class="centered">I was a scientist</h4>
-			<a class="imagepop" rel="gallery" href="/img/lab.JPG" data-caption="Jessica in the lab">
+			<a class="imagepop" rel="gallery" href="/img/lab.JPG" title="Jessica in the lab">
 				<img src="/img/lab.JPG" alt="lab">
 			</a>
 		</div>
 		<div section="developer" class="section" tooltip="Developer">
 			<div class="section_header">Now ...</div>
 			<h4 class="centered">I'm a developer!</h4>
-			<a class="imagepop" rel="gallery" href="/img/jessica.png" data-caption="Jessica at the computer">
+			<a class="imagepop" rel="gallery" href="/img/jessica.png" title="Jessica at the computer">
 				<img src="/img/jessica.png" alt="Jessica at the computer">
 			</a>
 		</div>
 		<div section="contact" class="section" tooltip="Contact">
-			{{>footer}}
+			<div class="half">
+				<h1><i class="fa fa-paper-plane"></i></h1>
+				{{>footer}}
+			</div>
 		</div>
 	</div>
 </template>
@@ -70,9 +94,9 @@
 		<div section="about" class="section" tooltip="Jessica">
 			<div class="section_sub">
 				<h1 itemprop="name">Jessica Lawshe</h1>
-				<h3 itemprop="role">Web Designer & Developer</h3>
+				<h2 itemprop="role">Web Designer & Developer</h2>
 				<div class="half">
-					<a class="imagepop" rel="gallery" href="/img/me.png" data-caption="Hiking the Rio Grande">
+					<a class="imagepop" rel="gallery" href="/img/me.png" title="Hiking the Rio Grande">
 						<img id="first_image" alt="Hiking the Rio Grande" src="/img/me.png">
 					</a>
 				</div>
@@ -89,7 +113,7 @@
 					<h3>Biochemistry B.S. Honors</h3>
 				</div>
 				<div class="half">
-					<h4 itemprop="alumni" style="border-bottom:0px;">The University of Texas</h4>
+					<h4 class="institution" itemprop="alumni">The University of Texas</h4>
 					<p>
 						2010<br>
 						Publication in the <a href="http://www.jbc.org/content/285/30/22840.long" target="_BLANK">Journal of Biological Chemistry</a>
@@ -100,7 +124,7 @@
 					<h3>Spanish B.A.</h3>
 				</div>
 				<div class="half">
-					<h4 itemprop="alumni" style="border-bottom:0px;">The University of Texas</h4>
+					<h4 class="institution" itemprop="alumni">The University of Texas</h4>
 					<p>
 						2010<br>
 						Study abroad in Córdoba, Argentina
@@ -113,43 +137,40 @@
 			<div class="slide"><div class="section_sub">
 				<div class="half"><h3>Designer & Developer</h3></div>
 				<div class="half">
-					<h4 itemprop="name" style="border-bottom:0px;">Landes Bioscience</h4>
+					<h4 class="institution" itemprop="name">Landes Bioscience</h4>
 					<p>2012 &mdash; present</p>
 				</div>
-
-				<hr>
-				<div class="half"><h3>Web Master</h3></div>
-				<div class="half">
-					<h4 style="border-bottom:0px;">Freelance</h4>
-					<p>2012 &mdash; present</p>
-				</div>
-
 				<hr>
 				<div class="half"><h3>Lab Manager & Research Scientist</h3></div>
 				<div class="half">
-					<h4 itemprop="name" style="border-bottom:0px;">The University of Texas</h4>
-					<p>2011 &mdash; 2013</p>
+					<h4 class="institution" itemprop="name">The University of Texas</h4>
+					<p>Laboratory of Dr. Jonghwan Kim
+						<br>Institute for Cellular and Molecular Biology
+						<br>2011 &mdash; 2013</p>
+				</div>
+				<hr>
+				<div class="half"><h3>Chemistry Specialist</h3></div>
+				<div class="half">
+					<h4 class="institution" itemprop="name">The University of Texas</h4>
+					<p>Introductory Chemistry Lab
+						<br>2011</p>
 				</div>
 			</div></div>
 			<div class="slide"><div class="section_sub">
-				<div class="half"><h3>Chemistry Specialist</h3></div>
-				<div class="half">
-					<h4 itemprop="name" style="border-bottom:0px;">The University of Texas</h4>
-					<p>2011</p>
-				</div>
-
-				<hr>
 				<div class="half"><h3>Research Assistant</h3></div>
 				<div class="half">
-					<h4 itemprop="name" style="border-bottom:0px;">The University of Texas</h4>
-					<p>2009 &mdash; 2010</p>
+					<h4 class="institution" itemprop="name">The University of Texas</h4>
+					<p>Laboratory of Dr. S. John Mihic
+						<br>Waggoner Center for Alcohol and Addiction Research
+						<br>2009 &mdash; 2010</p>
 				</div>
 
 				<hr>
 				<div class="half"><h3>Teaching Assistant</h3></div>
 				<div class="half">
-					<h4 itemprop="name" style="border-bottom:0px;">The University of Texas</h4>
-					<p>2009 &mdash; 2010</p>
+					<h4 class="institution" itemprop="name">The University of Texas</h4>
+					<p>Introductory Chemistry
+						<br>2009 &mdash; 2010</p>
 				</div>
 			</div></div>
 		</div>
@@ -157,7 +178,7 @@
 			<div class="section_header">Web Skills</div>
 			<div class="slide"><div class="section_sub">
 				<div class="third">
-					<h4>Advanced</h4>
+					<h4 class="skilllevel">Advanced</h4>
 					<div class="skillbar skill_a" data-percent="100%">
 						<div class="skillbar-title"><span itemprop="itemListElement">HTML</span></div>
 						<div class="skillbar-bar"></div>
@@ -176,7 +197,7 @@
 					</div>
 				</div>
 				<div class="third">
-					<h4>Proficient</h4>
+					<h4 class="skilllevel">Proficient</h4>
 					<div class="skillbar skill_b" data-percent="90%">
 						<div class="skillbar-title"><span itemprop="itemListElement">PHP</span></div>
 						<div class="skillbar-bar"></div>
@@ -199,7 +220,7 @@
 					</div>
 				</div>
 				<div class="third">
-					<h4>Learning</h4>
+					<h4 class="skilllevel">Learning</h4>
 					<div class="skillbar skill_c" data-percent="45%">
 						<div class="skillbar-title"><span itemprop="itemListElement">NodeJS</span></div>
 						<div class="skillbar-bar"></div>
@@ -224,6 +245,7 @@
 					<h4>Experience</h4>
 					<ul class="list">
 						<li>Git</li>
+						<li>Amazon Web Services</li>
 						<li>Unix shell scripting</li>
 					</ul>
 				</div>
@@ -260,5 +282,27 @@
 			</div>
 		</div>
 	</div>
+</template>
 
+<template name="notfound">
+	<div class="section">
+		<div class="section_sub">
+			<h3>404!</h3>
+			<h1>Page Not found</h1>
+			<h3><i class="fa fa-binoculars"></i></h3>
+			<div class="third">
+				<a href="{{pathFor 'landes'}}" class="link_internal thumbnail">
+					<h4>Landes Bioscience</h4>
+					<img alt="Publisher Homepage" src="/img/work/landes/icon_journal_home_mac.png">
+				</a>
+			</div>
+			<div class="third">
+					<a href="{{pathFor 'bpb'}}" class="link_internal thumbnail">
+						<h4>The Bipolar Bears</h4>
+						<img alt="The Bipolar Bears Homepage" src="/img/work/bpb/icon_home.png">
+					</a>
+			</div>
+				{{>footer}}
+		</div>
+	</div>
 </template>
