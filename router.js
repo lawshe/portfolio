@@ -1,4 +1,5 @@
 
+
 Router.configure({
 	layoutTemplate: 'layout',
 	loadingTemplate: 'loading',
@@ -20,6 +21,9 @@ Router.map(function() {
 	});
 	this.route('landes', {
 		path: 'work/landes'
+	});
+	this.route('notfound', {
+		path: '*'
 	});
 });
 
