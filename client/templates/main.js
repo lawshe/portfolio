@@ -15,12 +15,15 @@ if (Meteor.isClient) {
 	Template.bpb.rendered = function() {
 		Meteor.myFunctions.pageReady();
 	}
+	Template.notfound.rendered = function() {
+		Meteor.myFunctions.pageReady();
+	}
 
 	//--EVENTS
 	Template.menu.events = {
 		'click .menu_item': function(){
-		    $.fn.fullpage.destroy('all');
 		    Meteor.myFunctions.removeMenuClasses();
+		    Meteor.myFunctions.leavingPage();
 		},
 		'click .mobile_menu_toggle': function(){
 		    Meteor.myFunctions.toggleMobileMenu();
@@ -36,27 +39,27 @@ if (Meteor.isClient) {
 	}
 	Template.home.events = {
 		'click .internal_link': function(){
-		    $.fn.fullpage.destroy('all');
+		    Meteor.myFunctions.leavingPage();
 		}
 	}
 	Template.about.events = {
 		'click .internal_link': function(){
-		    $.fn.fullpage.destroy('all');
+		    Meteor.myFunctions.leavingPage();
 		}
 	}
 	Template.work.events = {
 		'click .link_internal': function(){
-		    $.fn.fullpage.destroy('all');
+		    Meteor.myFunctions.leavingPage();
 		}
 	}
 	Template.landes.events = {
 		'click .link_internal': function(){
-		    $.fn.fullpage.destroy('all');
+		    Meteor.myFunctions.leavingPage();
 		}
 	}
 	Template.bpb.events = {
 		'click .link_internal': function(){
-		    $.fn.fullpage.destroy('all');
+		    Meteor.myFunctions.leavingPage();
 		}
 	}
 }
