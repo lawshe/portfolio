@@ -132,6 +132,7 @@
 		}
 		.mini{
 			font-size: @font-xs;
+			text-align:center!important;
 		}
 	/*--list--*/
 		.list_unstyled {
@@ -162,10 +163,15 @@
 /* ----- FULL PAGE ----- */
 	#fullpage {
 		margin-left: 10%;
-		transition: all 2s ease;
+		transition:@fadeSpeed;
+		opacity: 0;
+		height: 100%;
+	}
+	.fullpage-visible{
+		opacity: 1!important;
+		transition: @fadeSpeed;
 	}
 	.section{
-		opacity: 0;
 		transition: @fadeSpeed;
 		background-color: @gray;
 		border-left: 5px solid @blue;
@@ -182,10 +188,6 @@
 			color: @link-color;
 		}
 	}
-	.sectionVisible{
-		opacity: 1;
-		transition: @fadeSpeed;
-	}
 	.fp-tableCell{
 		padding: 0px 35px!important;
 	}
@@ -197,7 +199,7 @@
 			top:auto;
 			bottom:0px;
 			transition: all 2s ease;
-			position: absolute;
+			position: fixed;
 			width: 10%;
 			font-size: 0px;
 		}
@@ -264,7 +266,6 @@
 		}
 	/*--first section--*/
 		.section:nth-child(1){
-			padding-top: 0px!important;
 			background-color: @blue;
 			.imagepop{
 				float: right;
@@ -328,6 +329,7 @@
 			color: @link-text-color;
 			margin-top:0px;
 			text-align: center;
+			overflow: hidden;
 			transition: all 0.5s ease;
 		}
 		.fp-controlArrow:after{
@@ -362,7 +364,117 @@
 		background: @blue;
 		font-family: "JosefinSans", Futura, Helvetica, Arial, sans-serif;
 		font-size: 100%;
-	}
+		height: 100%;
+		overflow-x:hidden!important;
+	}/*
+	body.no-fullpage{
+		overflow-x:hidden!important;
+		overflow-y: scroll!important;
+		.section:nth-child(1){
+			height:100%;
+			padding-bottom: 40px;
+		}
+		.section{
+			width: 100%;
+			padding:0px;
+			padding-top: 45px!important;
+			display: inline-block;
+			float: left;
+			h3{
+				margin-top: 0px;
+				text-align: left;
+				border-bottom: 2px solid;
+			}
+			h4{
+				border-bottom: 0px!important;
+				font-size: @font-base*.8!important;
+				line-height: @font-base!important;
+				margin-bottom: 0px!important;
+			}
+			p{
+				margin-bottom: 20px!important;
+				margin-top: 0px!important;
+				font-size: @font-xs*.8!important;
+				line-height: @font-xs!important;
+			}
+		}
+		.fp-slides{
+			overflow: scroll;
+			height: auto;
+		}
+		.fp-table{
+			display: block;
+		}
+		.slide{
+			padding-bottom: 20px;
+			width: 100%;
+		}
+		.section_header{
+			margin-bottom: 10px;
+			position: relative;
+			border-top:2px solid @black1;
+			border-bottom:2px solid @black1;
+		}
+		.section_header:after{
+			border:0px;
+		}
+		.skillbar{
+			opacity: 1;
+		}
+		.project_list{
+			display: none;
+		}
+		.mini{
+			display: none;
+		}
+		.collaborative{
+			display: none;
+		}
+		.thumbnail{
+			width: 85%;
+			p{
+				margin-bottom: 0px!important;
+			}
+		}
+		.fp-slide{
+			float: none;
+		}
+		.mobile_menu_toggle{
+			top: auto;
+			bottom: 0px;
+		}
+		.half{
+			width: 50%!important;
+			.imagepop{
+				float: right!important;
+			}
+		}
+		.half:first-child{
+			width: 100%!important;
+			.imagepop{
+				float: none!important;
+			}
+		}
+		.section:last-child{
+			.half{
+				width: 50%!important;
+			}
+			.half:last-child{
+				padding-bottom: 50px;
+			}
+		}
+		.about{
+			.half{
+				width: 50%!important;
+			}
+			h3{
+				border-bottom: 0px;
+				text-align: right;
+			}
+		}
+
+
+	}*/
 /* ----- HEADERS AND SUBHEADERS ------ */
 	.section_header{
 		width: 100%;
@@ -397,9 +509,11 @@
 	.icon{
 		width: @font-s;
 	}
-	.tiny-img img{
+	.api-logo{
 		max-width: 100px!important;
 		height: auto!important;
+		float: left;
+		margin: 10px;
 	}
 	/*--imagepop--*/
 		.imagepop{
@@ -458,6 +572,162 @@
 			.mfp-counter{
 				font-family: "JosefinSans-bold", Futura, Helvetica, Arial, sans-serif;
 			}
+/* ----- LANDSCAPE ------ */
+	html.landscape{
+		overflow-y: visible!important;
+	}
+	body.landscape{
+		overflow-y: scroll!important;
+	}
+	.container.landscape{
+		h3{
+			margin-top: 35px;
+			border-bottom: 1px solid;
+			padding:5px 0px;
+		}
+		h4{
+			margin-top: 15px;
+			border-bottom: 0px;
+		}
+		/*h1{
+			font-size: @font-l*0.9;
+			line-height: @font-l;
+		}
+		h3{
+			font-size: @font-s*0.9;
+			line-height: @font-s;
+			margin-top: 20px;
+		}
+		h4{
+			font-size: @font-base;
+			line-height: @font-base;
+			margin-top: 15px;
+		}
+		p{
+			font-size: @font-xs;
+			line-height: @font-xs;
+		}
+		li{
+			font-size: @font-xs;
+			line-height: @font-xs;
+		}*/
+		.project_list > li{
+			display: inline-block;
+			margin:5px 5px 0px 0px;
+		}
+		.project_list > li > span{
+			padding:5px;
+		}
+		.mobile_menu_toggle{
+			left: 0px;
+			bottom: 0px;
+			top: auto!important;
+			right: auto;
+		}
+		#fullpage{
+			padding-left: 45px!important;
+		}
+		.page_menu_visible{
+			width: 90%!important;
+		}
+		.mini{
+			display: none;
+		}
+		.collaborative{
+			display: none;
+		}
+		/*.menu_visible{
+			width: 90%!important;
+		}
+		.menu_visible .menu_item{
+			float: right;
+			clear: none;
+			width: 25%;
+		}*/
+		.section{
+			width: 100%;
+			display: table;
+			padding: 20px 0px!important;
+		}
+		.section:nth-child(1){
+			.half{
+				width: 50%!important;
+			}
+		}
+		hr{
+			display: none;
+		}
+		.fp-slide{
+			width: 100%;
+		}
+		.project_list{
+			display: none;
+		}
+		.slide{
+			.half{
+				width: 50%!important;
+				.imagepop{
+					float: right!important;
+				}
+			}
+		}
+
+		.half.full-width-image{
+			width: 100%!important;
+			.imagepop{
+				float: none!important;
+			}
+		}
+		.footer{
+			width: 100%!important;
+		}
+		.section_header{
+			position: relative;
+			margin-bottom: 20px;
+		}
+		/*--home--*/
+			.home{
+				.section{
+					text-align: center;
+				}
+				.imagepop{
+					float:none!important;
+				}
+			}
+		/*--about--*/
+			.skills{
+				width: 33%;
+			}
+			@landscape_skillbar_height:@font-xs*1.8;
+			.skillbar{
+				width: 80%;
+				height: @landscape_skillbar_height;
+			}
+			.skillbar-bar{
+				height: @landscape_skillbar_height;
+			}
+			.skillbar-title{
+				height:@landscape_skillbar_height;
+			}
+			.skillbar-title span{
+				font-size: @font-xs*.9!important;
+				line-height:@landscape_skillbar_height;
+				height:@landscape_skillbar_height;
+			}
+			.about{
+				h3{
+					margin-top: 7px!important;
+					text-align: right!important;
+					border-bottom: 0px;
+				}
+				.half{
+					width: 50%!important;
+				}
+			}
+	}
+	#fp-nav.landscape.page_menu_visible{
+		width: 90%!important;
+	}
 /* ----- LISTS ------ */
 	.list{
 		margin-left: 30px;
@@ -754,8 +1024,8 @@
 		@mobile-font-l:		1.5rem;
 		@mobile-font-m:		1.3rem;
 		@mobile-font-s: 	1.0rem;
-		@mobile-font-base:	1.0rem;
-		@mobile-font-xs: 	0.8rem;
+		@mobile-font-base:	0.9rem;
+		@mobile-font-xs: 	0.7rem;
 	/*--headers & paragraph--*/
 		h1 {
 			font-size: @mobile-font-xl;
@@ -796,6 +1066,7 @@
 /* ----- FULL PAGE ----- */
 	#fullpage {
 		margin-left: @menu-hidden-width;
+		padding: 0px!important;
 	}
 	.section{
 		border-left: 0px;
@@ -820,6 +1091,15 @@
 			.fp-controlArrow.fp-next{
 				right: 0px;
 			}
+			/*.fp-next:after{
+				content: "↓";
+				position: absolute;
+				color: @black2;
+				height: 30px;
+				width: 50%;
+				right: 0px;
+				bottom: 0;
+			}*/
 		/*prev*/
 			.fp-controlArrow.fp-prev{
 				left: 0px;
@@ -840,7 +1120,7 @@
 		#fp-nav li{
 			width: 45%;
 			clear: none;
-			margin:10px 0px;
+			margin:7px 0px;
 			height: @mobile-font-base*1.5;
 			line-height:@mobile-font-base*1.5;
 			font-size:@mobile-font-base;
@@ -856,7 +1136,7 @@
 		#fp-nav span{
 			font-size: @font-xs!important;
 			color: @link-text-color;
-			padding-left: 5px;
+			padding-left: 3px;
 			width: 100%;
 			display: block;
 		}
@@ -888,6 +1168,7 @@
 		.fp-slidesNav li{
 			margin: 7px 14px 0px 9px;
 		}
+/* ----- GENERAL ----- */
 /* ----- HEADERS AND SUBHEADERS ------ */
 	.section_header{
 		font-size: @mobile-font-l;
@@ -912,7 +1193,7 @@
 			font-size: @mobile-font-xs;
 		}
 		.project_list > li {
-			margin:10px 10px 0px 0px;
+			margin:5px 5px 0px 5px;
 		}
 /* ----- MENU ----- */
 	/*--main menu--*/
@@ -953,7 +1234,7 @@
 			color: @link-color-hover!important;
 		}
 		.fullpage_covered{
-			opacity: 0.2;
+			opacity: 0.2!important;
 		}
 		.menu_visible{
 			transition: all 2s ease;
@@ -969,9 +1250,6 @@
 		.about{
 			.half > h3{
 				text-align: left;
-			}
-			.third{
-				width: 100%;
 			}
 			.skilllevel{
 				margin-bottom: 0px;
@@ -1001,6 +1279,9 @@
 				margin-top: 10px;
 				border-bottom: 0px;
 			}
+		}
+		.skills{
+			width: 100%;
 		}
 
 }
