@@ -1,3 +1,4 @@
+Session.setDefault('section', '');
 if (Meteor.isClient) {
 	//---RENDERED
 	Template.home.rendered = function() {
@@ -22,14 +23,19 @@ if (Meteor.isClient) {
 	//--EVENTS
 	Template.menu.events = {
 		'click .menu_item': function(){
-		    Meteor.myFunctions.removeMenuClasses();
 		    Meteor.myFunctions.leavingPage();
 		},
 		'click .mobile_menu_toggle': function(){
 		    Meteor.myFunctions.toggleMobileMenu();
 		},
 		'click .menu_item.active': function(){
-    		location.reload();
+			var menu_id = $('.menu_item.active').attr("id");
+			if(menu_id == "menu_item_work"){
+			    Meteor.myFunctions.leavingPage();
+				window.location ="/work";
+			}else{
+				location.reload();
+			}
 		},
 	}
 	Template.fullpage.events = {
