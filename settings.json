@@ -1,7 +1,10 @@
 {
     "public": {
         "ga": {
-            "id": "UA-54824500-1"
+            "id": "UA-54824500-1",
+            "require": {
+                "displayfeatures": true
+            }
         }
     }
 }
