@@ -6,10 +6,11 @@
 standard-app-packages
 insecure
 less
-lawshe:full-page
 gabrielengel:konecty-magnific-popup
 natestrauser:font-awesome
 iron:router
 zimme:iron-router-active
 reywood:iron-router-ga
+manuelschoebel:ms-seo
+lawshe:full-page
 
