@@ -87,8 +87,22 @@
 				<img src="/img/jessica.png" alt="Jessica at the computer">
 			</a>
 		</div>
-		<div section="contact" class="section" tooltip="Contact">
-			{{>footer}}
+		<div class="section">
+			<div class="section_sub">
+				<div class="third">
+					<a href="{{pathFor 'landes'}}" class="link_internal thumbnail">
+						<p>Landes Bioscience</p>
+						<img alt="Publisher Homepage" src="/img/work/landes/icon_journal_home_mac.png">
+					</a>
+				</div>
+				<div class="third">
+					<a href="{{pathFor 'bpb'}}" class="link_internal thumbnail">
+						<p>The Bipolar Bears</p>
+						<img alt="The Bipolar Bears Homepage" src="/img/work/bpb/icon_home.png">
+					</a>
+				</div>
+				{{>footer}}
+			</div>
 		</div>
 	</div>
 </template>
@@ -240,23 +254,29 @@
 				</div>
 			</div></div>
 			<div class="slide"><div class="section_sub">
+				<div class="span_half"><h3>API</h3></div>
+				<div class="span_half">
+					<a href="https://developers.facebook.com/" target="_BLANK"><img src="img/logos/facebook.png" class="logo" alt="Facebook API"></a>
+					<a href="http://www.authorize.net/" target="_BLANK"><img src="img/logos/authorize.png" class="logo" alt="Authorize.net API"></a>
+					<a href="https://dev.twitter.com/" target="_BLANK"><img src="img/logos/twitter.png" class="logo" alt="Twitter API"></a>
+					<a href="http://www.ncbi.nlm.nih.gov/pmc/" target="_BLANK"><img src="img/logos/pubmed.png" class="logo" alt="PubMed API"></a>
+					<a href="http://search.crossref.org/help/api" target="_BLANK"><img src="img/logos/crossref.png" class="logo" alt="CrossRef API"></a>
+				</div>
+			</div></div>
+			<div class="slide"><div class="section_sub">
+				<div class="span_half"><h3>Experience</h3></div>
+				<div class="span_half">
+					<a href="https://github.com/" target="_BLANK"><img src="img/logos/github.png" class="logo" alt="GitHub"></a>
+					<a href="http://aws.amazon.com/" target="_BLANK"><img src="img/logos/aws.png" class="logo" alt="AWS"></a>
+					<a href="https://www.meteor.com/" target="_BLANK"><img src="img/logos/meteor.png" class="logo" alt="Meteor.js"></a>
+					<a href="http://mailchimp.com/" target="_BLANK"><img src="img/logos/mailchimp.png" class="logo" alt="MailChimp"></a>
+				</div>
+			</div></div>
+			<div class="slide"><div class="section_sub">
 				<div class="half">
-					<h4>API</h4>
-						<img src="img/logos/facebook.png" class="api-logo" alt="Facebook API">
-						<img src="img/logos/authorize.png" class="api-logo" alt="Authorize.net API">
-						<img src="img/logos/twitter.png" class="api-logo" alt="Twitter API">
-						<img src="img/logos/pubmed.png" class="api-logo" alt="PubMed API">
+					<h3>Libraries & Templating</h3>
 				</div>
 				<div class="half">
-					<h4>Experience</h4>
-					<ul class="list">
-						<li>Github</li>
-						<li>Amazon Web Services</li>
-						<li>Unix shell scripting</li>
-					</ul>
-				</div>
-				<div class="half">
-					<h4>Libraries & Templating</h4>
 					<ul class="list">
 						<li><a href="http://jquery.com/" target="_BLANK">jQuery</a></li>
 						<li><a href="http://grafico.kilianvalkhof.com/" target="_BLANK">Grafico.js</a></li>
@@ -285,19 +305,19 @@
 	<div class="section">
 		<div class="section_sub">
 			<h3>404!</h3>
-			<h1>Page Not found</h1>
+			<h2>Page Not found</h2>
 			<h3><i class="fa fa-binoculars"></i></h3>
 			<div class="third">
 				<a href="{{pathFor 'landes'}}" class="link_internal thumbnail">
-					<h4>Landes Bioscience</h4>
+					<p>Landes Bioscience</p>
 					<img alt="Publisher Homepage" src="/img/work/landes/icon_journal_home_mac.png">
 				</a>
 			</div>
 			<div class="third">
-					<a href="{{pathFor 'bpb'}}" class="link_internal thumbnail">
-						<h4>The Bipolar Bears</h4>
-						<img alt="The Bipolar Bears Homepage" src="/img/work/bpb/icon_home.png">
-					</a>
+				<a href="{{pathFor 'bpb'}}" class="link_internal thumbnail">
+					<p>The Bipolar Bears</p>
+					<img alt="The Bipolar Bears Homepage" src="/img/work/bpb/icon_home.png">
+				</a>
 			</div>
 			{{>footer}}
 		</div>
