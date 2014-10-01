@@ -3,6 +3,7 @@ if (Meteor.isClient) {
 	//---RENDERED
 	Template.home.rendered = function() {
 		Meteor.myFunctions.pageReady();
+		$("#fp-nav").hide();
 	}
 	Template.about.rendered = function() {
 		Meteor.myFunctions.pageReady();
