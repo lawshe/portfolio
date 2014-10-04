@@ -1,6 +1,9 @@
 Session.setDefault('section', '');
 if (Meteor.isClient) {
 	//---RENDERED
+	Template.fullpage.rendered = function() {
+		$(".container").show();
+	}
 	Template.home.rendered = function() {
 		Meteor.myFunctions.pageReady();
 		$("#fp-nav").hide();
@@ -23,15 +26,15 @@ if (Meteor.isClient) {
 
 	//--EVENTS
 	Template.menu.events = {
-		'click .menu_item': function(){
+		'click .menu-item': function(){
 		    Meteor.myFunctions.leavingPage();
 		},
 		'click .mobile_menu_toggle': function(){
 		    Meteor.myFunctions.toggleMobileMenu();
 		},
-		'click .menu_item.active': function(){
-			var menu_id = $('.menu_item.active').attr("id");
-			if(menu_id == "menu_item_work"){
+		'click .menu-item.active': function(){
+			var menu_id = $('.menu-item.active').attr("id");
+			if(menu_id == "menu-item-work"){
 			    Meteor.myFunctions.leavingPage();
 				window.location ="/work";
 			}else{
