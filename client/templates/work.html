@@ -1,24 +1,10 @@
 <template name="work">
 	<div section="work" tooltip="Work" class="section">
-		<div class="section_sub">
-			<h1>Selected Work</h1>
-			<div class="half">
-				<a href="{{pathFor 'landes'}}" class="link_internal thumbnail">
-					<h4>Landes Bioscience</h4>
-					<img alt="Publisher Homepage" src="/img/work/landes/icon_journal_home_mac.png">
-				</a>
-			</div>
-			<div class="half">
-				<a href="{{pathFor 'bpb'}}" class="link_internal thumbnail">
-					<h4>The Bipolar Bears</h4>
-					<img alt="The Bipolar Bears Homepage" src="/img/work/bpb/icon_home.png">
-				</a>
-			</div>
-		</div>
+		<h2>Selected Work</h2>
+		{{>selectedWork}}
 	</div>
 	<div section="site" tooltip="This Site" class="section">
 		<div class="section_header">This Site</div>
-		<div class="section_sub">
 			<div class="half">
 				<a class="imagepop no_bg" rel="gallery" href="/img/this.png" title="This site">
 					<img alt="This site" src="/img/this.png">
@@ -36,18 +22,14 @@
 				<p>View the repository on <a href="https://github.com/lawshe/portfolio" target="_BLANK">GitHub</a></p>
 
 			</div>
-		</div>
 	</div>
 	<div section="more" tooltip="More" class="section">
-		<div class="section_sub">
-			{{>footer}}
-		</div>
+		{{>footer}}
 	</div>
 </template>
 
 <template name="bpb">
 	<div section="bpb" tooltip="The Bipolar Bears" class="section">
-		<div class="section_sub">
 			<h1>The Bipolar Bears</h1>
 			<h2>Indie Band</h2>
 			<div class="half">
@@ -58,19 +40,14 @@
 			<div class="half">
 				<p>I created a site for the fans & a CMS to manage shows & show tasks.</p>
 			</div>
-		</div>
 	</div>
 	<div section="responsive" tooltip="Responsive Design" class="section">
 		<div class="section_header">Responsive Design</div>
-		<div class="slide"><div class="section_sub">
-			<div class="half">
-				<a class="imagepop no_bg" rel="gallery" href="/img/work/bpb/home.png" title="Responsive Design"><img alt="Responsive Design" src="/img/work/bpb/home.png"></a>
-			</div>
-			<div class="half">
-				<ul class="project_list"></ul>
-			</div>
-		</div></div>
-		<div class="slide" subproject="Fixed Nav"><div class="section_sub">
+		<div class="slide">
+			<a class="imagepop no_bg" rel="gallery" href="/img/work/bpb/home.png" title="Responsive Design"><img alt="Responsive Design" src="/img/work/bpb/home.png"></a>
+			<ul class="project_list"></ul>
+		</div>
+		<div class="slide" subproject="Fixed Nav">
 			<h3>Fixed Navigation</h3>
 			<div class="half">
 				<a class="imagepop no_bg" rel="gallery" href="/img/work/bpb/iphone_home.png" title="Responsive Design"><img alt="Responsive Design"	src="/img/work/bpb/iphone_home.png"></a>
@@ -79,8 +56,8 @@
 				<h4>Quickly navigate site</h4>
 				<p>Screen size dictates the location of the fixed navigation.</p>
 			</div>
-		</div></div>
-		<div class="slide" subproject="Photos"><div class="section_sub">
+		</div>
+		<div class="slide" subproject="Photos">
 			<h3>Photos</h3>
 			<div class="half">
 				<a class="imagepop no_bg" rel="gallery" href="/img/work/bpb/pics.png" title="Pictures"><img alt="Pictures"	src="/img/work/bpb/pics.png"></a>
@@ -89,8 +66,8 @@
 				<h4>Fluid photo grid</h4>
 				<p>The number of columns changes with the screen size. Clicking an image opens a popup image.</p>
 			</div>
-		</div></div>
-		<div class="slide" subproject="Videos"><div class="section_sub">
+		</div>
+		<div class="slide" subproject="Videos">
 			<h3>Videos</h3>
 			<div class="half">
 				<a class="imagepop no_bg" rel="gallery" href="/img/work/bpb/videos.png" title="Videos"><img alt="Videos" src="/img/work/bpb/videos.png"></a>
@@ -99,23 +76,19 @@
 				<h4>Embedded videos</h4>
 				<p>Videos are embedded from YouTube & Vimeo. Options to switch to another video or share on social networks.</p>
 			</div>
-		</div></div>
+		</div>
 	</div>
 	<div section="show_cms" tooltip="Show CMS" class="section">
 		<div class="section_header">Show CMS</div>
-		<div class="slide"><div class="section_sub">
-			<div class="half">
+		<div class="slide">
 				<a class="imagepop" rel="gallery" href="/img/work/bpb/cms_login.png" title="CMS Login">
 					<img alt="CMS Login" src="/img/work/bpb/cms_login.png">
 				</a>
-			</div>
-			<div class="half">
 				<ul class="project_list"></ul>
 				<div class="clearfix"></div>
 				<p class="mini">The show CMS was in the middle of a<br>redesign when the band went on hiatus.</p>
-			</div>
-		</div></div>
-		<div class="slide" subproject="Users & Permissions"><div class="section_sub">
+		</div>
+		<div class="slide" subproject="Users & Permissions">
 			<h3>Users & Permissions</h3>
 			<div class="half">
 				<a class="imagepop" rel="gallery" href="/img/work/bpb/cms_adduser.png" title="CMS">
@@ -126,8 +99,8 @@
 				<h4>Add new user</h4>
 				<p>After adding a user, permissions can be granted to book shows, edit website & assign show tasks.</p>
 			</div>
-		</div></div>
-		<div class="slide" subproject="Venues Table"><div class="section_sub">
+		</div>
+		<div class="slide" subproject="Venues Table">
 			<h3>Venues Table</h3>
 			<div class="half">
 				<a class="imagepop" rel="gallery" href="/img/work/bpb/cms_venues.png" title="Venues"><img alt="Venues"	src="/img/work/bpb/cms_venues.png"></a>
@@ -136,8 +109,8 @@
 				<h4>Search & sort</h4>
 				<p>Past and future show venues are listed in a paginated table. The venue row expands to display additional information.</p>
 			</div>
-		</div></div>
-		<div class="slide" subproject="Add Venue"><div class="section_sub">
+		</div>
+		<div class="slide" subproject="Add Venue">
 			<h3>Add Venue</h3>
 			<div class="half">
 				<a class="imagepop" rel="gallery" href="/img/work/bpb/cms_new_venue.png" title="Add Venue"><img alt="Add Venue"	src="/img/work/bpb/cms_new_venue.png"></a>
@@ -146,18 +119,18 @@
 				<h4>Save & share</h4>
 				<p>There are many venue contacts when booking a show & this information can easily be lost. Saving venue information makes it easy for the band & manager to share this information. </p>
 			</div>
-		</div></div>
-		<div class="slide" subproject="Add Show"><div class="section_sub">
+		</div>
+		<div class="slide" subproject="Add Show">
 			<h3>Add Show</h3>
 			<div class="half">
 				<a class="imagepop" rel="gallery" href="/img/work/bpb/cms_adshow.png" title="Add Show"><img alt="Add Show"	src="/img/work/bpb/cms_adshow.png"></a>
 			</div>
 			<div class="half">
-				<h4>Location, Times, Contacts </h4>
+				<h4>Location, times, contacts </h4>
 				<p>When selecting a saved venue, all venue information is automatically associated with the show. </p>
 			</div>
-		</div></div>
-		<div class="slide" subproject="Calendar"><div class="section_sub">
+		</div>
+		<div class="slide" subproject="Calendar">
 			<h3>Calendar</h3>
 			<div class="half">
 				<a class="imagepop no_bg" rel="gallery" href="/img/work/bpb/bpb_calendar.png" title="Show Calendar">
@@ -168,8 +141,8 @@
 				<h4>Color coding</h4>
 				<p>Booked shows, pending shows, member unavailability are all displayed on the calendar with different color coding. </p>
 			</div>
-		</div></div>
-		<div class="slide" subproject="Show Tasks"><div class="section_sub">
+		</div>
+		<div class="slide" subproject="Show Tasks">
 			<h3>Show Tasks</h3>
 			<div class="half">
 				<a class="imagepop" rel="gallery" href="/img/work/bpb/cms_promo.png" title="Show Tasks"><img alt="Show Tasks"	src="/img/work/bpb/cms_promo.png"></a>
@@ -178,24 +151,21 @@
 				<h4>Assign & view status</h4>
 				<p>Assign tasks to users. Color coding of task to indicate task completion status.</p>
 			</div>
-		</div></div>
+		</div>
 	</div>
-	<div section="mailchimp" tooltip="Mailchimp" class="section">
-		<div class="section_header">Mailchimp</div>
-		<div class="section_sub">
+	<div section="mailchimp" tooltip="MailChimp" class="section">
+		<div class="section_header">MailChimp</div>
 			<h3>Email Campaign</h3>
 			<div class="half">
-				<a class="imagepop" rel="gallery" href="/img/work/bpb/mailchimp.png" title="Mailchimp"><img alt="Mailchimp"	src="/img/work/bpb/mailchimp.png"></a>
+				<a class="imagepop" rel="gallery" href="/img/work/bpb/mailchimp.png" title="MailChimp"><img alt="MailChimp"	src="/img/work/bpb/mailchimp.png"></a>
 			</div>
 			<div class="half">
 				<h4>Band branding</h4>
 				<p>Designed & coded email campaign to promote new single. The design of the campaigns was consistent with the band branding on their website.</p>
 			</div>
-		</div>
 	</div>
 	<div section="fb" tooltip="Facebook" class="section">
 		<div class="section_header">Facebook</div>
-		<div class="section_sub">
 			<h3>Page Cover Photos</h3>
 			<div class="half">
 				<a class="imagepop" rel="gallery" href="/img/work/bpb/fb/fb2.png" title="Facebook Cover Photo"><img alt="Facebook Cover Photo"	src="/img/work/bpb/fb/fb2.png"></a>
@@ -203,11 +173,10 @@
 			<div class="half">
 				<a class="imagepop" rel="gallery" href="/img/work/bpb/fb/fb.png" title="Facebook Cover Photo"><img alt="Facebook Cover Photo"	src="/img/work/bpb/fb/fb.png"></a>
 			</div>
-		</div>
 	</div>
 	<div section="poster" tooltip="Poster" class="section">
 		<div class="section_header">Poster Design</div>
-		<div class="section_sub">
+
 			<h3>Single Release Show</h3>
 			<div class="half">
 				<a class="imagepop" rel="gallery" href="/img/work/bpb/tos.png" title="Show Poster"><img alt="Show Poster"	src="/img/work/bpb/tos.png"></a>
@@ -216,25 +185,20 @@
 				<h4>Working with print</h4>
 				<p>I incorporated the single cover into a poster for the release show.</p>
 			</div>
-		</div>
 	</div>
 	<div section="more" tooltip="More" class="section">
-		<div class="section_sub">
 			<div class="half">
-				<a class="link_internal thumbnail" href="{{pathFor 'landes'}}">
-					<h4>Landes Bioscience</h4>
+				<a class="link_internal solid-link thumbnail" href="{{pathFor 'landes'}}">
 					<img alt="Landes Bioscience Homepage" src="/img/work/landes/journal_home_mac.png">
-					<p>See more of my work</p>
+					Landes Bioscience
 				</a>
 			</div>
 			{{>footer}}
-		</div>
 	</div>
 </template>
 
 <template name="landes">
 	<div section="landes" tooltip="Landes" class="section">
-		<div class="section_sub">
 			<h1>Landes Bioscience</h1>
 			<h2>Bioscience research publisher</h2>
 			<div class="half">
@@ -245,164 +209,31 @@
 			<div class="half">
 				<p>I work full time in the design & development of the visitor & admin sites. Projects use both MySQL and MongoDB. Templates were created via Dust.js. Languages used - PHP, JavaScript, HTML, CSS/Less, JSON, & XML.</p>
 			</div>
-		</div>
-	</div>
-	<div section="journal_homepages" tooltip="Journal Homepages" class="section">
-		<div class="section_header">Journal Homepages</div>
-		<div class="slide"><div class="section_sub">
-			<div class="half">
-				<a class="imagepop no_bg" rel="gallery" href="/img/work/landes/imac_psb.png" title="Journal Homepage"><img alt="Journal Homepage" src="/img/work/landes/imac_psb.png"></a>
-			</div>
-			<div class="half">
-				<ul class="project_list"></ul>
-				<div class="collaborative">* indicates collaborative project</div>
-			</div>
-		</div></div>
-		<div class="slide" subproject="CMS: Current Issue*"><div class="section_sub">
-			<h3>CMS: Current Issue</h3>
-			<div class="half">
-				<a class="imagepop" rel="gallery" href="/img/work/landes/cms_current_issue.png" title="CMS: Current Issue"><img alt="CMS: Current Issue"	src="/img/work/landes/cms_current_issue.png"></a>
-			</div>
-			<div class="half">
-				<h4>WYSIWYG</h4>
-				<p>Cover caption input with option to display entire caption or preview of caption.</p>
-
-				<h4>Preview</h4>
-				<p>The cover image and caption are previewable before publishing.</p>
-			</div>
-		</div></div>
-		<div class="slide" subproject="Current Issue Sharing"><div class="section_sub">
-			<h3>Current Issue Sharing</h3>
-			<div class="half">
-				<a class="imagepop" rel="gallery" href="/img/work/landes/jhome_current.png" title="Current Issue Sharing"><img alt="Current Issue Sharing"	src="/img/work/landes/jhome_current.png"></a>
-			</div>
-			<div class="half">
-				<h4 style="border:0px;">Facebook, Twitter, LinkedIn, Email</h4>
-			</div>
-		</div></div>
-		<div class="slide" subproject="Paper Type Search*"><div class="section_sub">
-			<h3>Paper Type Search</h3>
-			<div class="half">
-				<a class="imagepop" rel="gallery" href="/img/work/landes/explore.png" title="Online Only Journals"><img alt="Recent Article Thumbnails" src="/img/work/landes/explore.png"></a>
-			</div>
-			<div class="half">
-				<h4>Solr</h4>
-				<p>Integration of Solr queries & results.</p>
-				<h4>HTML5 Local Storage</h4>
-				<p>The paper type is stored in the browser’s local storage. Results are queried using this variable.</p>
-			</div>
-		</div></div>
-		<div class="slide" subproject="Recent Articles*"><div class="section_sub">
-			<h3>Recent Articles</h3>
-			<div class="half">
-				<a class="imagepop" rel="gallery" href="/img/work/landes/recent_no_img.png" title="Recent Article Thumbnails"><img alt="Recent Article Thumbnails" src="/img/work/landes/recent_no_img.png"></a>
-			</div>
-			<div class="half">
-				<h4>6 Most Recent</h4>
-				<p>Once epublished the article is listed on the homepage. The editor has the option to display an image preview within the thumbnails.</p>
-			</div>
-		</div></div>
-		<div class="slide" subproject="Featured Special Focus"><div class="section_sub">
-			<h3>Featured Special Focus</h3>
-			<div class="half">
-				<a class="imagepop" rel="gallery" href="/img/work/landes/home_sf.png" title="Featured Special Focus"><img alt="Featured Special Focus" src="/img/work/landes/home_sf.png"></a>
-			</div>
-			<div class="half">
-				<h4>Shared Topic</h4>
-				<p>Featured group of articles with a similar focus.</p>
-			   	<p>Scroll down to learn more about the CMS.</p>
-			</div>
-		</div></div>
-	</div>
-	<div section="special_focus" tooltip="Special Focus" class="section">
-		<div class="section_header">Special Focus</div>
-		<div class="slide"><div class="section_sub">
-			<div class="half">
-				<a class="imagepop no_bg" rel="gallery" href="/img/work/landes/imac_sf.png" title="Special Focus Features on Homepage"><img alt="Special Focus on Homepage" src="/img/work/landes/imac_sf.png"></a>
-			</div>
-			<div class="half">
-				<ul class="project_list"></ul>
-			</div>
-		</div></div>
-		<div class="slide" subproject="CMS: Article Group"><div class="section_sub">
-			<h3>CMS: Article Group</h3>
-			<div class="half">
-				<a class="imagepop" rel="gallery" href="/img/work/landes/mongo_sf_group.png" title="CMS to manage article group"><img alt="CMS to manage article group" src="/img/work/landes/mongo_sf_group.png"></a>
-			</div>
-			<div class="half">
-				<h4>Display Options</h4>
-				<p>Editors can feature the group on homepage with an option to include figures in article thumbnails. The group can also be marked as current & will be listed first on the special focus list page. Subgroups are also listed and can be edited. </p>
-			</div>
-		</div></div>
-		<div class="slide" subproject="CMS: Create Subgroup"><div class="section_sub">
-			<h3>CMS: Create Subgroup</h3>
-			<div class="half">
-				<a class="imagepop" rel="gallery" href="/img/work/landes/sf_subgroup_new.png" title="CMS to create subgroups"><img alt="CMS to create subgroups" src="/img/work/landes/sf_subgroup_new.png"></a>
-			</div>
-			<div class="half">
-				<h4>Organize Group</h4>
-				<p>The editor can create a subgroup via a WYSIWYG text editor & then assign articles within the special focus to this subgroup.</p>
-			</div>
-		</div></div>
-		<div class="slide" subproject="CMS: Subgroup Order"><div class="section_sub">
-			<h3>CMS: Subgroup Order</h3>
-			<div class="half">
-				<a class="imagepop" rel="gallery" href="/img/work/landes/sf_subgoup_order.png" title="CMS to sort subgroups"><img alt="CMS to sort subgroups" src="/img/work/landes/sf_subgoup_order.png"></a>
-			</div>
-			<div class="half">
-				<h4>Drag & Drop</h4>
-				<p>Select the order in which subgroups are organized within the special focus.</p>
-			</div>
-		</div></div>
-		<div class="slide" subproject="Special Focus Page"><div class="section_sub">
-			<h3>Special Focus Page</h3>
-			<div class="half">
-				<a class="imagepop" rel="gallery" href="/img/work/landes/sf_articles_smallgtpases.png" title="Special Focus Page"><img alt="Special Focus Page" src="/img/work/landes/sf_articles_smallgtpases.png"></a>
-			</div>
-			<div class="half">
-				<h4>Sorted Articles</h4>
-				<p>Articles are sorted based on editor selections. The page includes a group note & article abstract accordion.  Each subgroup is an anchor that smoothly scrolls down the page.</p>
-			</div>
-		</div></div>
-		<div class="slide" subproject="Special Focuses"><div class="section_sub">
-			<h3>Special Focuses</h3>
-			<div class="half">
-				<a class="imagepop" rel="gallery" href="/img/work/landes/sf_list_hv.png" title="Special Focus List"><img alt="Special Focus List" src="/img/work/landes/sf_list_hv.png"></a>
-			</div>
-			<div class="half">
-				<h4>All Special Focuses</h4>
-				<p>List of all special focuses by the journal, with the current listed first.</p>
-			</div>
-		</div></div>
 	</div>
 	<div section="article" tooltip="Article" class="section">
 		<div class="section_header">Article</div>
-		<div class="slide"><div class="section_sub">
-			<div class="half">
+		<div class="slide">
 				<a class="imagepop no_bg" rel="gallery" href="/img/work/landes/imac_article.png" title="Article Page"><img alt="Article Page"	src="/img/work/landes/imac_article.png"></a>
-			</div>
-			<div class="half">
 				<ul class="project_list"></ul>
 				<div class="collaborative">* indicates collaborative project</div>
-			</div>
-		</div></div>
-		<div class="slide" subproject="Full Text Viewer*"><div class="section_sub">
+		</div>
+		<div class="slide" subproject="Full Text Viewer*">
 			<h3>Full Text Viewer</h3>
 			<div class="half">
 				<a class="imagepop no_bg" rel="gallery" href="/img/work/landes/mac_lens.png" title="Full text viewer"><img alt="Full text viewer" src="/img/work/landes/mac_lens.png"></a>
 			</div>
 			<div class="half">
 				<h4>XML to JSON</h4>
-				<p>Via the open source project Lens, created by eLife. I have edited the implementation of this project into Landes' website. Changing XSL, XML to JSON conversion, & templating.</p>
+				<p>Via the open source project Lens, created by eLife. I have worked on the implementation of this project into Landes' website. Changing XSL, XML to JSON conversion, & templating.</p>
 			</div>
-		</div></div>
-		<div class="slide" subproject="Editor Preview"><div class="section_sub">
+		</div>
+		<div class="slide" subproject="Editor Preview">
 			<h3>Editor Access</h3>
 			<div class="half">
-				<div class="span_half">
+				<div class="max-half">
 					<a class="imagepop" rel="gallery" href="/img/work/landes/article_view_admin.png" title="Admin view of article page"><img alt="Admin view of article page" src="/img/work/landes/article_view_admin.png"></a>
 				</div>
-				<div class="span_half">
+				<div class="max-half">
 					<a class="imagepop" rel="gallery" href="/img/work/landes/article_view_public_1.png" title="Public view of article page without journal subscription"><img alt="Public view of article page without journal subscription" src="/img/work/landes/article_view_public_1.png"></a>
 				</div>
 			</div>
@@ -410,9 +241,9 @@
 				<h4>View restricted material</h4>
 				<p>Editors can access restricted content that is behind a pay wall or not published to the public. This allows editors to preview the online full text version of the article.</p>
 			</div>
-		</div></div>
-		<div class="slide" subproject="Metrics: Preview"><div class="section_sub">
-			<h3>Metrics: Preview</h3>
+		</div>
+		<div class="slide" subproject="Metrics | Preview">
+			<h3>Metrics | Preview</h3>
 			<div class="half">
 				<a class="imagepop" rel="gallery" href="/img/work/landes/metrics_preview.png" title="Preview of article metrics"><img alt="Preview of article metrics" src="/img/work/landes/metrics_preview.png"></a>
 			</div>
@@ -420,9 +251,9 @@
 				<h4>Views & citations count</h4>
 				<p>Thumbnails toggle article metrics. Scroll right to learn more about metrics.</p>
 			</div>
-		</div></div>
-		<div class="slide" subproject="Metrics: Article Views"><div class="section_sub">
-			<h3>Metrics: Article Views</h3>
+		</div>
+		<div class="slide" subproject="Metrics | Article Views">
+			<h3>Metrics | Article Views</h3>
 			<div class="half">
 				<div class="third">
 					<a class="imagepop" rel="gallery" href="/img/work/landes/metrics_views.png" title="Article views"><img alt="Article views"	src="/img/work/landes/metrics_views.png"></a>
@@ -436,14 +267,14 @@
 			</div>
 			<div class="half">
 				<h4>Data</h4>
-				<p>View counts come from PubMed Central API & publisher stats</p>
+				<p>Data provided by PubMed Central API & publisher stats.</p>
 
 				<h4>Graphing</h4>
-				<p>Charting JavaScript via <a href="http://grafico.kilianvalkhof.com/" target="_BLANK">Grafico.js</a>. The data source (PMC, publisher, total) is selectable. The type of graph (stacked, line, donut) is also changeable.</p>
+				<p>Graphing is created with the JavaScript library <a href="http://grafico.kilianvalkhof.com/" target="_BLANK">Grafico.js</a>. The data source (PMC, publisher, total) and type of graph (stacked, line, donut) are both selectable. </p>
 			</div>
-		</div></div>
-		<div class="slide" subproject="Metrics: Citations"><div class="section_sub">
-			<h3>Metrics: Citations</h3>
+		</div>
+		<div class="slide" subproject="Metrics | Citations">
+			<h3>Metrics | Citations</h3>
 			<div class="half">
 				<a class="imagepop" rel="gallery" href="/img/work/landes/metrics_citations.png" title="Article citations"><img alt="Article citations"	src="/img/work/landes/metrics_citations.png"></a>
 			</div>
@@ -451,9 +282,9 @@
 				<h4>Article impact</h4>
 				<p>The cited by counts are provided by CrossRef and PubMed Central APIs. These counts may vary depending on the indexing service. Each count links to a list of all cited by articles.</p>
 			</div>
-		</div></div>
-		<div class="slide"><div class="section_sub">
-			<h3>Metrics: CrossRef Citations</h3>
+		</div>
+		<div class="slide">
+			<h3>Metrics | CrossRef Citations</h3>
 			<div class="half">
 				<a class="imagepop" rel="gallery" href="/img/work/landes/crossref.png" title="Article citations from CrossRef"><img alt="Article citations from CrossRef" src="/img/work/landes/crossref.png"></a>
 			</div>
@@ -461,29 +292,19 @@
 				<h4>Cited by list</h4>
 				<p>List of articles citing the Landes Bioscience article</p>
 			</div>
-		</div></div>
+		</div>
 	</div>
 	<div section="cart" tooltip="Shopping Cart" class="section">
 		<div class="section_header">Shopping Cart</div>
-		<div class="slide"><div class="section_sub">
-			<div class="half">
-				<a class="imagepop no_bg" rel="gallery" href="/img/work/landes/cart/imac_cart.png" title="Cart"><img alt="Cart" src="/img/work/landes/cart/imac_cart.png"></a>
-			</div>
-			<div class="half">
-				<ul class="project_list"></ul>
-			</div>
-		</div></div>
-		<div class="slide" subproject="Preview Purchase"><div class="section_sub">
+		<div class="slide">
+			<a class="imagepop no_bg" rel="gallery" href="/img/work/landes/cart/imac_cart.png" title="Cart"><img alt="Cart" src="/img/work/landes/cart/imac_cart.png"></a>
+			<ul class="project_list"></ul>
+		</div>
+		<!--<div class="slide" subproject="Preview Purchase">
 			<h3>Preview Purchase</h3>
-			<div class="half">
-				<a class="imagepop" rel="gallery" href="/img/work/landes/cart/article_preview.png" title="Article Preview"><img alt="Article Preview"	src="/img/work/landes/cart/article_preview.png"></a>
-			</div>
-			<div class="half">
-				<h4>Article PDF</h4>
-				<p>The user can preview the first page before purchasing.</p>
-			</div>
-		</div></div>
-		<div class="slide" subproject="Subscription Advertising"><div class="section_sub">
+			<a class="imagepop" rel="gallery" href="/img/work/landes/cart/article_preview.png" title="Article preview - First page of PDF"><img alt="Article preview - First page of PDF"	src="/img/work/landes/cart/article_preview.png"></a>
+		</div>-->
+		<div class="slide" subproject="Subscription Advertising">
 			<h3>Subscription Advertising</h3>
 			<div class="half">
 				<a class="imagepop" rel="gallery" href="/img/work/landes/cart/cart_ads.png" title="Subscription advertising"><img alt="Subscription advertising"	src="/img/work/landes/cart/cart_ads.png"></a>
@@ -492,31 +313,25 @@
 				<h4>Add subscription, remove articles</h4>
 				<p>When purchasing an article the journal's subscription prices are displayed. Clicking will add the journal subscription & remove all articles from the journal in the cart.</p>
 			</div>
-		</div></div>
+		</div>
 	</div>
 	<div section="checkout" tooltip="Checkout" class="section">
 		<div class="section_header">Checkout</div>
-		<div class="slide"><div class="section_sub">
-			<div class="section_sub">
-				<div class="half">
-					<a class="imagepop no_bg" rel="gallery" href="/img/work/landes/cart/imac_2.png" title="Checkout"><img alt="Checkout" src="/img/work/landes/cart/imac_2.png"></a>
-				</div>
-				<div class="half">
-					<ul class="project_list"></ul>
-				</div>
-			</div>
-		</div></div>
-		<div class="slide" subproject="Authorize.net"><div class="section_sub">
+		<div class="slide">
+			<a class="imagepop no_bg" rel="gallery" href="/img/work/landes/cart/imac_2.png" title="Checkout"><img alt="Checkout" src="/img/work/landes/cart/imac_2.png"></a>
+			<ul class="project_list"></ul>
+		</div>
+		<div class="slide" subproject="Authorize.net">
 			<h3>Authorize.net</h3>
 			<div class="half">
 				<a class="imagepop" rel="gallery" href="/img/work/landes/cart/1_saved.png" title="Checkout Step 1 Saved"><img alt="Checkout Step 1 Saved" src="/img/work/landes/cart/1_saved.png"></a>
 			</div>
 			<div class="half">
-				<h4>Payment Gateway</h4>
+				<h4>Payment gateway</h4>
 				<p>Transactions are processed via the Advanced Integration Method API.</p>
 			</div>
-		</div></div>
-		<div class="slide" subproject="One Page, Three Steps"><div class="section_sub">
+		</div>
+		<div class="slide" subproject="One Page, Three Steps">
 			<h3>One Page, Three Steps</h3>
 			<div class="half">
 				<a class="imagepop" rel="gallery" href="/img/work/landes/cart/steps.png" title="One Page, Three Steps"><img alt="One Page, Three Steps" src="/img/work/landes/cart/steps.png"></a>
@@ -525,8 +340,8 @@
 				<h4>Step Navigation</h4>
 				<p>Black = Complete<br>Green = Active<br>Gray = Incomplete</p>
 			</div>
-		</div></div>
-		<div class="slide" subproject="Step 1"><div class="section_sub">
+		</div>
+		<div class="slide" subproject="Step 1">
 			<h3>Step 1</h3>
 			<div class="half">
 				<a class="imagepop" rel="gallery" href="/img/work/landes/cart/1.png" title="Checkout Step 1"><img alt="Checkout Step 1"	src="/img/work/landes/cart/1.png"></a>
@@ -537,8 +352,8 @@
 				<h4>Form Validation</h4>
 				<p>Form validated before continuing to next step</p>
 			</div>
-		</div></div>
-		<div class="slide" subproject="Step 2"><div class="section_sub">
+		</div>
+		<div class="slide" subproject="Step 2">
 			<h3>Step 2</h3>
 			<div class="half">
 				<a class="imagepop" rel="gallery" href="/img/work/landes/cart/2.png" title="Checkout Step 2"><img alt="Checkout Step 2"	src="/img/work/landes/cart/2.png"></a>
@@ -547,8 +362,8 @@
 				<h4>Payment Information</h4>
 				<p>Credit card verified as valid before continuing to final step.</p>
 			</div>
-		</div></div>
-		<div class="slide" subproject="Step 3"><div class="section_sub">
+		</div>
+		<div class="slide" subproject="Step 3">
 			<h3>Step 3</h3>
 			<div class="half">
 				<a class="imagepop" rel="gallery" href="/img/work/landes/cart/3.png" title="Checkout Step 3"><img alt="Checkout Step 3"	src="/img/work/landes/cart/3.png"></a>
@@ -557,8 +372,8 @@
 				<h4>Review & Submit</h4>
 				<p>The final step in checkout.</p>
 			</div>
-		</div></div>
-		<div class="slide" subproject="Confirmation"><div class="section_sub">
+		</div>
+		<div class="slide" subproject="Confirmation">
 			<h3>Confirmation</h3>
 			<div class="half">
 				<div class="span_half">
@@ -572,19 +387,15 @@
 				<h4>Success!</h4>
 				<p>After successful payment, a confirmation email is sent & the user is taken to a page that links to all the items in his or her cart. </p>
 			</div>
-		</div></div>
+		</div>
 	</div>
 	<div section="invite" tooltip="Editor Invite" class="section">
 		<div class="section_header">Editor Invite</div>
-		<div class="slide"><div class="section_sub">
-			<div class="half">
+		<div class="slide">
 				<a class="imagepop no_bg" rel="gallery" href="/img/work/landes/imac_invite.png" title="Editor Invite"><img alt="Editor Invite"	src="/img/work/landes/imac_invite.png"></a>
-			</div>
-			<div class="half">
 				<ul class="project_list"></ul>
-			</div>
-		</div></div>
-		<div class="slide" subproject="CMS: Add Editor"><div class="section_sub">
+		</div>
+		<div class="slide" subproject="CMS: Add Editor">
 			<h3>CMS: Add Editor</h3>
 			<div class="half">
 				<a class="imagepop" rel="gallery" href="/img/work/landes/cms_add_editor.png" title="CMS: Create new editor"><img alt="CMS: Create new editor" src="/img/work/landes/cms_add_editor.png"></a>
@@ -593,8 +404,8 @@
 				<h4>Invitee record</h4>
 				<p>Editors create records of invitees to join a journal's editorial board. The saved information will be used to autofill the acceptance form.</p>
 			</div>
-		</div></div>
-		<div class="slide" subproject="CMS: Tracking"><div class="section_sub">
+		</div>
+		<div class="slide" subproject="CMS: Tracking">
 			<h3>CMS: Tracking</h3>
 			<div class="half">
 				<a class="imagepop" rel="gallery" href="/img/work/landes/cms_editor_invite_table.png" title="CMS: Invite tracking"><img alt="CMS: Editor tracking"	src="/img/work/landes/cms_editor_invite_table.png"></a>
@@ -603,8 +414,8 @@
 				<h4>Invites table</h4>
 				<p>The table is sortable & searchable. The rows are color coded based on status & expand to show the editor's information. The table is also downloadable as a CSV.</p>
 			</div>
-		</div></div>
-		<div class="slide" subproject="Invitee Acceptance Form"><div class="section_sub">
+		</div>
+		<div class="slide" subproject="Invitee Acceptance Form">
 			<h3>Acceptance Form</h3>
 			<div class="half">
 				<div class="span_half">
@@ -618,8 +429,8 @@
 				<h4>3 Versions</h4>
 				<p>Depending on editor type the form will vary. Each version of the form has different required fields.</p>
 			</div>
-		</div></div>
-		<!--<div class="slide" subproject="Acceptance Confirmation"><div class="section_sub">
+		</div>
+		<!--<div class="slide" subproject="Acceptance Confirmation">
 			<h3>Acceptance Confirmation</h3>
 			<div class="half">
 				<a class="imagepop" rel="gallery" href="/img/work/landes/editorform.png" title="Editor Invite CMS"><img alt="Editor Invite CMS"	src="/img/work/landes/editorform.png"></a>
@@ -628,29 +439,172 @@
 				<h4>Confirmation</h4>
 				<p>After completing the form without errors the editorial board member receives an email and confirmation in the browser.</p>
 			</div>
-		</div></div>-->
+		</div>-->
+	</div>
+	<div section="twitter" tooltip="Twitter API" class="section">
+		<div class="section_header">Twitter API</div>
+		<div class="slide">
+				<a class="imagepop no_bg" rel="gallery" href="/img/work/landes/iphone_tweet.png" title="Article tweet"><img alt="Article tweet"	src="/img/work/landes/iphone_tweet.png"></a>
+				<ul class="project_list"></ul>
+		</div>
+		<div class="slide" subproject="Via Admin Page">
+			<h3>Via Admin Page</h3>
+			<div class="half">
+				<a class="imagepop" rel="gallery" href="/img/work/landes/admin_tweet_sm.png" title="Article tweet from admin page"><img alt="Article tweet from admin page"	src="/img/work/landes/admin_tweet_sm.png"></a>
+			</div>
+			<div class="half">
+				<h4>Tweet from journal</h4>
+				<p>Admins skip logging into the journal Twitter account and tweet  via the journal admin page. After tweeting, a retweet option is displayed & tweet button color changed to green to indicate completed.</p>
+			</div>
+		</div>
+		<div class="slide" subproject="Twitter Card">
+			<h3>Twitter Card</h3>
+			<div class="half">
+				<a class="imagepop" rel="gallery" href="/img/work/landes/twitter_card.png" title="Twitter Card"><img alt="Twitter Card" src="/img/work/landes/twitter_card.png"></a>
+			</div>
+			<div class="half">
+				<h4>Meta Tags</h4>
+				<p>The tweet appears as a Twitter Card, which uses the article page's meta tags to display an image, preview of the abstract, & URL.</p>
+			</div>
+		</div>
+	</div>
+	<div section="journal_homepages" tooltip="Homepages" class="section">
+		<div class="section_header">Journal Homepages</div>
+		<div class="slide">
+				<a class="imagepop no_bg" rel="gallery" href="/img/work/landes/imac_psb.png" title="Journal Homepage"><img alt="Journal Homepage" src="/img/work/landes/imac_psb.png"></a>
+				<ul class="project_list"></ul>
+				<div class="collaborative">* indicates collaborative project</div>
+		</div>
+		<div class="slide" subproject="CMS: Current Issue*">
+			<h3>CMS: Current Issue</h3>
+			<div class="half">
+				<a class="imagepop" rel="gallery" href="/img/work/landes/cms_current_issue.png" title="CMS: Current Issue"><img alt="CMS: Current Issue"	src="/img/work/landes/cms_current_issue.png"></a>
+			</div>
+			<div class="half">
+				<h4>WYSIWYG</h4>
+				<p>Cover caption input with option to display entire caption or preview of caption.</p>
+
+				<h4>Preview</h4>
+				<p>The cover image and caption are previewable before publishing.</p>
+			</div>
+		</div>
+		<div class="slide" subproject="Current Issue Sharing">
+			<h3>Current Issue Sharing</h3>
+			<div class="half">
+				<a class="imagepop" rel="gallery" href="/img/work/landes/jhome_current.png" title="Current Issue Sharing"><img alt="Current Issue Sharing"	src="/img/work/landes/jhome_current.png"></a>
+			</div>
+			<div class="half">
+				<h4 style="border:0px;">Facebook, Twitter, LinkedIn, Email</h4>
+			</div>
+		</div>
+		<div class="slide" subproject="Paper Type Search*">
+			<h3>Paper Type Search</h3>
+			<div class="half">
+				<a class="imagepop" rel="gallery" href="/img/work/landes/explore.png" title="Online Only Journals"><img alt="Recent Article Thumbnails" src="/img/work/landes/explore.png"></a>
+			</div>
+			<div class="half">
+				<h4>Solr</h4>
+				<p>Integration of Solr queries & results.</p>
+				<h4>HTML5 Local Storage</h4>
+				<p>The paper type is stored in the browser’s local storage. Results are queried using this variable.</p>
+			</div>
+		</div>
+		<div class="slide" subproject="Recent Articles*">
+			<h3>Recent Articles</h3>
+			<div class="half">
+				<a class="imagepop" rel="gallery" href="/img/work/landes/recent_no_img.png" title="Recent Article Thumbnails"><img alt="Recent Article Thumbnails" src="/img/work/landes/recent_no_img.png"></a>
+			</div>
+			<div class="half">
+				<h4>6 Most Recent</h4>
+				<p>Once epublished the article is listed on the homepage. The editor has the option to display an image preview within the thumbnails.</p>
+			</div>
+		</div>
+		<div class="slide" subproject="Featured Special Focus">
+			<h3>Featured Special Focus</h3>
+			<div class="half">
+				<a class="imagepop" rel="gallery" href="/img/work/landes/home_sf.png" title="Featured Special Focus"><img alt="Featured Special Focus" src="/img/work/landes/home_sf.png"></a>
+			</div>
+			<div class="half">
+				<h4>Shared Topic</h4>
+				<p>Featured group of articles with a similar focus.</p>
+			   	<p>Scroll down to learn more about the CMS.</p>
+			</div>
+		</div>
+	</div>
+	<div section="special_focus" tooltip="Special Focus" class="section">
+		<div class="section_header">Special Focus</div>
+		<div class="slide">
+				<a class="imagepop no_bg" rel="gallery" href="/img/work/landes/imac_sf.png" title="Special Focus Features on Homepage"><img alt="Special Focus on Homepage" src="/img/work/landes/imac_sf.png"></a>
+				<ul class="project_list"></ul>
+		</div>
+		<div class="slide" subproject="CMS: Article Group">
+			<h3>CMS: Article Group</h3>
+			<div class="half">
+				<a class="imagepop" rel="gallery" href="/img/work/landes/mongo_sf_group.png" title="CMS to manage article group"><img alt="CMS to manage article group" src="/img/work/landes/mongo_sf_group.png"></a>
+			</div>
+			<div class="half">
+				<h4>Display Options</h4>
+				<p>Editors can feature the group on homepage with an option to include figures in article thumbnails. The group can also be marked as current & will be listed first on the special focus list page. Subgroups are also listed and can be edited. </p>
+			</div>
+		</div>
+		<div class="slide" subproject="CMS: Create Subgroup">
+			<h3>CMS: Create Subgroup</h3>
+			<div class="half">
+				<a class="imagepop" rel="gallery" href="/img/work/landes/sf_subgroup_new.png" title="CMS to create subgroups"><img alt="CMS to create subgroups" src="/img/work/landes/sf_subgroup_new.png"></a>
+			</div>
+			<div class="half">
+				<h4>Organize Group</h4>
+				<p>The editor can create a subgroup via a WYSIWYG text editor & then assign articles within the special focus to this subgroup.</p>
+			</div>
+		</div>
+		<div class="slide" subproject="CMS: Subgroup Order">
+			<h3>CMS: Subgroup Order</h3>
+			<div class="half">
+				<a class="imagepop" rel="gallery" href="/img/work/landes/sf_subgoup_order.png" title="CMS to sort subgroups"><img alt="CMS to sort subgroups" src="/img/work/landes/sf_subgoup_order.png"></a>
+			</div>
+			<div class="half">
+				<h4>Drag & Drop</h4>
+				<p>Select the order in which subgroups are organized within the special focus.</p>
+			</div>
+		</div>
+		<div class="slide" subproject="Special Focus Page">
+			<h3>Special Focus Page</h3>
+			<div class="half">
+				<a class="imagepop" rel="gallery" href="/img/work/landes/sf_articles_smallgtpases.png" title="Special Focus Page"><img alt="Special Focus Page" src="/img/work/landes/sf_articles_smallgtpases.png"></a>
+			</div>
+			<div class="half">
+				<h4>Sorted Articles</h4>
+				<p>Articles are sorted based on editor selections. The page includes a group note & article abstract accordion.  Each subgroup is an anchor that smoothly scrolls down the page.</p>
+			</div>
+		</div>
+		<div class="slide" subproject="Special Focuses">
+			<h3>Special Focuses</h3>
+			<div class="half">
+				<a class="imagepop" rel="gallery" href="/img/work/landes/sf_list_hv.png" title="Special Focus List"><img alt="Special Focus List" src="/img/work/landes/sf_list_hv.png"></a>
+			</div>
+			<div class="half">
+				<h4>All Special Focuses</h4>
+				<p>List of all special focuses by the journal, with the current listed first.</p>
+			</div>
+		</div>
 	</div>
 	<div section="search" tooltip="Search" class="section">
 		<div class="section_header">Article Search</div>
-		<div class="slide"><div class="section_sub">
-			<div class="half">
+		<div class="slide">
 				<a class="imagepop no_bg" rel="gallery" href="/img/work/landes/imac_search.png" title="Article Search"><img alt="Article Search"	src="/img/work/landes/imac_search.png"></a>
-			</div>
-			<div class="half">
 				<ul class="project_list"></ul>
-			</div>
-		</div></div>
-		<div class="slide" subproject="Solr"><div class="section_sub">
+		</div>
+		<div class="slide" subproject="Solr">
 			<h3>Solr</h3>
 			<div class="half">
-				<a class="imagepop no_bg" rel="gallery" href="/img/work/landes/solr.png" title="Apache Solr"><img alt="Apache Solr" src="/img/work/landes/solr.png"></a>
+				<a class="imagepop no_bg" rel="gallery" href="/img/logos/solr.png" title="Apache Solr"><img alt="Apache Solr" src="/img/logos/solr.png"></a>
 			</div>
 			<div class="half">
 				<h4>HTTP GET</h4>
 				<p>Queried Solr search server & displayed results for searching articles within a journal.</p>
 			</div>
-		</div></div>
-		<div class="slide" subproject="Search Inputs"><div class="section_sub">
+		</div>
+		<div class="slide" subproject="Search Inputs">
 			<h3>Search Inputs</h3>
 			<div class="half">
 				<a class="imagepop" rel="gallery" href="/img/work/landes/search_left.png" title="Search Options"><img alt="Search Options" src="/img/work/landes/search_left.png"></a>
@@ -661,65 +615,43 @@
 				<h4>Paper Type</h4>
 				<p>Each filter includes the number of matching paper types within the current results.</p>
 			</div>
-		</div></div>
-	</div>
-	<div section="twitter" tooltip="Twitter API" class="section">
-		<div class="section_header">Twitter API</div>
-		<div class="slide"><div class="section_sub">
-			<div class="half">
-				<a class="imagepop no_bg" rel="gallery" href="/img/work/landes/iphone_tweet.png" title="Article tweet"><img alt="Article tweet"	src="/img/work/landes/iphone_tweet.png"></a>
-			</div>
-			<div class="half">
-				<ul class="project_list"></ul>
-			</div>
-		</div></div>
-		<div class="slide" subproject="Via Admin Page"><div class="section_sub">
-			<h3>Via Admin Page</h3>
-			<div class="half">
-				<a class="imagepop" rel="gallery" href="/img/work/landes/admin_tweet_sm.png" title="Article tweet from admin page"><img alt="Article tweet from admin page"	src="/img/work/landes/admin_tweet_sm.png"></a>
-			</div>
-			<div class="half">
-				<h4>Tweet from journal</h4>
-				<p><span class="span_half">
-					<a class="imagepop" rel="gallery" href="/img/work/landes/tweeted.png" title="Article tweeted"><img alt="Article tweeted"	src="/img/work/landes/tweeted.png"></a></span>Admins skip logging into the journal Twitter account and tweet  via the journal admin page. After tweeting, a retweet option is displayed & tweet button color changed to green to indicate completed.</p>
-			</div>
-		</div></div>
-		<div class="slide" subproject="Twitter Card"><div class="section_sub">
-			<h3>Twitter Card</h3>
-			<div class="half">
-				<a class="imagepop" rel="gallery" href="/img/work/landes/twitter_card.png" title="Twitter Card"><img alt="Twitter Card" src="/img/work/landes/twitter_card.png"></a>
-			</div>
-			<div class="half">
-				<h4>Meta Tags</h4>
-				<p>The tweet appears as a Twitter Card, which uses the article page's meta tags to display an image, preview of the abstract, & URL.</p>
-			</div>
-		</div></div>
+		</div>
 	</div>
 	<div section="xml" tooltip="XML" class="section">
 		<div class="section_header">XML Indexing</div>
-		<div class="section_sub">
-			<h3>XML Submission to Indexers</h3>
-			<div class="half">
-				<a class="imagepop" rel="gallery" href="/img/work/landes/xml.png" title="Article XML"><img alt="Article XML"	src="/img/work/landes/xml.png"></a>
-			</div>
-			<div class="half">
+		<h3>XML Submission to Indexers</h3>
+		<div class="half">
+			<a class="imagepop" rel="gallery" href="/img/work/landes/xml.png" title="Article XML"><img alt="Article XML"	src="/img/work/landes/xml.png"></a>
+		</div>
+		<div class="half">
 				<h4>XML compliance</h4>
-				<p>Maintain compliance of XML with the Journal Article Tag Suite<a href="http://jats.nlm.nih.gov/" target="_BLANK">JATS</a></p>
+				<p>Maintain compliance of XML with the Journal Article Tag Suite <a href="http://jats.nlm.nih.gov/" target="_BLANK">JATS</a></p>
 				<h4>Submission</h4>
 				<p>Adjust script for zipping of article XML, figures, and supplemental material to article indexers.</p>
-			</div>
 		</div>
 	</div>
 	<div section="more" tooltip="More" class="section">
-		<div class="section_sub">
 			<div class="half">
-				<a class="link_internal thumbnail" href="{{pathFor 'bpb'}}">
-					<h4>The Bipolar Bears</h4>
+				<a class="link_internal solid-link thumbnail" href="{{pathFor 'bpb'}}">
 					<img alt="The Bipolar Bears Homepage" src="/img/work/bpb/icon_home.png">
-					<p>See more of my work</p>
+					The Bipolar Bears
 				</a>
 			</div>
 			{{>footer}}
-		</div>
+	</div>
+</template>
+
+<template name="selectedWork">
+	<div class="span_half">
+		<a href="{{pathFor 'landes'}}" class="link_internal solid-link thumbnail float_r">
+			<img alt="Publisher Homepage" src="/img/work/landes/icon_journal_home_mac.png">
+			Landes Bioscience
+		</a>
+	</div>
+	<div class="span_half">
+		<a href="{{pathFor 'bpb'}}" class="link_internal solid-link thumbnail">
+			<img alt="The Bipolar Bears Homepage" src="/img/work/bpb/icon_home.png">
+			The Bipolar Bears
+		</a>
 	</div>
 </template>
