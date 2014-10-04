@@ -1,3 +1,9 @@
+
+<!--[if IE]><![endif]-->
+<!--[if lt IE 7 ]> <html lang="en" class="ie6">    <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="ie7">    <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="ie8">    <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="ie9">    <![endif]-->
 <head>
 	<title>JLawshe</title>
 
@@ -6,21 +12,32 @@
 	<link rel="apple-touch-icon" href="/img/apple_icon.png" />
 	<link rel="apple-touch-startup-image" href="/img/loading.gif">
 
-
 	<meta name="author" content="Jessica Lawshe" />
 	<meta name="copyright" content="Jessica Lawshe" />
 	<meta name="fragment" content="!">
 	<meta name="apple-mobile-web-app-capable" content="yes">
 	<meta name="mobile-web-app-capable" content="yes">
 	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-
 	<meta name="viewport" content="width=device-width,maximum-scale=1,initial-scale=1,maximum-scale=1, user-scalable=0,minimal-ui">
+
+	<!--Twitter-->
+	<meta name="twitter:card" content="gallery" />
+	<meta name="twitter:site" content="@lawsheee" />
+	<meta name="twitter:creator" content="@lawsheee" />
+	<meta name="twitter:title" content="Jessica Lawshe">
+	<meta name="twitter:description" content="Portfolio of a designer & developer.">
+	<meta name="twitter:url" content="http://www.jlawshe.com" />
+	<meta name="twitter:image0" content="http://jlawshe.com/img/work/landes/cart/1.png">
+	<meta name="twitter:image1" content="http://jlawshe.com/img/work/bpb/home.png">
+	<meta name="twitter:image2" content="http://jlawshe.com/img/work/bpb/cms_login.png">
+	<meta name="twitter:image3" content="http://jlawshe.com/img/work/landes/iphone_tweet.png">
 </head>
 
 <template name="layout">
 	<div class="container">
 		{{>menu}}
 		{{>loading}}
+		<div class="header"></div>
 		{{>fullpage}}
 	</div>
 </template>
@@ -41,9 +58,9 @@
 <template name="menu">
 	<div class="menu_wrap">
 		<div id="main_menu">
-			<a class="menu_item {{ isActiveRoute 'home'}}" href="{{pathFor 'home'}}">JL</a>
-			<a class="menu_item {{ isActiveRoute 'about'}}" href="{{pathFor 'about'}}">About</a>
-			<a class="menu_item {{ isActiveRoute 'work|landes|bpb'}}" id="menu_item_work" href="{{pathFor 'work'}}">Work</a>
+			<a class="solid-link menu-item {{ isActiveRoute 'home'}}" href="{{pathFor 'home'}}">JL</a>
+			<a class="solid-link menu-item {{ isActiveRoute 'about'}}" href="{{pathFor 'about'}}">About</a>
+			<a class="solid-link menu-item {{ isActiveRoute 'work|landes|bpb'}}" id="menu-item-work" href="{{pathFor 'work'}}">Work</a>
 		</div>
 	</div>
 	<a class="mobile_menu_toggle" href=""><i class="fa fa-list"></i></a>
@@ -51,18 +68,18 @@
 
 <template name="footer">
 	<div class="footer">
-		<a class="thumbnail" href="/img/jessica_lawshe_resume.pdf" target="_BLANK"><p>
+		<a class="solid-link thumbnail" href="/jessica_lawshe.pdf" target="_BLANK">
 			<i class="fa fa-file-o"></i> Resume
-		</p></a>
-		<a class="thumbnail" itemprop="url" href="https://www.linkedin.com/in/lawshe" target="_BLANK"><p>
+		</a>
+		<a class="solid-link thumbnail" itemprop="url" href="https://www.linkedin.com/in/lawshe" target="_BLANK">
 			<i class="fa fa-linkedin-square"></i> LinkedIn
-		</p></a>
-		<a class="email thumbnail">
+		</a>
+		<a class="email solid-link thumbnail">
 			moc [ dot ] liamg [ at ] ehswalej
 		</a>
-		<a class="thumbnail" itemprop="url" href="https://github.com/lawshe" target="_BLANK"><p>
+		<a class="solid-link thumbnail" itemprop="url" href="https://github.com/lawshe" target="_BLANK">
 			<i class="fa fa-github"></i> GitHub
-		</p></a>
+		</a>
 	</div>
 </template>
 
@@ -72,254 +89,33 @@
 		<div section="home" class="section" tooltip="Home">
 			<h1 class="myname">Jessica Lawshe</h1>
 			<a class="imagepop" rel="gallery" href="/img/jessica.jpg" data-title="Jessica"><img src="/img/jessica.jpg"></a>
-		</div>
-		<div section="science" class="section" tooltip="Science">
-			<div class="section_header">Once ...</div>
-			<h4 class="centered">I was a scientist</h4>
-			<a class="imagepop" rel="gallery" href="/img/lab.JPG" title="Jessica in the lab">
-				<img src="/img/lab.JPG" alt="lab">
-			</a>
-		</div>
-		<div section="developer" class="section" tooltip="Developer">
-			<div class="section_header">Now ...</div>
-			<h4 class="centered">I'm a developer!</h4>
-			<a class="imagepop" rel="gallery" href="/img/jessica.png" title="Jessica at the computer">
-				<img src="/img/jessica.png" alt="Jessica at the computer">
-			</a>
+			<h3>Designer & Developer</h3>
 		</div>
 		<div class="section">
-			<div class="section_sub">
-				<div class="third">
-					<a href="{{pathFor 'landes'}}" class="link_internal thumbnail">
-						<p>Landes Bioscience</p>
-						<img alt="Publisher Homepage" src="/img/work/landes/icon_journal_home_mac.png">
-					</a>
-				</div>
-				<div class="third">
-					<a href="{{pathFor 'bpb'}}" class="link_internal thumbnail">
-						<p>The Bipolar Bears</p>
-						<img alt="The Bipolar Bears Homepage" src="/img/work/bpb/icon_home.png">
-					</a>
-				</div>
-				{{>footer}}
+			<div class="half">
+				{{>selectedWork}}
 			</div>
-		</div>
-	</div>
-</template>
-<template name="about">
-	<div class="about">
-		<div section="about" class="section" tooltip="Jessica">
-			<div class="section_sub">
-				<h1 itemprop="name">Jessica Lawshe</h1>
-				<h2 itemprop="role">Web Designer & Developer</h2>
-				<div class="half">
-					<a class="imagepop" rel="gallery" href="/img/me.png" title="Hiking the Rio Grande">
-						<img id="first_image" alt="Hiking the Rio Grande" src="/img/me.png">
-					</a>
-				</div>
-				<div class="half">
-					<span class="always_hide" itemprop="organization">Landes Bioscience</span>
-					<p>I went from research scientist to full stack developer. I'm self motivated with a passion for learning new web technologies. I enjoy buidling sites from the front end & back end and enhancing the user experience.</p>
-				</div>
-			</div>
-		</div>
-		<div section="education" class="section" tooltip="Education">
-			<div class="section_header">Education</div>
-			<div class="section_sub">
-				<div class="half">
-					<h3>Biochemistry B.S. Honors</h3>
-				</div>
-				<div class="half">
-					<h4 class="institution" itemprop="alumni">The University of Texas</h4>
-					<p>
-						2010<br>
-						Publication in the <a href="http://www.jbc.org/content/285/30/22840.long" target="_BLANK">Journal of Biological Chemistry</a>
-					</p>
-				</div>
-				<hr>
-				<div class="half">
-					<h3>Spanish B.A.</h3>
-				</div>
-				<div class="half">
-					<h4 class="institution" itemprop="alumni">The University of Texas</h4>
-					<p>
-						2010<br>
-						Study abroad in Córdoba, Argentina
-					</p>
-				</div>
-			</div>
-		</div>
-		<div section="employment" class="section" tooltip="Employment">
-			<div class="section_header">Employment</div>
-			<div class="slide"><div class="section_sub">
-				<div class="half"><h3>Designer & Developer</h3></div>
-				<div class="half">
-					<h4 class="institution" itemprop="name">Landes Bioscience</h4>
-					<p>2012 &mdash; present</p>
-				</div>
-				<hr>
-				<div class="half"><h3>Lab Manager & Research Scientist</h3></div>
-				<div class="half">
-					<h4 class="institution" itemprop="name">The University of Texas</h4>
-					<p>Institute for Cellular and Molecular Biology
-						<br>2011 &mdash; 2013</p>
-				</div>
-			</div></div>
-			<div class="slide"><div class="section_sub">
-				<div class="half"><h3>Chemistry Specialist</h3></div>
-				<div class="half">
-					<h4 class="institution" itemprop="name">The University of Texas</h4>
-					<p>Introductory Chemistry Lab
-						<br>2011</p>
-				</div>
-				<hr>
-				<div class="half"><h3>Research Assistant</h3></div>
-				<div class="half">
-					<h4 class="institution" itemprop="name">The University of Texas</h4>
-					<p>Waggoner Center for Alcohol and Addiction Research
-						<br>2009 &mdash; 2010</p>
-				</div>
-			</div></div>
-			<div class="slide"><div class="section_sub">
-				<div class="half"><h3>Teaching Assistant</h3></div>
-				<div class="half">
-					<h4 class="institution" itemprop="name">The University of Texas</h4>
-					<p>Introductory Chemistry
-						<br>2009 &mdash; 2010</p>
-				</div>
-				<hr>
-				<div class="half"><h3>Research Assistant</h3></div>
-				<div class="half">
-					<h4 class="institution" itemprop="name">The University of Texas</h4>
-					<p>Department of Chemistry and Biochemistry
-						<br>2006 &mdash; 2008</p>
-				</div>
-			</div></div>
-		</div>
-		<div section="web" class="section" tooltip="Web Skills">
-			<div class="section_header">Web Skills</div>
-			<div class="slide"><div class="section_sub">
-				<div class="third skills">
-					<h4 class="skilllevel">Advanced</h4>
-					<div class="skillbar skill_a" data-percent="100%">
-						<div class="skillbar-title"><span itemprop="itemListElement">HTML</span></div>
-						<div class="skillbar-bar"></div>
-					</div>
-					<div class="skillbar skill_a" data-percent="100%">
-						<div class="skillbar-title"><span itemprop="itemListElement">CSS, Less</span></div>
-						<div class="skillbar-bar"></div>
-					</div>
-					<div class="skillbar skill_a" data-percent="100%">
-						<div class="skillbar-title"><span itemprop="itemListElement">JavaScript</span></div>
-						<div class="skillbar-bar"></div>
-					</div>
-					<div class="skillbar skill_a" data-percent="100%">
-						<div class="skillbar-title"><span itemprop="itemListElement">XML</span></div>
-						<div class="skillbar-bar"></div>
-					</div>
-				</div>
-				<div class="third skills">
-					<h4 class="skilllevel">Proficient</h4>
-					<div class="skillbar skill_b" data-percent="90%">
-						<div class="skillbar-title"><span itemprop="itemListElement">PHP</span></div>
-						<div class="skillbar-bar"></div>
-					</div>
-					<div class="skillbar skill_b" data-percent="90%">
-						<div class="skillbar-title"><span itemprop="itemListElement">MySQL</span></div>
-						<div class="skillbar-bar"></div>
-					</div>
-					<div class="skillbar skill_b" data-percent="90%">
-						<div class="skillbar-title"><span itemprop="itemListElement">MongoDB</span></div>
-						<div class="skillbar-bar"></div>
-					</div>
-					<div class="skillbar skill_b" data-percent="90%">
-						<div class="skillbar-title"><span itemprop="itemListElement">MeteorJS</span></div>
-						<div class="skillbar-bar"></div>
-					</div>
-					<div class="skillbar skill_b" data-percent="90%">
-						<div class="skillbar-title"><span itemprop="itemListElement">Photoshop</span></div>
-						<div class="skillbar-bar"></div>
-					</div>
-				</div>
-				<div class="third skills">
-					<h4 class="skilllevel">Learning</h4>
-					<div class="skillbar skill_c" data-percent="45%">
-						<div class="skillbar-title"><span itemprop="itemListElement">NodeJS</span></div>
-						<div class="skillbar-bar"></div>
-					</div>
-					<div class="skillbar skill_c" data-percent="30%">
-						<div class="skillbar-title"><span itemprop="itemListElement">Ruby</span></div>
-						<div class="skillbar-bar"></div>
-					</div>
-				</div>
-			</div></div>
-			<div class="slide"><div class="section_sub">
-				<div class="span_half"><h3>API</h3></div>
-				<div class="span_half">
-					<a href="https://developers.facebook.com/" target="_BLANK"><img src="img/logos/facebook.png" class="logo" alt="Facebook API"></a>
-					<a href="http://www.authorize.net/" target="_BLANK"><img src="img/logos/authorize.png" class="logo" alt="Authorize.net API"></a>
-					<a href="https://dev.twitter.com/" target="_BLANK"><img src="img/logos/twitter.png" class="logo" alt="Twitter API"></a>
-					<a href="http://www.ncbi.nlm.nih.gov/pmc/" target="_BLANK"><img src="img/logos/pubmed.png" class="logo" alt="PubMed API"></a>
-					<a href="http://search.crossref.org/help/api" target="_BLANK"><img src="img/logos/crossref.png" class="logo" alt="CrossRef API"></a>
-				</div>
-			</div></div>
-			<div class="slide"><div class="section_sub">
-				<div class="span_half"><h3>Experience</h3></div>
-				<div class="span_half">
-					<a href="https://github.com/" target="_BLANK"><img src="img/logos/github.png" class="logo" alt="GitHub"></a>
-					<a href="http://aws.amazon.com/" target="_BLANK"><img src="img/logos/aws.png" class="logo" alt="AWS"></a>
-					<a href="https://www.meteor.com/" target="_BLANK"><img src="img/logos/meteor.png" class="logo" alt="Meteor.js"></a>
-					<a href="http://mailchimp.com/" target="_BLANK"><img src="img/logos/mailchimp.png" class="logo" alt="MailChimp"></a>
-				</div>
-			</div></div>
-			<div class="slide"><div class="section_sub">
-				<div class="half">
-					<h3>Libraries & Templating</h3>
-				</div>
-				<div class="half">
-					<ul class="list">
-						<li><a href="http://jquery.com/" target="_BLANK">jQuery</a></li>
-						<li><a href="http://grafico.kilianvalkhof.com/" target="_BLANK">Grafico.js</a></li>
-						<li><a href="http://akdubya.github.io/dustjs/" target="_BLANK">Dust.js</a></li>
-						<li><a href="http://getbootstrap.com/" target="_BLANK">Twitter Bootstrap</a></li>
-					</ul>
-				</div>
-			</div></div>
-			<div class="slide"><div class="section_sub">
-				<div class="half">
-					<h3>UX & UI Design</h3>
-				</div>
-				<div class="half">
-					<h4>The process</h4>
-					<p>My approach is to begin with the user goals. Then I create sitemaps with the paths of least resistance to obtain those goals. Mockups are created by hand, Photoshop & in the browser. I'll often switch between these methods throughout design & development in order to ensure a clean & accessible application. I also use several tools to test platform compatibility.</p>
-				</div>
-			</div></div>
-		</div>
-		<div section="contact" class="section" tooltip="Contact">
-			<span class="always_hide" itemprop="name">Jessica Lawshe</span>
 			{{>footer}}
 		</div>
 	</div>
 </template>
 <template name="notfound">
 	<div class="section">
-		<div class="section_sub">
 			<h3>404!</h3>
 			<h2>Page Not found</h2>
 			<h3><i class="fa fa-binoculars"></i></h3>
 			<div class="third">
-				<a href="{{pathFor 'landes'}}" class="link_internal thumbnail">
+				<a href="{{pathFor 'landes'}}" class="solid-link thumbnail">
 					<p>Landes Bioscience</p>
 					<img alt="Publisher Homepage" src="/img/work/landes/icon_journal_home_mac.png">
 				</a>
 			</div>
 			<div class="third">
-				<a href="{{pathFor 'bpb'}}" class="link_internal thumbnail">
+				<a href="{{pathFor 'bpb'}}" class="solid-link thumbnail">
 					<p>The Bipolar Bears</p>
 					<img alt="The Bipolar Bears Homepage" src="/img/work/bpb/icon_home.png">
 				</a>
 			</div>
 			{{>footer}}
 		</div>
-	</div>
 </template>
