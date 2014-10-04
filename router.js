@@ -1,10 +1,11 @@
 
-
 Router.configure({
 	layoutTemplate: 'layout',
 	loadingTemplate: 'loading',
 	trackPageView: true
 });
+
+Router.onBeforeAction("loading");
 
 Router.map(function() {
 	this.route('home', {
@@ -16,7 +17,8 @@ Router.map(function() {
 		  SEO.set({
 			title: "Jessica Lawshe",
 			meta: {
-			  "description": "Jessica Lawshe is a full stack developer based in Austin, Texas"
+			  "description": "Jessica Lawshe is a full stack developer based in Austin, Texas",
+			  "keywords": "Jessica Lawshe, Lawshe, designer, developer, Austin, Texas, MongoDB, Meteor"
 			}
 		  });
 		}
@@ -28,9 +30,10 @@ Router.map(function() {
 			return;
 		  }
 		  SEO.set({
-			title: "JL | About",
+			title: "About | JL",
 			meta: {
-			  "description": "About Jessica Lawshe, a full stack developer based in Austin, Texas."
+			  "description": "About Jessica Lawshe, a full stack developer based in Austin, Texas.",
+			  "keywords": "Jessica Lawshe, Lawshe, designer, developer, Austin, Texas, MongoDB, Meteor, PHP, jQuery, HTML, CSS"
 			}
 		  });
 		}
@@ -47,7 +50,7 @@ Router.map(function() {
 			return;
 		  }
 		  SEO.set({
-			title: "JL | Work",
+			title: "Work | JL",
 			meta: {
 			  "description": "Selected work by Jessica Lawshe"
 			}
@@ -66,7 +69,7 @@ Router.map(function() {
 			return;
 		  }
 		  SEO.set({
-			title: "JL | Work - The Bipolar Bears",
+			title: "Work: The Bipolar Bears | JL",
 			meta: {
 			  "description": "The Bipolar Bears website, created by Jessica Lawshe"
 			}
@@ -85,7 +88,7 @@ Router.map(function() {
 			return;
 		  }
 		  SEO.set({
-			title: "JL | Work - Landes Bioscience",
+			title: "Work: Landes Bioscience | JL",
 			meta: {
 			  "description": "Landes Bioscience website, development projects by Jessica Lawshe"
 			}
