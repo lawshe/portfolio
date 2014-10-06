@@ -1,17 +1,17 @@
 /* ---- VARIABLE ----- */
 	@fadeSpeed: all 2s ease;
-	/* --colors-- */
+	@maxWidth: 620px;
+	/*--colors--*/
 		@blue: #19538A;
 		@blue1: #527FAA;
 		@blue2: #19538A;
 		@blue3: #0E3E6C;
 
-		@white: #f2f2f2;
-		@white-dark: #A1A1A1;
 
-		@gray-light:#BFBFBF;
+		@gray-light: #f2f2f2;
+		@gray:#BFBFBF;
 		/*@gray:gainsboro;*/
-		@gray: #f2f2f2;
+		@gray-med: #A1A1A1;
 		@gray-dark:#747373;
 
 		@black1:#34495e;
@@ -23,12 +23,12 @@
 		@link-color-active:@blue;
 
 		/*--link text--*/
-		@link-text-color:@gray-light;
+		@link-text-color:@gray;
 		@link-text-color-hover:@link-color;
-		@link-text-color-visited:@white-dark;
-		@link-text-color-active:@white-dark;
+		@link-text-color-visited:@gray-med;
+		@link-text-color-active:@gray-med;
 	/*--size--*/
-		@font-xl:	3.5rem;
+		@font-xl:	3.0rem;
 		@font-l:	2.5rem;
 		@font-m:	1.8rem;
 		@font-s: 	1.5rem;
@@ -55,6 +55,9 @@
 		width: 50%;
 		display: inline-block;
 		float: left;
+		h3{
+			text-align: right!important;
+		}
 	}
 	.container{
 		display: none;
@@ -90,16 +93,8 @@
 			font-family: "JosefinSans-Bold", Futura, Helvetica, Arial, sans-serif;
 		}
 	/*--headers & paragraph--*/
-		h1, h2 , h5, p {
+		h1,h2,h3,h4,p {
 			text-align: left;
-		}
-		h4,p {
-			text-align: left;
-			max-width: 600px;
-			/*fix this! xl screen*/
-		}
-
-		h1, h2, h3, h4, h5, p {
 			margin: 10px;
 		}
 
@@ -108,7 +103,8 @@
 			text-align: center;
 			font-size: @font-xl;
 			line-height: @font-xl;
-			color: @white;
+			color: @gray-light;
+			margin: 10px auto;
 		}
 		h2 {
 			font-size: @font-l;
@@ -126,7 +122,7 @@
 			color: @black1;
 			font-size: @font-s;
 			line-height: @font-s;
-			border-bottom: 1px solid @gray-light;
+			border-bottom: 1px solid @gray;
 			text-align: left;
 		}
 		p{
@@ -176,7 +172,7 @@
 	}
 	.section{
 		transition: @fadeSpeed;
-		background-color: @gray;
+		background-color: @gray-light;
 		border-left: 5px solid @blue;
 		/*--links--*/
 			a{
@@ -184,7 +180,7 @@
 				text-decoration: none;
 			}
 			a:hover {
-				color: @gray-light;
+				color: @gray;
 			}
 			a:visited {
 				color: @link-color;
@@ -192,6 +188,7 @@
 	}
 	.fp-tableCell{
 		text-align: center;
+		padding: 0px 30px;
 	}
 	/*--fp-nav--*/
 		#fp-nav{
@@ -302,27 +299,28 @@
 			.half{
 				float: left;
 			}
-			h1{
-			}
-			h2{
-				color:@white-dark;
+			h1,h2,h3,h4,p {
+				max-width: @maxWidth;
+				margin: 10px auto;
 				text-align: center;
 			}
+			h2{
+				color:@gray-med;
+			}
 			h3{
-				color:@white-dark;
+				color:@gray-med;
 				margin-top: 0px;
 				margin-left: 0px;
 			}
 			h4{
-				color:@white-dark;
+				color:@gray-med;
 			}
 			p{
-				color:@gray-light;
+				color:@gray;
 				.josefinsans-bold();
 			}
 			.imagepop{
 				border: 2px solid @blue;
-				float: right!important;
 				margin-left: 0px;
 			}
 			.imagepop:hover{
@@ -333,17 +331,17 @@
 		.section:last-child{
 			background-color: @blue;
 			h2{
-				color:@white;
+				color:@gray-light;
 			}
 			h3{
-				color:@white-dark;
+				color:@gray-med;
 			}
 			h4{
-				color:@white;
+				color:@gray-light;
 				border:0px;
 			}
 			p{
-				color:@white;
+				color:@gray-light;
 				text-align: center;
 			}
 			.imagepop{
@@ -361,7 +359,7 @@
 			text-align: center;
 			overflow: hidden;
 			transition: all 0.5s ease;
-			.josefinsans-bold();
+        	font-family: FontAwesome;
 		}
 		.fp-controlArrow:after{
 			height: 100%;
@@ -378,7 +376,7 @@
 				right: 0px;
 			}
 			.fp-next:after{
-				content: ">>";
+				content: "\f061";
 			}
 		/*prev*/
 			.fp-controlArrow.fp-prev{
@@ -386,7 +384,7 @@
 				left: 0px;
 			}
 			.fp-prev:after{
-				content: "<<";
+				content: "\f060";
 			}
 /* ----- GENERAL ----- */
 	html, body {
@@ -404,7 +402,7 @@
 		background: @blue;
 		padding: 10px 0px;
 		font-family: "otama.epregular", Times New Roman, Times, serif;
-		color: @gray;
+		color: @gray-light;
 		font-size: @font-l;
 		line-height: @font-l;
 		height: @font-l;
@@ -424,7 +422,7 @@
 		background: @blue;
 		padding: 10px 0px;
 		font-family: "otama.epregular", Times New Roman, Times, serif;
-		color: @gray;
+		color: @gray-light;
 		font-size: @section-header-height;
 		line-height:@section-header-height;
 		text-align: center;
@@ -446,17 +444,12 @@
 		left: 50%;
 		margin-left: -30px;
 	}*/
-	.span_half{
-		h3{
-			text-align: right!important;
-		}
-	}
 /* ----- HR ----- */
 	hr{
 		padding: 0;
 		border: none;
-		border-top: medium double @gray-light;
-		color: @gray-light;
+		border-top: medium double @gray;
+		color: @gray;
 		background: none;
 		text-align: center;
 		margin: 20px 0 10px 0;
@@ -471,13 +464,13 @@
 		top: -0.7em;
 		font-size: 1.5em;
 		padding: 0 0.25em;
-		background: @gray;
+		background: @gray-light;
 	}
 	.hr_fontawesome{
 		padding: 0;
 		border: none;
-		border-top: medium double @gray-light;
-		color: @gray-light;
+		border-top: medium double @gray;
+		color: @gray;
 		background: none;
 		text-align: center;
 		margin: 10px 0 -15px 0;
@@ -526,8 +519,8 @@
 			margin: -4px 0px 0px 10px;
 			padding: 10px;
 			transition: @fadeSpeed;
-			border: 4px solid @gray;
-			background: @gray-light;
+			border: 4px solid @gray-light;
+			background: @gray;
 			color: transparent!important;
 			text-decoration: none!important;
 			img{
@@ -552,7 +545,7 @@
 				background: none;
 			}
 			.mfp-counter{
-				color: @white-dark;
+				color: @gray-med;
 			}
 			img.mfp-img{
 				padding: 25px 35px;
@@ -565,7 +558,7 @@
 			.mfp-title{
 				.josefinsans-bold();
 				padding-left: 10px;
-				color: @white;
+				color: @gray-light;
 				font-size: @font-base;
 			}
 			.mfp-bottom-bar{
@@ -639,8 +632,8 @@
 			cursor: pointer;
 		}
 		.outline-link:hover{
-			color: @gray-light!important;
-			border: 2px solid @gray-light;
+			color: @gray!important;
+			border: 2px solid @gray;
 			background: none;
 		}
 	/*--external--*/
@@ -654,7 +647,7 @@
 			float: left;
 		}
 		.external_link:hover{
-			border:2px solid @gray-light;
+			border:2px solid @gray;
 		}
 /* ----- LISTS ------ */
 	.list{
@@ -764,7 +757,7 @@
 					padding: 10px;
 					height: auto!important;
 					clear: none;
-					background: @gray;
+					background: @gray-light;
 					margin: 10px;
 					display: inline-block;
 					font-size: @font-base;
@@ -802,12 +795,12 @@
 			margin: 0 auto;
 			opacity: 1;
 			text-align: center;
-		}
-		.loading > h4{
-			color: @gray;
-			text-align: center;
-			border:0px;
-			margin-top: 30px;
+			h4{
+				color: @gray;
+				text-align: center;
+				border:0px;
+				margin: 30px auto;
+			}
 		}
 		.hide-loading{
 			display: none;
@@ -839,7 +832,7 @@
 	}
 /* ----- TOOLTIP ----- */
 	/*.ui-tooltip {
-		color: @white;
+		color: @gray-light;
 		z-index: 9999;
 	}
 	.ui-tooltip-content {
@@ -854,7 +847,7 @@
 	.ui-tooltip-content {
 		position: relative;
 		top: -60px;
-		color:@gray;
+		color:@gray-light;
 	}*/
 
 /* ---------- LARGE DESKTOP ---------- */
@@ -890,7 +883,7 @@
 	/*--size--*/
 		@mobile-font-xl:	2.5rem;
 		@mobile-font-l:		1.5rem;
-		@mobile-font-m:		1.3rem;
+		@mobile-font-m:		1.2rem;
 		@mobile-font-s: 	1.1rem;
 		@mobile-font-base:	1.0rem;
 		@mobile-font-xs: 	0.7rem;
@@ -909,7 +902,8 @@
 		h1 {
 			font-size: @mobile-font-xl;
 			line-height: @mobile-font-xl;
-			color: @white;
+			color: @gray-light;
+			text-align: left;
 		}
 		h2 {
 			font-size: @mobile-font-l;
@@ -948,13 +942,8 @@
 		border-left: 0px;
 	}
 	.fp-tableCell{
+		padding: 0px 15px;
 	}
-	/*--first slide--*/
-		.slide:nth-child(1){
-			.imagepop{
-				float: none!important;
-			}
-		}
 	/*--arrows--*/
 		.fp-controlArrow{
 			/*height: 30px!important;
@@ -985,16 +974,14 @@
 				left: 0px;
 			}
 	/*--fp-nav--*/
+		.page_menu_visible{
+			width: 70%!important;
+		}
 		#fp-nav{
 			margin-top: 0px;
 			bottom: 1px;
 			width: 0%;
 			overflow: hidden;
-		}
-		.page_menu_visible{
-			width: 70%!important;
-		}
-		#fp-nav{
 			li{
 				width: 45%;
 				a{
@@ -1035,6 +1022,15 @@
 		}
 	/*--first section--*/
 		.section:nth-child(1){
+			h1,h2,h3,h4,p{
+				text-align: left;
+			}
+			.imagepop{
+				float: none!important;
+			}
+		}
+	/*--first slide--*/
+		.slide:nth-child(1){
 			.imagepop{
 				float: none!important;
 			}
@@ -1075,40 +1071,67 @@
 		}
 /* ----- LANDSCAPE ------ */
 	.landscape{
-		h3{
-			text-align: center!important;
-		}
-		.fp-tableCell{
-		}
-		.section_header{
-			font-size: @font-s;
-			line-height: @font-s;
-		}
-		hr{
-			display: none;
-		}
-		.imagepop{
-			float: right!important;
-			margin-top: 2px;
-		}
-		.half{
-			width: 50%!important;
-		}
-		.half:first-child{
-			.imagepop{
-				float: right!important;
-				margin-top: -10px;
+		/*--containers--*/
+			.half{
+				width: 50%!important;
 			}
-		}
-		/*--images--*/
-			.max-half{
-				float: right!important;
-			}
-		/*--first section--*/
-			.section:nth-child(1){
+			.half:first-child{
 				.imagepop{
 					float: right!important;
+					margin-top: -10px;
 				}
+			}
+		/*--fonts--*/
+			/*--headers & paragraph--*/
+			h1{
+				text-align: left;
+			}
+			h3{
+				text-align: center;
+				margin-bottom: 0px;
+			}
+		/*--fullPage--*/
+			.fp-tableCell{
+			}
+			/*--fp-nav--*/
+			#fp-nav{
+				li{
+					width: 33%;
+				}
+			}
+			/*--odd sections--*/
+				.section:nth-child(odd){
+					.slide:nth-child(1){
+						.half:nth-child(1){
+							.imagepop{
+								float: left!important;
+							}
+
+						}
+					}
+				}
+			/*--first section--*/
+				.section:nth-child(1){
+					.imagepop{
+						float: none!important;
+					}
+				}
+		/*--headers and subheaders--*/
+			.section_header{
+				font-size: @font-s;
+				line-height: @font-s;
+			}
+		/*--hr--*/
+			hr{
+				display: none;
+			}
+		/*--images--*/
+			.imagepop{
+				float: right!important;
+				margin-top: 2px;
+			}
+			.max-half{
+				float: right!important;
 			}
 		/*--menu--*/
 			.menu_visible{
@@ -1120,24 +1143,13 @@
 				width: @font-s;
 				height: @font-s;
 			}
-		/*--odd sections--*/
-			.section:nth-child(odd){
-				.slide:nth-child(1){
-					.half:nth-child(1){
-						.imagepop{
-							float: left!important;
-						}
-
-					}
-				}
-			}
 		/*--pages--*/
 			/*-- About --*/
 				.about{
 					h3{
-							margin-top: 7px!important;
-							text-align: right!important;
-							border-bottom: 0px;
+						margin-top: 7px!important;
+						text-align: right!important;
+						border-bottom: 0px;
 					}
 					.section:nth-child(1){
 						.imagepop{
@@ -1223,6 +1235,12 @@
 		margin:20px 0 0px 0;
 	}
 /* ----- PAGES ----- */
+	/* ----- Home ----- */
+		.home{
+			h3{
+				text-align: center;
+			}
+		}
 	/* ----- About ----- */
 		.about{
 			.half > h3{
