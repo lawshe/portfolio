@@ -1,0 +1,66 @@
+.opacity(@opacity: 0.5) {
+  -moz-opacity: @opacity;
+  -khtml-opacity: @opacity;
+  -webkit-opacity: @opacity;
+  opacity: @opacity;
+  @opperc: @opacity * 100;
+  -ms-filter: ~"progid:DXImageTransform.Microsoft.Alpha(opacity=@{opperc})";
+  filter: ~"alpha(opacity=@{opperc})";
+} 
+.transition(@duration:0.2s, @ease:ease-out) {
+  -webkit-transition: all @duration @ease;
+  -moz-transition: all @duration @ease;
+  -o-transition: all @duration @ease;
+  transition: all @duration @ease;
+}
+
+.animation (@arguments) {
+	-webkit-animation: @arguments;
+	-moz-animation:    @arguments;
+	-ms-animation:     @arguments;
+}
+.animation-name(@arguments...) {
+  -o-animation-name: @arguments;
+  -moz-animation-name: @arguments;
+  -webkit-animation-name: @arguments;
+  animation-name: @arguments;
+}
+.animation-duration(@arguments...) {
+  -o-animation-duration: @arguments;
+  -moz-animation-duration: @arguments;
+  -webkit-animation-duration: @arguments;
+  animation-duration: @arguments;
+}
+.animation-timing-function(@arguments...) {
+  -o-animation-timing-function: @arguments;
+  -moz-animation-timing-function: @arguments;
+  -webkit-animation-timing-function: @arguments;
+  animation-timing-function: @arguments;
+}
+.animation-iteration-count(@arguments...){
+  -o-animation-iteration-count: @arguments;
+  -moz-animation-iteration-count: @arguments;
+  -webkit-animation-iteration-count: @arguments;
+  animation-iteration-count: @arguments;
+}
+
+
+.transform(@arguments) {
+  -webkit-transform: @arguments;
+  -moz-transform: @arguments;
+  -o-transform: @arguments;
+  -ms-transform: @arguments;
+  transform: @arguments;
+} 
+.transform-style(@arguments) {
+  -webkit-transform-style: @arguments;
+  -moz-transform-style: @arguments;
+  -ms-transform-style: @arguments;
+  transform-style: @arguments;
+}
+.perspective(@arguments) {
+  -webkit-perspective: @arguments; 
+  -moz-perspective: @arguments; 
+  -ms-perspective: @arguments; 
+  perspective: @arguments;
+}
