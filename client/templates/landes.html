@@ -1,0 +1,20 @@
+<template name="landes">
+	<div class="subpage landes">
+		<div section="landes" section-title="Landes" class="section">
+			<div class="half">
+				<h1>Landes Bioscience</h1>
+				<h2>Peer Reviewed Research Publisher</h2>
+			</div>
+			<div class="half">
+				<a class="imagepop" rel="gallery" href="/img/work/landes/{{imgSize}}/journal_home_mac.png" data-title="Journal Homepage">
+					<img alt="Journal Homepage" src="/img/work/landes/{{imgSize}}/journal_home_mac.png">
+				</a>			
+			</div>
+			{{>scrollTo}}
+		</div>
+		{{#each sections}}
+			{{>workSection}}
+		{{/each}}	
+		{{>moreWork}}	
+	</div>
+</template>

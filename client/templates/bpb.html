@@ -1,0 +1,20 @@
+<template name="bpb">
+	<div class="subpage bpb">
+		<div section="bpb" section-title="The Bipolar Bears" class="section">
+			<div class="half">
+				<h1>The Bipolar Bears</h1>
+				<h2>Indie Band</h2>
+			</div>
+			<div class="half">
+				<a class="imagepop no_bg" rel="gallery" href="/img/work/bpb/{{imgSize}}/home_logo.png" data-title="The Bipolar Bears Homepage">
+					<img alt="The Bipolar Bears Homepage" src="/img/work/bpb/{{imgSize}}/home_logo.png">
+				</a>				
+			</div>
+			{{>scrollTo}}
+		</div>
+		{{#each sections}}
+			{{>workSection}}
+		{{/each}}	
+		{{>moreWork}}	
+	</div>
+</template>
