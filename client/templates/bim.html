@@ -1,0 +1,20 @@
+<template name="bim">
+	<div class="subpage bim">
+		<div class="section" section-title="Coming Soon">
+			<div class="half">
+				<h1>Coming Soon</h1>
+				<h2>Launch April 2015</h2>
+			</div>
+			<div class="half">
+				<a class="imagepop" rel="gallery" href="/img/work/bim/{{imgSize}}/home.png" data-title="BIM Cubed Home">
+					<img alt="BIM Cubed Home" src="/img/work/bim/{{imgSize}}/home.png">
+				</a>
+			</div>
+			{{>scrollTo}}
+		</div>
+		{{#each sections}}
+			{{>workSection}}
+		{{/each}}
+		{{>moreWork}}
+	</div>
+</template>
