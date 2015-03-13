@@ -1,11 +1,8 @@
-
 Router.configure({
 	layoutTemplate: 'layout',
 	loadingTemplate: 'loading',
 	trackPageView: true
 });
-
-Router.onBeforeAction("loading");
 
 Router.map(function() {
 	this.route('home', {
@@ -99,9 +96,24 @@ Router.map(function() {
 		onBeforeAction: function() {
 			this.redirect('/work/landes');
 		}
+	}); 
+	this.route('bim', {
+		path: 'work/coming_soon',
+		onAfterAction: function() {
+		  if (!Meteor.isClient) {
+			return;
+		  }
+		  SEO.set({
+			title: "Work: BIM Cubed | JL",
+			meta: {
+			  "description": "BIM Cubed website, development projects by Jessica Lawshe"
+			}
+		  });
+		}
 	});
-	this.route('notfound', {
-		path: '*'
+	this.route('notFound', {
+		path: '/(.*)',
+		template: 'notFound'
 	});
 });
 
