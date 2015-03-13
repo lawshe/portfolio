@@ -1,0 +1,98 @@
+<template name="scrollTo">
+	<div class="scroll-to"><a class="scroll-btn">&#9660;</a></div>
+</template>
+<template name="sectionTitle">
+	<div class="half">
+		<a class="imagepop {{imageClasses}}" rel="gallery" href="{{image}}" data-title="{{title}}">
+			<img alt="{{title}}" src="{{image}}">
+		</a>					
+	</div>	
+	<div class="half">
+		<h4>{{subtitle}}</h4>
+		{{#if txt}}<p>{{{txt}}}</p>{{/if}}
+		{{#if slides}}
+			<ul class="slides-list">
+				{{#each slides}}
+				<li>
+					<span class="toSlide slide-link" data-index="{{index}}">
+						{{title}}
+					</span>
+				</li>
+				{{/each}}
+			</ul>
+		{{/if}}
+	</div>
+</template>
+<template name="workSection">
+	<div class="section" section-title="{{title}}">
+		<div class="section-header">{{title}}</div>
+		{{#if slides}}
+			<div class="slide" slide="{{title}}">
+				{{>sectionTitle}}
+			</div>			
+			{{#each slides}}
+				<div class="slide" slide="{{title}}">
+					<h3>{{title}}</h3>
+					<div class="half">
+						{{#each images}}
+							<span class="slide-img {{imageClasses}}">
+								<a class="imagepop" rel="gallery" href="{{image}}" data-title="{{title}}">
+									<img alt="{{title}}" src="{{image}}">
+								</a>	
+							</span>
+						{{/each}}							
+					</div>
+					<div class="half">
+						<h4>{{subtitle}}</h4>
+						{{#if txt}}<p>{{{txt}}}</p>{{/if}}
+					</div>
+					{{#if last}}
+						{{>scrollTo}}
+					{{/if}}
+				</div>
+			{{/each}}	
+		{{else}}
+			{{>sectionTitle}}
+			{{>scrollTo}}
+		{{/if}}
+	</div>
+</template>
+<template name="moreWork">
+	<div section="more" section-title="More" class="section">
+		<div class="footer">
+			<div class="thumbnail">
+				{{#with work}}
+				<a href="{{path}}">
+					More Work
+					<img alt="{{name}}" src="{{image}}">
+					{{name}}
+				</a>				
+				{{/with}}
+			</div>
+			{{>footer}}			
+		</div>
+	</div>		
+</template>
+<template name="footer">
+		<!-- <div class="thumbnail">
+			<a href="/jessica_lawshe.pdf" target="_BLANK">
+				<i class="fa fa-file-o"></i> Resume
+			</a>			
+		</div> -->
+		<div class="thumbnail">
+			<a itemprop="url" href="https://www.linkedin.com/in/lawshe" target="_BLANK">
+				<i class="fa fa-linkedin-square"></i> LinkedIn
+			</a>
+		</div>
+		<div class="thumbnail">
+			<a itemprop="url" href="https://github.com/lawshe" target="_BLANK">
+				<i class="fa fa-github"></i> GitHub
+			</a>
+		</div>
+		<div class="thumbnail">
+			<a class="email">
+				moc [ dot ] ehswalj [ at ] acissej
+				<!-- moc [ dot ] liamg [ at ] ehswalej -->
+			</a>
+		</div>
+</template>
