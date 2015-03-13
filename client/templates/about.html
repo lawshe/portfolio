@@ -1,157 +1,150 @@
 
 <template name="about">
-	<div class="about">
-		<div section="about" class="section" tooltip="Jessica">
-			<div class="span_half">
-				<h3>Passion for learning<br>new web technologies</h3>
-				<p class="about_intro">{{>about_intro}}</p>
-				<span class="always_hide" itemprop="organization">Landes Bioscience</span>
+	<div class="subpage about">
+		<div section="about" class="section bg-me" section-title="Jessica">
+			<div class="overlay">
+				<h1>Jessica Lawshe</h1>
+				<h2>Designer & Developer</h2>
+				<h4>Passion for learning new web technologies</h4>
 			</div>
-			<div class="span_half">
-				<a class="imagepop" rel="gallery" href="/img/cayman.png" data-title="Jessica in Cayman">
-					<img id="first_image" alt="Jessica in Cayman" src="/img/cayman.png">
+			{{>scrollTo}}
+		</div>
+		<div class="section" section="languages" section-title="Languages">
+			<div class="section-header">Languages</div>
+			<h4 class="web-languages"></h4>
+			{{>scrollTo}}
+		</div>
+		<div class="section" section="api" section-title="API">
+			<div class="section-header">API</div>
+			<div id="flips-api" class="flips">
+				<a href="https://developers.facebook.com/" target="_BLANK" class="flip">
+					<div class="front"></div>
+					<div class="back"></div>
+				</a>
+				<a href="http://www.authorize.net/" target="_BLANK" class="flip">
+					<div class="front"></div>
+					<div class="back"></div>
+				</a>
+				<a href="https://dev.twitter.com/" target="_BLANK" class="flip">
+					<div class="front"></div>
+					<div class="back"></div>
+				</a>
+				<a href="http://www.ncbi.nlm.nih.gov/pmc/" target="_BLANK" class="flip">
+					<div class="front"></div>
+					<div class="back"></div>
+				</a>
+				<a href="http://search.crossref.org/help/api" target="_BLANK" class="flip">
+					<div class="front"></div>
+					<div class="back"></div>
 				</a>
 			</div>
-			<p class="mobile_about_intro">{{>about_intro}}</p>
+			{{>scrollTo}}
 		</div>
-		<div section="web" class="section" tooltip="Web Skills">
-			<div class="section_header">Web Skills</div>
-			<div class="slide">
-					<div class="skills">
-						<div class="skill-box">MySQL</div>
-						<div class="skill-box">MongoDB</div>
-					</div>
-					<div class="skills">
-						<div class="skill-box">HTML</div>
-						<div class="skill-box">CSS</div>
-						<div class="skill-box">Less</div>
-						<div class="skill-box">JSON</div>
-						<div class="skill-box">XML</div>
-						<div class="skill-box">PHP</div>
-						<div class="skill-box">JavaScript</div>
-					</div>
-					<div class="skills">
-						<div class="skill-box">Meteor.js</div>
-						<div class="skill-box">Dust.js</div>
-					</div>
+		<div class="section" section="experience" section-title="Experience">
+			<div class="section-header">Experience</div>
+			<div id="flips-experience" class="flips">
+				<a href="https://github.com/" target="_BLANK" class="flip">
+					<div class="front"></div>
+					<div class="back"></div>
+				</a>
+				<a href="http://aws.amazon.com/" target="_BLANK" class="flip">
+					<div class="front"></div>
+					<div class="back"></div>
+				</a>
+				<a href="https://www.meteor.com/" target="_BLANK" class="flip">
+					<div class="front"></div>
+					<div class="back"></div>
+				</a>
+				<a href="http://mailchimp.com/" target="_BLANK" class="flip">
+					<div class="front"></div>
+					<div class="back"></div>
+				</a>
+				<a href="http://www.google.com/analytics/" target="_BLANK" class="flip">
+					<div class="front"></div>
+					<div class="back"></div>
+				</a>
 			</div>
-			<div class="slide">
-				<div class="span_half"><h3>API</h3></div>
-				<div class="span_half">
-					<a href="https://developers.facebook.com/" class="logo" target="_BLANK"><img src="img/logos/facebook.png" alt="Facebook API"></a>
-					<a href="http://www.authorize.net/" class="logo" target="_BLANK"><img src="img/logos/authorize.png" alt="Authorize.net API"></a>
-					<a href="https://dev.twitter.com/" class="logo" target="_BLANK"><img src="img/logos/twitter.png" alt="Twitter API"></a>
-					<a href="http://www.ncbi.nlm.nih.gov/pmc/" class="logo" target="_BLANK"><img src="img/logos/pubmed.png" alt="PubMed API"></a>
-					<a href="http://search.crossref.org/help/api" class="logo" target="_BLANK"><img src="img/logos/crossref.png" alt="CrossRef API"></a>
-				</div>
-			</div>
-			<div class="slide">
-				<div class="span_half"><h3>Experience</h3></div>
-				<div class="span_half">
-					<a href="https://github.com/" class="logo" target="_BLANK"><img src="img/logos/github.png" alt="GitHub"></a>
-					<a href="http://aws.amazon.com/" class="logo" target="_BLANK"><img src="img/logos/aws.png" alt="AWS"></a>
-					<a href="https://www.meteor.com/" class="logo" target="_BLANK"><img src="img/logos/meteor.png" alt="Meteor.js"></a>
-					<a href="http://mailchimp.com/" class="logo" target="_BLANK"><img src="img/logos/mailchimp.png" class="logo" alt="MailChimp"></a>
-					<a href="http://www.google.com/analytics/" class="logo" target="_BLANK"><img src="img/logos/google_analytics.png" alt="Google Analytics"></a>
-				</div>
-			</div>
-			<div class="slide">
-				<div class="span_half">
-					<h3>Libraries & Templating</h3>
-				</div>
-				<div class="span_half">
-					<a href="http://jquery.com/" target="_BLANK" class="outline-link">jQuery</a>
-					<a href="http://grafico.kilianvalkhof.com/" target="_BLANK" class="outline-link">Grafico.js</a>
-					<a href="http://akdubya.github.io/dustjs/" target="_BLANK" class="outline-link">Dust.js</a>
-					<a href="http://getbootstrap.com/" target="_BLANK" class="outline-link">Twitter Bootstrap</a>
-				</div>
-			</div>
-			<div class="slide">
-				<div class="half">
-					<h3>UX & UI Design</h3>
-				</div>
-				<div class="half">
-					<h4>The process</h4>
-					<p>My approach is to begin with the user goals. Then I create sitemaps with the paths of least resistance to obtain those goals. Mockups are created by hand, Photoshop & in the browser. I'll often switch between these methods throughout design & development in order to ensure a clean & accessible application. I also use several tools to test platform compatibility.</p>
-				</div>
-			</div>
+			{{>scrollTo}}
 		</div>
-		<div section="education" class="section" tooltip="Education">
-			<div class="section_header">Education</div>
-			<div class="half">
-				<h3>Biochemistry B.S. Honors</h3>
+		<div class="section" section="server" section-title="Server-Side">
+			<div class="section-header">Server-Side</div>
+			<div id="flips-server" class="flips">
+				<a href="https://nodejs.org/" target="_BLANK" class="flip">
+					<div class="front">Node.js</div>
+					<div class="back"></div>
+				</a>
+				<a href="http://www.mongodb.org/" target="_BLANK" class="flip">
+					<div class="front">MongoDB</div>
+					<div class="back"></div>
+				</a>
+				<a href="http://www.mysql.com/" target="_BLANK" class="flip">
+					<div class="front">MySQL</div>
+					<div class="back"></div>
+				</a>
 			</div>
-			<div class="half">
-				<h4 class="institution" itemprop="alumni">The University of Texas</h4>
-				<p>
-					2010<br>
-					Publication in the <a href="http://www.jbc.org/content/285/30/22840.long" target="_BLANK">Journal of Biological Chemistry</a>
-				</p>
+			{{>scrollTo}}
+		</div>
+		<div class="section" section="lib" section-title="Libraries">
+			<div class="section-header">Libraries</div>
+			<div  id="flips-lib" class="flips">
+				<a href="http://jquery.com/" target="_BLANK" class="flip">
+					<div class="front">jQuery</div>
+					<div class="back"></div>
+				</a>
+				<a href="http://grafico.kilianvalkhof.com/" target="_BLANK" class="flip">
+					<div class="front">Grafico.js</div>
+					<div class="back"></div>
+				</a>
+				<a href="http://getbootstrap.com/" target="_BLANK" class="flip">
+					<div class="front">Bootstrap</div>
+					<div class="back"></div>
+				</a>
+				<a href="http://summernote.org/" target="_BLANK" class="flip">
+					<div class="front">Summernote</div>
+					<div class="back"></div>
+				</a>
+				<a href="http://summernote.org/" target="_BLANK" class="flip">
+					<div class="front">Modernizr</div>
+					<div class="back"></div>
+				</a>
 			</div>
-			<hr>
+			{{>scrollTo}}
+		</div>
+		<div class="section education" section="education" section-title="Education">
+			<div class="section-header">Education</div>
 			<div class="half">
-				<h3>Spanish B.A.</h3>
+				<h3 class="institution" itemprop="alumni">The University of Texas<br>2010</h3>
 			</div>
 			<div class="half">
-				<h4 class="institution" itemprop="alumni">The University of Texas</h4>
-				<p>
-					2010<br>
-					Study abroad in Córdoba, Argentina
-				</p>
+				<h4>Biochemistry B.S. Honors</h4>
+				<p>Publication in the <a href="http://www.jbc.org/content/285/30/22840.long" target="_BLANK">Journal of Biological Chemistry</a></p>
+				<h4>Spanish B.A.</h4>
+				<p>Study abroad in Córdoba, Argentina</p>
 			</div>
+			{{>scrollTo}}
 		</div>
-		<div section="employment" class="section" tooltip="Employment">
-			<div class="section_header">Employment</div>
-			<div class="slide">
-				<div class="half"><h3>Designer & Developer</h3></div>
-				<div class="half">
-					<h4 class="institution" itemprop="name">Landes Bioscience</h4>
-					<p>2012 &mdash; present</p>
-				</div>
-				<hr>
-				<div class="half"><h3>Lab Manager & Research Scientist</h3></div>
-				<div class="half">
-					<h4 class="institution" itemprop="name">The University of Texas</h4>
-					<p>Institute for Cellular and Molecular Biology
-						<br>2011 &mdash; 2013</p>
-				</div>
+		<div class="section employment" section="employment" section-title="Employment">
+			<div class="section-header">Employment</div>
+			<div class="half">
+				<h3>Designer & Developer</h3>
 			</div>
-			<div class="slide">
-				<div class="half"><h3>Chemistry Specialist</h3></div>
-				<div class="half">
-					<h4 class="institution" itemprop="name">The University of Texas</h4>
-					<p>Introductory Chemistry Lab
-						<br>2011</p>
-				</div>
-				<hr>
-				<div class="half"><h3>Research Assistant</h3></div>
-				<div class="half">
-					<h4 class="institution" itemprop="name">The University of Texas</h4>
-					<p>Waggoner Center for Alcohol and Addiction Research
-						<br>2009 &mdash; 2010</p>
-				</div>
+			<div class="half">
+				<h4 itemprop="name">Landes Bioscience</h4>
+				<p>2012 &mdash; 2014</p>
 			</div>
-			<div class="slide">
-				<div class="half"><h3>Teaching Assistant</h3></div>
-				<div class="half">
-					<h4 class="institution" itemprop="name">The University of Texas</h4>
-					<p>Introductory Chemistry
-						<br>2009 &mdash; 2010</p>
-				</div>
-				<hr>
-				<div class="half"><h3>Research Assistant</h3></div>
-				<div class="half">
-					<h4 class="institution" itemprop="name">The University of Texas</h4>
-					<p>Department of Chemistry and Biochemistry
-						<br>2006 &mdash; 2008</p>
-				</div>
+
+			<div class="half">
+				<h3>Lab Manager & Research Scientist</h3>
 			</div>
+			<div class="half">
+				<h4 itemprop="name">The University of Texas</h4>
+				<p>Institute for Cellular and Molecular Biology<br>2011 &mdash; 2013</p>
+			</div>
+			{{>scrollTo}}
 		</div>
-		<div section="contact" class="section" tooltip="Contact">
+		<div section="contact" class="section" section-title="Contact">
 			<span class="always_hide" itemprop="name">Jessica Lawshe</span>
-			{{>footer}}
+			<div class="footer">{{>footer}}</div>
 		</div>
 	</div>
-</template>
-<template name="about_intro">
 </template>
