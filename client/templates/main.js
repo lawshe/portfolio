@@ -141,7 +141,7 @@ if (Meteor.isClient) {
 		},
 		'click .toSlide': function(e,t){
 			e.preventDefault();
-			Meteor.fxns.moveToSlide(e);
+			Meteor.fullpage.moveToSlide(e);
 		}
 	};
 	Template.bpb.events = {
