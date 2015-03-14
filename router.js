@@ -5,23 +5,8 @@ Router.configure({
 });
 
 Router.map(function() {
-	this.route('home', {
-		path: '/',
-		onAfterAction: function() {
-		  if (!Meteor.isClient) {
-			return;
-		  }
-		  SEO.set({
-			title: "Jessica Lawshe",
-			meta: {
-			  "description": "Jessica Lawshe is a full stack developer based in Austin, Texas",
-			  "keywords": "Jessica Lawshe, Lawshe, designer, developer, Austin, Texas, MongoDB, Meteor"
-			}
-		  });
-		}
-	});
 	this.route('about', {
-		path: 'about',
+		path: '/',
 		onAfterAction: function() {
 		  if (!Meteor.isClient) {
 			return;
@@ -37,7 +22,7 @@ Router.map(function() {
 	});
 	this.route('about.html', {
 		onBeforeAction: function() {
-			this.redirect('/about');
+			this.redirect('/');
 		}
 	});
 	this.route('work', {
