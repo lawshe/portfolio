@@ -5,9 +5,9 @@
 	@maxWidth: 620px;
 	@menu-hidden-width:0px;	
 	/*font size*/
-		@font-xl:	3.1rem;
+		@font-xl:	2.9rem;
 		@font-l:	2.4rem;
-		@font-m:	2.1rem;
+		@font-m:	2.0rem;
 		@font-s: 	1.7rem;
 		@font-base: 1.4rem;
 		@font-xs: 	0.9rem;
@@ -525,16 +525,23 @@
 			bottom: 10px;
 			ul{
 				text-align: center;
-			}
-			span{
-				border:1px solid @link-color!important;
-				background: @link-color!important;
-				border-radius: 0px!important;	
-				&:hover{
-					.transition(@fadeSpeed);
-					border:1px solid @link-color-hover!important;
-					background: @link-color-hover!important;
-				}			
+				li{
+					width: 15px!important;
+					height: 15px!important;	
+					margin: 0 @marginSM;				
+					span{
+						border:1px solid @link-color!important;
+						background: @link-color!important;
+						border-radius: 0px!important;	
+						width: 15px!important;
+						height: 15px!important;
+						&:hover{
+							.transition(@fadeSpeed);
+							border:1px solid @link-color-hover!important;
+							background: @link-color-hover!important;
+						}			
+					}
+				}
 			}
 			.active{
 				span{
@@ -544,15 +551,6 @@
 			}
 			@media @phoneTablet {
 				bottom: 0px;
-				li{
-					margin: @marginSM;
-					width: 20px;
-					height: 10px;
-				}
-				span{
-					width: 20px;
-					height: 10px;
-				}
 			}
 		}
 	/*slides arrows*/
@@ -1054,10 +1052,20 @@
 				}
 			}
 		}
-		.bg-me{
-			background-image: url(/img/jl.jpg);
-			background-size: cover;
-			background-position: left;
+		.intro{			
+			background: left center/cover no-repeat fixed url(/img/jl.jpg);
+			h1{
+				font-size: 15vh;
+				line-height: 15vh;
+			}
+			h2{
+				font-size: 10vh;
+				line-height: 10vh;
+			}
+			h4{
+				font-size: 5vh;
+				line-height: 5vh;
+			}
 			ul{
 				list-style: none;
 			}
