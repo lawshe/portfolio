@@ -1,150 +1,98 @@
-
 <template name="about">
-	<div class="subpage about">
-		<div section="about" class="section intro" section-title="Jessica">
-			<div class="overlay">
-				<h1>Jessica Lawshe</h1>
-				<h2>Designer & Developer</h2>
-				<h4>Passion for learning new web technologies</h4>
+	<div class="subpage about" itemscope itemtype="http://schema.org/Person">
+		<div data-anchor="about-intro" class="section intro" data-title="Jessica">
+			<div class="page-header">
+				<div class="half">
+					<h1 itemprop="name">Jessica Lawshe</h1>
+				</div>
+				<div class="half">
+					<h2 itemprop="jobTitle">Designer &<br>Developer</h2>
+				</div>
+			</div>
+			<div class="svg-container">
+				<svg viewBox="0 0 829.44 1244.16" preserveAspectRatio="xMidYMin slice" style="width:100%;height:1px;padding-bottom: 150%;overflow:visible;">
+					<path id="svg-me" fill="none" stroke="#BABABA" stroke-width="4" stroke-miterlimit="10" d="M513,643c-5,6-10,12-15,17c-6,4-9,10-15,15
+								c-5,4-9,7-14,11c-2,1-3,1-5,2c-24,18-50,28-79,25c-10-2-18-5-27-10c-32-21-56-44-77-76c-18-29-30-59-41-90c-16-30-19-65-18-99
+								c0-2,2-4,3-4c8,1,14-3,20-8c1-1,3,0,4-1c11-7,24-11,37-9c16,3,30,4,46,2c17-2,33-5,51-8c6-1,12-1,17-5c4-4,6-9,9-14c1-2,1-4,2-6
+								c7-16,15-32,16-49c-5.248,12.475-0.127,1.272,0,0c-7,17-8,40,7,54c3,3,7,5,10,5c42,4,76,27,108,54c6,6,12,12,18,18
+								c-8,16-9,34-12,52c-2,8-4,16-5,24c-1,9-2,19-2,28c-1,20-9,38-21,54c-4,4-9,8-9,13c-1,3,1,7,2,10c1,6,1,12,3,18c3,8,6,16,7,24
+								c3,21,8,39,12,60c5,27,9,51,13,77c1,10,2,19,3,29c2,23,1,45,2,68c0,18,0,36,0,54c-2,40-8,81-6,121c0,11,3,23,10,33c1,1,0,3,1,4
+								c11,18,23,32,40,44c11,7,19,14,30,20c1,1,3,0,4,1c25,15,51,24,79,32c1,0,3,0,4,0c-16.038-3.19-9.006,0,0,0c-6-1-11-4-14-9
+								c-1-2-2-3-3-5c-19-55-23-113-28-171c-7-88-9-173-21-261c-1-7-3-13-4-19c-13-136-19-269-26-404c-11-75-49-139-92-205
+								c-8-12-17-21-29-30c-2-1-5-3-7-5c-56-34-123-35-181-10c-2,1-3,0-5,1c-40,20-76,49-97,88c-5,3-7,10-9,15c-22,43-34,89-37,137
+								c-1,14-1,28-1,42c7,191,28,380,16,572c-1,11-2,23-3,34c0,3-2,7-2,10c-4,60-2,119-8,179c0,6,0,12-3,18c11,4,22-1,33-2
+								c16-2,30-6,46-10c9-3,17-6,26-9c11-4,22-9,33-14c13-6,24-13,35-22c7-6,13-13,19-20c2-3,4-7,6-10c7-12,6-24,4-37
+								c-15-88-39-169-46.275-256.097c0,0-33.725-166.222-20.725-165.062"/>
+				</svg>
 			</div>
 			{{>scrollTo}}
 		</div>
-		<div class="section" section="languages" section-title="Languages">
-			<div class="section-header">Languages</div>
-			<h4 class="web-languages"></h4>
+		<div data-anchor="about" class="section" data-title="About">
+			<div class="section-header"><h2>About</h2></div>
+			<h3>Freelancer for Hire</h3>
+			<!-- <p class="txt-center" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">Based in <span itemprop="addressLocality">Austin</span>, <span itemprop="addressRegion">Texas</span></p> -->
+			<div class="clearfix"></div>
+			<div class="half txt-right">
+				<ul class="web-skills"><li>PHP</li><li>HTML</li><li>XML</li><li>CSS</li><li>Less</li><li>jQuery</li><li>JavaScript</li><li>JSON</li><li>MongoDB</li><li>MySQL</li></ul>
+			</div>
+			<div class="half txt-left">
+				<h4>I create<br><span class="emph">custom websites</span><br>& content management systems.</h4>
+			</div>
+			<div class="clearfix"></div>
+			<a href="" class="outline-link txt-center email-project"><i class="fa fa-envelope"></i> Email Me About a Project</a>
 			{{>scrollTo}}
 		</div>
-		<div class="section" section="api" section-title="API">
-			<div class="section-header">API</div>
-			<div id="flips-api" class="flips">
-				<a href="https://developers.facebook.com/" target="_BLANK" class="flip">
-					<div class="front"></div>
-					<div class="back"></div>
-				</a>
-				<a href="http://www.authorize.net/" target="_BLANK" class="flip">
-					<div class="front"></div>
-					<div class="back"></div>
-				</a>
-				<a href="https://dev.twitter.com/" target="_BLANK" class="flip">
-					<div class="front"></div>
-					<div class="back"></div>
-				</a>
-				<a href="http://www.ncbi.nlm.nih.gov/pmc/" target="_BLANK" class="flip">
-					<div class="front"></div>
-					<div class="back"></div>
-				</a>
-				<a href="http://search.crossref.org/help/api" target="_BLANK" class="flip">
-					<div class="front"></div>
-					<div class="back"></div>
-				</a>
-			</div>
+		<div data-anchor="api" class="section" data-title="API">
+			<div class="section-header"><h2>API</h2></div>
+			<ul class="flips" id="flips-api">
+				{{#each api}}
+					<li><div class="flip-container"><a href="{{url}}" target="_BLANK" class="{{#if ie}}{{else}}flip{{/if}}">
+						{{#if ie}}
+							<span><i class="fa {{icon}}"></i><br>{{what}}
+						{{else}}
+							<span class="front"><span><i class="fa {{icon}}"></i> {{what}}</span></span>
+							<span class="back"></span>
+						{{/if}}
+					</a></div></li>
+				{{/each}}
+			</ul>
 			{{>scrollTo}}
 		</div>
-		<div class="section" section="experience" section-title="Experience">
-			<div class="section-header">Experience</div>
-			<div id="flips-experience" class="flips">
-				<a href="https://github.com/" target="_BLANK" class="flip">
-					<div class="front"></div>
-					<div class="back"></div>
-				</a>
-				<a href="http://aws.amazon.com/" target="_BLANK" class="flip">
-					<div class="front"></div>
-					<div class="back"></div>
-				</a>
-				<a href="https://www.meteor.com/" target="_BLANK" class="flip">
-					<div class="front"></div>
-					<div class="back"></div>
-				</a>
-				<a href="http://mailchimp.com/" target="_BLANK" class="flip">
-					<div class="front"></div>
-					<div class="back"></div>
-				</a>
-				<a href="http://www.google.com/analytics/" target="_BLANK" class="flip">
-					<div class="front"></div>
-					<div class="back"></div>
-				</a>
-			</div>
-			{{>scrollTo}}
-		</div>
-		<div class="section" section="server" section-title="Server-Side">
-			<div class="section-header">Server-Side</div>
-			<div id="flips-server" class="flips">
-				<a href="https://nodejs.org/" target="_BLANK" class="flip">
-					<div class="front">Node.js</div>
-					<div class="back"></div>
-				</a>
-				<a href="http://www.mongodb.org/" target="_BLANK" class="flip">
-					<div class="front">MongoDB</div>
-					<div class="back"></div>
-				</a>
-				<a href="http://www.mysql.com/" target="_BLANK" class="flip">
-					<div class="front">MySQL</div>
-					<div class="back"></div>
-				</a>
-			</div>
-			{{>scrollTo}}
-		</div>
-		<div class="section" section="lib" section-title="Libraries">
-			<div class="section-header">Libraries</div>
-			<div  id="flips-lib" class="flips">
-				<a href="http://jquery.com/" target="_BLANK" class="flip">
-					<div class="front">jQuery</div>
-					<div class="back"></div>
-				</a>
-				<a href="http://grafico.kilianvalkhof.com/" target="_BLANK" class="flip">
-					<div class="front">Grafico.js</div>
-					<div class="back"></div>
-				</a>
-				<a href="http://getbootstrap.com/" target="_BLANK" class="flip">
-					<div class="front">Bootstrap</div>
-					<div class="back"></div>
-				</a>
-				<a href="http://summernote.org/" target="_BLANK" class="flip">
-					<div class="front">Summernote</div>
-					<div class="back"></div>
-				</a>
-				<a href="http://summernote.org/" target="_BLANK" class="flip">
-					<div class="front">Modernizr</div>
-					<div class="back"></div>
-				</a>
-			</div>
-			{{>scrollTo}}
-		</div>
-		<div class="section education" section="education" section-title="Education">
-			<div class="section-header">Education</div>
-			<div class="half">
-				<h3 class="institution" itemprop="alumni">The University of Texas<br>2010</h3>
-			</div>
-			<div class="half">
-				<h4>Biochemistry B.S. Honors</h4>
-				<p>Publication in the <a href="http://www.jbc.org/content/285/30/22840.long" target="_BLANK">Journal of Biological Chemistry</a></p>
-				<h4>Spanish B.A.</h4>
-				<p>Study abroad in Córdoba, Argentina</p>
-			</div>
-			{{>scrollTo}}
-		</div>
-		<div class="section employment" section="employment" section-title="Employment">
-			<div class="section-header">Employment</div>
-			<div class="half">
-				<h3>Designer & Developer</h3>
-			</div>
-			<div class="half">
-				<h4 itemprop="name">Landes Bioscience</h4>
-				<p>2012 &mdash; 2014</p>
+		<div data-anchor="education" class="section education" data-title="Education">
+			<div class="section-header"><h2>Education</h2></div>
+			
+			<div class="degree-box">
+				<div class="half">
+					<h3 itemprop="alumniOf">The University<br>of Texas<br>2010</h3>
+				</div>
+				<div class="half">
+					<h4>Biochemistry B.S. Honors</h4>
+					<h4>Spanish B.A.</h4>
+				</div>				
 			</div>
 
-			<div class="half">
-				<h3>Lab Manager & Research Scientist</h3>
-			</div>
-			<div class="half">
-				<h4 itemprop="name">The University of Texas</h4>
-				<p>Institute for Cellular and Molecular Biology<br>2011 &mdash; 2013</p>
-			</div>
 			{{>scrollTo}}
 		</div>
-		<div section="contact" class="section" section-title="Contact">
-			<span class="always_hide" itemprop="name">Jessica Lawshe</span>
-			<div class="footer">{{>footer}}</div>
+		<div data-anchor="experience" class="section" data-title="Experience">
+			<div class="section-header"><h2>Experience</h2></div>
+			<ul class="flips" id="flips-experience">
+				{{#each experience}}
+					<li><div class="flip-container"><a href="{{url}}" target="_BLANK" class="{{#if ie}}{{else}}flip{{/if}}">
+						{{#if ie}}
+							<i class="fa {{icon}}"></i><br>{{what}}
+						{{else}}
+							<span class="front"><span><i class="fa {{icon}}"></i> {{what}}</span></span>
+							<span class="back"></span>
+						{{/if}}
+					</a></div></li>
+				{{/each}}
+			</ul>
+			{{>scrollTo}}
+		</div>
+		<div data-anchor="contact" class="section" data-title="Contact">
+			<h3>Selected Work</h3>
+			{{>selectedWork}}
+			{{>footer}}
 		</div>
 	</div>
 </template>
