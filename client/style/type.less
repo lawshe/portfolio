@@ -1,0 +1,139 @@
+@import "mixin.less";
+@import "colors.less";
+@import "variables.less";
+/*FONTS*/
+	/*color*/
+		.txt-dark-bg{
+			h1{
+				color: @gray;
+			}
+			h2{
+				color: @gray-med;
+			}
+			h3{
+				color: @gray;
+			}
+			h4{
+				color: @gray-med;
+			}
+			p{
+				color: @white;
+			}
+			li{
+				color: @white;
+			}
+		}
+	/*type*/
+		@font-face {
+			font-family: 'otama.epregular';
+			src: url('/fonts/otama/Otama-ep-webfont.eot');
+			src: url('/fonts/otama/Otama-ep-webfont.eot?#iefix') format('embedded-opentype'),
+					url('/fonts/otama/Otama-ep-webfont.woff') format('woff'),
+					url('/fonts/otama/Otama-ep-webfont.ttf') format('truetype'),
+					url('/fonts/otama/Otama-ep-webfont.svg#otama.epregular') format('svg');
+			font-weight: normal;
+			font-style: normal;
+		}
+		.serif(){
+			font-family: "otama.epregular", Times New Roman, Times, serif;
+		}	
+		.sans{
+			font-family: Helvetica Neue,Helvetica, Arial,sans-serif;
+		}
+		.sans-light{
+			.sans;
+			font-weight: 300;
+		}
+		.sans-bold{
+			.sans;
+			font-weight: 700;
+		}
+		.sans-med{
+			.sans;
+			font-weight: 600;
+		}
+	/*headers & paragraph*/
+		h1,h2,h3,h4,p{
+			clear: both;
+		}
+		h1{
+			color: @black;
+			.serif;
+			text-align: right;
+			font-size: @font-xl;
+			line-height: @font-xl; 
+			margin: 0;
+			@media @phoneTablet{
+				text-align: left;
+			}
+		}
+		h2{
+			color:@black-dark;
+			.sans-light;
+			font-size: @font-xl/2;
+			line-height: @font-xl/2;
+			text-align: left;
+			margin: 0;
+		}
+		h3{
+			color:@black-dark;
+			.serif;
+			font-size: @font-m;
+			line-height: @font-m;
+			text-align: center;
+			margin: @marginSM 0;
+		}
+		h4{
+			color:@blue-base;
+			.sans-med;
+			font-size: @font-s;
+			line-height: @font-s*1.1;
+			text-align: left;
+			margin: @marginSM 0;
+			@media @phoneTablet{
+				text-align: center;
+			}
+			.emph{
+				color: @black;
+			}
+
+		}
+		p{
+			color:@color-base;
+			.sans-light;
+			text-align: center;
+			margin: @marginSM auto;
+			font-size: @font-base;
+			line-height: @font-base*1.3;
+			text-align: justify;
+   			text-align-last:center;
+   			max-width: 400px;
+   			float: left;
+   			@media @phoneTablet{
+   				float:none;
+   			}
+		}
+		.mini{
+			font-size: @font-xs;
+			text-align:center!important;
+			color: @gray;
+		}		
+	/*text align*/
+		.centered,.txt-center {
+			text-align: center !important;
+			h1,h2,h3,h4,p{
+				text-align: center!important;
+			}
+		}
+		.txt-right{
+			text-align: right!important;
+			h1,h2,h3,h4,p{
+				text-align: right!important;
+			}
+		}
+		.txt-left{
+			text-align: left!important;
+			h1,h2,h3,h4,p{
+				text-align: left!important;
+			}
+		}
