@@ -11,6 +11,8 @@ iron:router
 zimme:iron-router-active
 reywood:iron-router-ga
 manuelschoebel:ms-seo
-lawshe:full-page
 aldeed:template-extension
 meteorhacks:kadira
+spiderable
+gadicohen:sitemaps
+lawshe:full-page
