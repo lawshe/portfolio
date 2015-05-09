@@ -1,7 +1,26 @@
 Session.setDefault('section', '');
 Session.setDefault('page','');
 Session.setDefault('imgSize','sm');
-if (Meteor.isClient) {
+Session.setDefault('ie',false);
+Meteor.startup(function() {
+	Meteor.fxns.msIE();
+	return SEO.config({
+			title: 'Jessica Lawshe',
+			meta: {
+				'description': 'Freelance designer & developer based in Austin, Texas.'
+			},
+			og: {
+				'title': 'Jessica Lawshe',
+				'description': 'Freelance designer & developer based in Austin, Texas.'
+			},
+		    auto: {
+		      twitter: false,
+		      og: true,
+		      set: ['description', 'url', 'title']
+		    }
+      });		
+});
+//if (Meteor.isClient) {
 	Template.layout.hooks({
 		created: function () {
 		},
@@ -11,25 +30,15 @@ if (Meteor.isClient) {
 		destroyed: function () {
 		}
 	});
-	Template.home.hooks({
-		created: function () {
-		},
-		rendered: function () {
-			Meteor.fxns.allPages();
-
-			Session.set('page','home');
-		},
-		destroyed: function () {
-			Meteor.fullpage.destroy();
-		}
-	});
 	Template.about.hooks({
 		created: function () {
 		},
 		rendered: function () {
-			Meteor.fxns.allPages();
-			Meteor.about.me();
 			Session.set('page','about');
+			Meteor.fxns.allPages();
+
+			//svg
+			Meteor.about.drawMe();
 		},
 		destroyed: function () {
 			Meteor.fullpage.destroy();
@@ -39,8 +48,8 @@ if (Meteor.isClient) {
 		created: function () {
 		},
 		rendered: function () {
-			Meteor.fxns.allPages();
 			Session.set('page','work');
+			Meteor.fxns.allPages();
 		},
 		destroyed: function () {
 			Meteor.fullpage.destroy();
@@ -51,8 +60,8 @@ if (Meteor.isClient) {
 		created: function () {
 		},
 		rendered: function () {
+			Session.set('page','landes');
 			Meteor.fxns.allPages();
-			Session.set('page','abolandesut');
 		},
 		destroyed: function () {
 			Meteor.fullpage.destroy();
@@ -75,8 +84,8 @@ if (Meteor.isClient) {
 		created: function () {
 		},
 		rendered: function () {
+			Session.set('page','bim_cubed');
 			Meteor.fxns.allPages();
-			Session.set('page','bim');
 		},
 		destroyed: function () {
 			Meteor.fullpage.destroy();
@@ -95,7 +104,7 @@ if (Meteor.isClient) {
 
 	//--EVENTS
 	Template.menu.events = {
-		'click .mobile_menu_toggle': function(){
+		'click .mobile-menu-toggle': function(){
 		    Meteor.fxns.toggleMobileMenu();
 		},
 		'click .menu-item.active': function(){
@@ -105,17 +114,16 @@ if (Meteor.isClient) {
 			}else{
 				location.reload();
 			}
+		},
+		'click .menu-item-sub': function(e,t){
+			e.preventDefault();
+			var anchor = $(e.currentTarget).attr('href').replace('#', '');
+			$.fn.fullpage.moveTo(anchor);
 		}
 	};
 	Template.fullpage.events = {
-		'click .fullpage_covered': function(){
+		'click .fullpage-covered': function(){
 			Meteor.fxns.checkMenu();
-		}
-	};
-	Template.home.events = {
-		'click .scroll-btn': function(e){
-			e.preventDefault();
-			Meteor.fullpage.nextSection();
 		}
 	};
 	Template.about.events = {
@@ -134,7 +142,7 @@ if (Meteor.isClient) {
 			Meteor.fullpage.nextSection();
 		}
 	};
-	Template.landes.events = {
+	Template.clientPage.events = {
 		'click .scroll-btn': function(e){
 			e.preventDefault();
 			Meteor.fullpage.nextSection();
@@ -144,24 +152,4 @@ if (Meteor.isClient) {
 			Meteor.fullpage.moveToSlide(e);
 		}
 	};
-	Template.bpb.events = {
-		'click .scroll-btn': function(e){
-			e.preventDefault();
-			Meteor.fullpage.nextSection();
-		},
-		'click .toSlide': function(e,t){
-			e.preventDefault();
-			Meteor.fxns.moveToSlide(e);
-		}
-	};
-	Template.bim.events = {
-		'click .scroll-btn': function(e){
-			e.preventDefault();
-			Meteor.fullpage.nextSection();
-		},
-		'click .toSlide': function(e,t){
-			e.preventDefault();
-			Meteor.fullpage.moveToSlide(e);
-		}
-	};
-}
+//}
