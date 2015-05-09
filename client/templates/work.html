@@ -19,20 +19,18 @@
 
 <template name="clientPage">
 	<div class="subpage {{anchor}}">
-		{{#with title}}
-			{{>pageHeader}}
-		{{/with}}
-		{{#each sections}}
-			{{>workSection}}
+		{{>pageHeader}}
+		{{#each projects}}
+			{{>clientSection}}
 		{{/each}}	
 		{{>moreWork}}
 	</div>	
 </template>
 
-<template name="workSection">
+<template name="clientSection">
 	<div class="section" data-anchor="{{anchor}}" data-title="{{sectionHeader}}">
 		<div class="section-header"><h2>{{sectionHeader}}</h2></div>
-		{{#each project}}
+		{{#each sections}}
 			<div class="subproject">
 				<h3>{{headerThree}}</h3>
 				<div class="half">
@@ -64,12 +62,6 @@
 			</li>	
 		{{/each}}		
 	</ul>
-</template>
-
-<template name="workNav">
-	{{#if projectTitle}}
-		<li>{{projectTitle}}</li>
-	{{/if}}
 </template>
 
 <template name="moreWork">
