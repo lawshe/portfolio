@@ -14,15 +14,10 @@ Router.map(function() {
 		  SEO.set({
 			title: "About | JL",
 			meta: {
-			  "description": "About Jessica Lawshe, a full stack developer based in Austin, Texas.",
+			  "description": "About Jessica Lawshe, a freelance designer & developer based in Austin, Texas.",
 			  "keywords": "Jessica Lawshe, Lawshe, designer, developer, Austin, Texas, MongoDB, Meteor, PHP, jQuery, HTML, CSS"
 			}
 		  });
-		}
-	});
-	this.route('about.html', {
-		onBeforeAction: function() {
-			this.redirect('/');
 		}
 	});
 	this.route('work', {
@@ -37,11 +32,6 @@ Router.map(function() {
 			  "description": "Selected work by Jessica Lawshe"
 			}
 		  });
-		}
-	});
-	this.route('work.html', {
-		onBeforeAction: function() {
-			this.redirect('/work');
 		}
 	});
 	this.route('bpb', {
@@ -62,7 +52,7 @@ Router.map(function() {
 		onBeforeAction: function() {
 			this.redirect('/work/bpb');
 		}
-	});
+	});	
 	this.route('landes', {
 		path: 'work/landes',
 		onAfterAction: function() {
@@ -81,9 +71,9 @@ Router.map(function() {
 		onBeforeAction: function() {
 			this.redirect('/work/landes');
 		}
-	}); 
+	}); 	
 	this.route('bim', {
-		path: 'work/coming_soon',
+		path: 'work/bim_cubed',
 		onAfterAction: function() {
 		  if (!Meteor.isClient) {
 			return;
@@ -92,6 +82,20 @@ Router.map(function() {
 			title: "Work: BIM Cubed | JL",
 			meta: {
 			  "description": "BIM Cubed website, development projects by Jessica Lawshe"
+			}
+		  });
+		}
+	});
+	this.route('cherrywood', {
+		path: 'work/cherrywood_studios',
+		onAfterAction: function() {
+		  if (!Meteor.isClient) {
+			return;
+		  }
+		  SEO.set({
+			title: "Work: Cherrywood Studios | JL",
+			meta: {
+			  "description": "Cherrywood Studios website, development projects by Jessica Lawshe"
 			}
 		  });
 		}
