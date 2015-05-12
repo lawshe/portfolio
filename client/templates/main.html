@@ -48,6 +48,9 @@
 </template>
 
 <template name="menu">
+	<div class="toggle-container">
+		<a class="mobile-menu-toggle" href=""><i class="fa fa-list"></i></a>
+	</div>
 	<div class="menu-wrap">
 		<ul class="main-menu">
 			<li><a href="{{pathFor 'about'}}" class="menu-item {{isActiveRoute regex='about' className='active-menu'}}"><span>JL</span></a></li>
@@ -57,16 +60,11 @@
 			{{/if}}
 		</ul>
 		<ul id="sub-menu"></ul>
-		
 		{{#if isAbout}}
 			<ul class="main-menu">
 				<li><a  href="{{pathFor 'work'}}" class="menu-item {{isActiveRoute regex='work' className='active-menu'}}" id="menu-item-work"><span>Work</span></a></li>
 			</ul>
 		{{/if}}
-		
-	</div>
-	<div class="toggle-container">
-		<a class="mobile-menu-toggle" href=""><i class="fa fa-list"></i></a>
 	</div>
 </template>
 <template name="notFound">

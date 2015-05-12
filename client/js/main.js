@@ -122,7 +122,7 @@ Meteor.startup(function() {
 		}
 	};
 	Template.fullpage.events = {
-		'click .fullpage-covered': function(){
+		'click #fullpage': function(){
 			Meteor.fxns.checkMenu();
 		}
 	};
