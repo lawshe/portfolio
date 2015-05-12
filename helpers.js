@@ -5,6 +5,8 @@ if (Meteor.isClient) {
 			thumb: 'BIM<br>Cubed',
 			slug: 'bim_cubed',
 			headerTwo: 'Building Information<br>Modeling',
+			description: 'Front and back end design and development of a website for Building Information Modeling built with Meteor.js and hosted on AWS',
+			keywords: 'Database architecture, MongoDB, Meteor.js, JavaScript, Building Information Modeling, Twitter Bootstrap, jQuery',
 			imageThumb: 'home_surface.png',
 			image: 'home.png',
 			imageTitle: 'The Bipolar Bears Homepage',
@@ -94,6 +96,8 @@ if (Meteor.isClient) {
 			thumb: 'Landes<br>Bioscience',
 			slug: 'landes',
 			headerTwo: 'Peer Reviewed<br>Research Publisher',
+			description: 'Front and back end design and development of a website for a peer reviewed research publisher. I worked with various APIs, including Authorize.net and Twitter.',
+			keywords: 'Database architecture, MongoDB, MySQL, JavaScript, Peer Reviewed Research, Twitter Bootstrap, jQuery, Authorize.net, Twitter API, Facebook API, PubMed Central, CrossRef, JATS, PHP',
 			imageThumb: 'journal_home_mac.png',
 			image: 'journal_home_mac.png',
 			projects: [
@@ -201,7 +205,7 @@ if (Meteor.isClient) {
 						{
 							headerThree: 'Payment Gateway',
 							headerFour: 'Advanced Integration Method API',
-							txt: 'Transactions are processed via a SSL connection to Authorize.net. The API is the most secure method from the payment gateway. A transaction key is required ultimate security.',
+							txt: 'Transactions are processed via a SSL connection to Authorize.net. The API is the most secure method from the payment gateway. A transaction key is required for ultimate security.',
 							images: [
 								{
 									image: '1_saved_s.png',
@@ -266,7 +270,7 @@ if (Meteor.isClient) {
 						{
 							headerThree: 'Admin',
 							headerFour: 'Tweet from Admin',
-							txt: 'Editors skip logging into individual Twitter accounts & tweet via the admin page. The same tweet can be tweeted multiple Twitter accounts. Other journals can also be tagged in the tweet. After tweeting, a retweet option is displayed.',
+							txt: 'Editors skip logging into individual Twitter accounts & tweet via the admin page. The same tweet can be tweeted by multiple Twitter accounts. Other journals can also be tagged in the tweet. After tweeting, a retweet option is displayed.',
 							images: [
 								{
 									image: 'admin_tweet_sm.png',
@@ -458,15 +462,14 @@ if (Meteor.isClient) {
 			thumb: 'The<br>Bipolar<br>Bears',
 			slug: 'bpb',
 			headerTwo: 'Indie<br>Band',
+			description: 'Front and back end design and development of a website for a band. A CMS was also needed to help manage show tasks.',
+			keywords: 'Database architecture, MySQL, PHP, jQuery',
 			imageThumb: 'home_iphone.png',
 			image: 'home_logo.png',
 			projects: [
 				{
 					sectionHeader: 'Responsive',
 					anchor: 'responsive',
-					// image: 'home_iphone.png',
-					// imageClasses: 'no-bg',
-					// imageTitle: 'Responsive Layout',
 					sections: [
 						{	
 							headerThree: 'Adaptive Layout',

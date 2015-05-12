@@ -19,10 +19,27 @@
 
 <template name="clientPage">
 	<div class="subpage {{anchor}}">
-		{{>pageHeader}}
-		{{#each projects}}
-			{{>clientSection}}
-		{{/each}}	
+		<span itemscope itemtype="http://schema.org/CreativeWork">
+			<div class="section" data-anchor="{{anchor}}" data-title="{{headerOne}}">
+				<div class="page-header">
+					<div class="half">
+						<h1 itemprop="name">{{headerOne}}</h1>
+					</div>
+					<div class="half">
+						<h2>{{{headerTwo}}}</h2>			
+					</div>
+					<div class="hidden" itemprop="description">{{description}}</div>
+					<meta itemprop="keywords" content="{{keywords}}"/>
+				</div>
+				<a class="imagepop" rel="gallery" href="{{imagePath}}" data-title="{{imageTitle}}" thumbnailUrl="{{imagePath}}">
+					<img alt="{{imageTitle}}" src="{{imagePath}}">
+				</a>
+				{{>scrollTo}}
+			</div>
+			{{#each projects}}
+				{{>clientSection}}
+			{{/each}}	
+		</span>
 		{{>moreWork}}
 	</div>	
 </template>

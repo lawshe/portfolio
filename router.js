@@ -27,7 +27,7 @@ Router.map(function() {
 			return;
 		  }
 		  SEO.set({
-			title: "Work | JL",
+			title: "Work | by JL",
 			meta: {
 			  "description": "Selected work by Jessica Lawshe"
 			}
@@ -41,9 +41,10 @@ Router.map(function() {
 			return;
 		  }
 		  SEO.set({
-			title: "Work: The Bipolar Bears | JL",
+			title: "The Bipolar Bears | by JL",
 			meta: {
-			  "description": "The Bipolar Bears website, created by Jessica Lawshe"
+			  "description":  Session.get('pageDescription') + " created by Jessica Lawshe",
+			  "keywords": Session.get('pageKeywords')
 			}
 		  });
 		}
@@ -60,9 +61,10 @@ Router.map(function() {
 			return;
 		  }
 		  SEO.set({
-			title: "Work: Landes Bioscience | JL",
+			title: "Landes Bioscience | by JL",
 			meta: {
-			  "description": "Landes Bioscience website, development projects by Jessica Lawshe"
+			  "description":  Session.get('pageDescription') + " created by Jessica Lawshe",
+			  "keywords": Session.get('pageKeywords')
 			}
 		  });
 		}
@@ -79,9 +81,10 @@ Router.map(function() {
 			return;
 		  }
 		  SEO.set({
-			title: "Work: BIM Cubed | JL",
+			title: "BIM Cubed | by JL",
 			meta: {
-			  "description": "BIM Cubed website, development projects by Jessica Lawshe"
+			  "description":  Session.get('pageDescription') + " created by Jessica Lawshe",
+			  "keywords": Session.get('pageKeywords')
 			}
 		  });
 		}
@@ -93,7 +96,7 @@ Router.map(function() {
 			return;
 		  }
 		  SEO.set({
-			title: "Work: Cherrywood Studios | JL",
+			title: "Cherrywood Studios | by JL",
 			meta: {
 			  "description": "Cherrywood Studios website, development projects by Jessica Lawshe"
 			}

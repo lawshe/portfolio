@@ -2,49 +2,26 @@
 	<div class="scroll-to"><a class="scroll-btn">&#9660;</a></div>
 </template>
 <template name="footer">
-	<div class="footer" itemscope itemtype="http://schema.org/Person">
+	<div class="footer">
 		<h3>Contact</h3>
-			<ul class="thumbnails">
-				<li class="thumbnail">
-					<a itemprop="url" href="https://www.linkedin.com/in/lawshe" target="_BLANK">
-						<span><i class="fa fa-linkedin-square"></i><br>LinkedIn</span>
-					</a>
-				</li>
-				<li class="thumbnail">
-					<a itemprop="url" href="https://github.com/lawshe" target="_BLANK">
-						<span><i class="fa fa-github"></i><br>GitHub</span>
-					</a>			
-				</li>
-				<li class="thumbnail">
-					<a itemprop="email" class="email">
-						moc [ dot ] ehswalj [ at ] acissej
-					</a>				
-				</li>
-			</ul>
-		<!-- <div class="half">			
-		</div>
-		<div class="half">
-			<h3 itemprop="name">Jessica Lawshe</h3>
-			<h4 itemprop="jobTitle">Designer & Developer</h4>
-			<p itemprop="addressLocality">Austin, Texas</p>
-		</div> -->
-	</div>
-</template>
-
-
-<template name="pageHeader">
-	<div class="section" data-anchor="{{anchor}}" data-title="{{headerOne}}">
-		<div class="page-header">
-			<div class="half">
-				<h1>{{headerOne}}</h1>
-			</div>
-			<div class="half">
-				<h2>{{{headerTwo}}}</h2>			
-			</div>
-		</div>
-		<a class="imagepop" rel="gallery" href="{{imagePath}}" data-title="{{imageTitle}}">
-			<img alt="{{imageTitle}}" src="{{imagePath}}">
-		</a>
-		{{>scrollTo}}
+		<span class="hidden" itemprop="name">Jessica Lawshe</span>
+		<span class="hidden" itemprop="jobTitle">Designer &<br>Developer</span>
+		<ul class="thumbnails">
+			<li class="thumbnail">
+				<a itemprop="url" href="https://www.linkedin.com/in/lawshe" target="_BLANK">
+					<span><i class="fa fa-linkedin-square"></i><br>LinkedIn</span>
+				</a>
+			</li>
+			<li class="thumbnail">
+				<a itemprop="url" href="https://github.com/lawshe" target="_BLANK">
+					<span><i class="fa fa-github"></i><br>GitHub</span>
+				</a>			
+			</li>
+			<li class="thumbnail">
+				<a itemprop="email" class="email">
+					moc [ dot ] ehswalj [ at ] acissej
+				</a>				
+			</li>
+		</ul>
 	</div>
 </template>
