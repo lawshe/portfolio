@@ -1,4 +1,4 @@
-portfolio
+Portfolio
 =========
 
-This is a meteor app for my portfolio site. 
+My portfolio site built with [Meteor.js](https://www.meteor.com/). 
