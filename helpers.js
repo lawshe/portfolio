@@ -22,7 +22,7 @@ if (Meteor.isClient) {
 									{
 										image: 'home_iphone.gif',
 										imageClasses: 'no-bg',
-										title: 'Interactive Logo',
+										title: 'Interactive Logo'
 									}
 								]
 							}
@@ -150,7 +150,7 @@ if (Meteor.isClient) {
 								}
 							]
 						}
-					],
+					]
 				},
 				{
 					sectionHeader: 'Checkout',
