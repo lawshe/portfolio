@@ -117,7 +117,7 @@ Meteor.startup(function() {
 				location.reload();
 			}
 		},
-		'click .menu-item-sub': function(e,t){
+		'click .menu-item-sub': function(e){
 			e.preventDefault();
 			var anchor = $(e.currentTarget).attr('href').replace('#', '');
 			$.fn.fullpage.moveTo(anchor);
@@ -133,7 +133,7 @@ Meteor.startup(function() {
 			e.preventDefault();
 			Meteor.fullpage.nextSection();
 		},
-		'click .toSlide': function(e,t){
+		'click .toSlide': function(e){
 			e.preventDefault();
 			Meteor.fxns.moveToSlide(e);
 		}
