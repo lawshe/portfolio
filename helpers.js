@@ -290,7 +290,7 @@ if (Meteor.isClient) {
 									imageClasses: ''
 								}
 							]
-						},
+						}
 					]
 				},
 				{
@@ -405,18 +405,7 @@ if (Meteor.isClient) {
 									imageClasses: ''
 								}
 							]
-						},
-						// {
-						// 	headerFour: 'All Special Focuses',
-						// 	txt: 'List of current & past special focuses within the journal.',
-						// 	images: [
-						// 		{
-						// 			image: 'sf_list_hv.png',
-						// 			title: 'Special Focus List',
-						// 			imageClasses: ''
-						// 		}
-						// 	]
-						// },
+						}
 					]
 				},
 				{
@@ -434,7 +423,7 @@ if (Meteor.isClient) {
 									imageClasses: ''
 								}
 							]
-						},
+						}
 					]
 				},
 				{
@@ -454,7 +443,7 @@ if (Meteor.isClient) {
 							]
 						}
 					]
-				},
+				}
 			]		
 		},
 		{
@@ -482,29 +471,7 @@ if (Meteor.isClient) {
 									imageClasses: 'no-bg'
 								}
 							]
-						},
-						// {	
-						// 	//headerFour: 'Menu',
-						// 	//txt: 'Screen size dictates the location of the fixed navigation.',
-						// 	images: [
-						// 		{
-						// 			image: 'home_iphone.png',
-						// 			title: 'Fixed Menu',
-						// 			imageClasses: 'no-bg'
-						// 		}
-						// 	]
-						// },
-						// {
-						// 	headerFour: 'Embedded YouTube & Vimeo',
-						// 	txt: 'Options to switch to another video or share on social networks.',
-						// 	images: [
-						// 		{
-						// 			image: 'videos.png',
-						// 			title: 'Videos',
-						// 			imageClasses: 'no-bg'
-						// 		}
-						// 		]
-						// }
+						}
 					]
 				},
 				{
@@ -523,18 +490,6 @@ if (Meteor.isClient) {
 							}
 							]
 						},
-						// {
-						// 	headerThree: 'Venues',
-						// 	headerFour: 'Add New',
-						// 	txt: 'Saved venues can be added to shows.',
-						// 	images: [
-						// 	{
-						// 		image: 'cms_new_venue.png',
-						// 		title: 'CMS: Add Venue',
-						// 		imageClasses: ''
-						// 	}
-						// 	]
-						// },
 						{
 							headerThree: 'Venues',
 							headerFour: 'Search & Sort',
@@ -581,7 +536,7 @@ if (Meteor.isClient) {
 			]
 		}
 	];
-	var api = [,
+	var api = [
 		{
 			url: 'https://developers.facebook.com/',
 			what: 'Facebook',
@@ -658,19 +613,19 @@ if (Meteor.isClient) {
 
 	Template.landes.helpers({
 		client: function(){
-			client = Meteor.fxns.findClient('landes',clients);
+			var client = Meteor.fxns.findClient('landes',clients);
 			return client;
 		}
 	});	
 	Template.bpb.helpers({
 		client: function(){
-			client = Meteor.fxns.findClient('bpb',clients);
+			var client = Meteor.fxns.findClient('bpb',clients);
 			return client;
 		}
 	});
 	Template.bim.helpers({
 		client: function(){
-			client = Meteor.fxns.findClient('bim_cubed',clients);
+			var client = Meteor.fxns.findClient('bim_cubed',clients);
 			return client;
 		},
 		imgSize: function(){
@@ -688,8 +643,7 @@ if (Meteor.isClient) {
 	Template.moreWork.helpers({
 		work: function(){
 			var currentClient = Session.get('page'),
-			otherClients = $.grep(clients, function(e){ return e.slug !== currentClient; }),
-			randomWork = otherClients[(~~(Math.random() * otherClients.length))];
+			otherClients = $.grep(clients, function(e){ return e.slug !== currentClient; });
 			return otherClients;
 		},
 		imgSize: function(){
@@ -697,15 +651,14 @@ if (Meteor.isClient) {
 		}
 	});
 	Template.clientSection.helpers({
-
 		imgSize: function(){
 			return Session.get('imgSize');
-		},
+		}
 	});
 	Template.work.helpers({
 		imgSize: function(){
 			return Session.get('imgSize');
-		},
+		}
 	});
 	Template.about.helpers({
 		api: function(){
@@ -720,7 +673,7 @@ if (Meteor.isClient) {
 	});
 	Template.menu.helpers({
 		isAbout: function(){
-			if(Session.get('page') == 'about'){
+			if(Session.get('page') === 'about'){
 				return true;
 			}else{
 				return false;
