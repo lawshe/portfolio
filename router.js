@@ -12,10 +12,10 @@ Router.map(function() {
 			return;
 		  }
 		  SEO.set({
-			title: "About | JL",
+			title: 'About | JL',
 			meta: {
-			  "description": "About Jessica Lawshe, a freelance designer & developer based in Austin, Texas.",
-			  "keywords": "Jessica Lawshe, Lawshe, designer, developer, Austin, Texas, MongoDB, Meteor, PHP, jQuery, HTML, CSS"
+			  'description': 'About Jessica Lawshe, a freelance designer & developer based in Austin, Texas.',
+			  'keywords': 'Jessica Lawshe, Lawshe, designer, developer, Austin, Texas, MongoDB, Meteor, PHP, jQuery, HTML, CSS'
 			}
 		  });
 		}
@@ -27,9 +27,9 @@ Router.map(function() {
 			return;
 		  }
 		  SEO.set({
-			title: "Work | by JL",
+			title: 'Work | by JL',
 			meta: {
-			  "description": "Selected work by Jessica Lawshe"
+			  'description': 'Selected work by Jessica Lawshe'
 			}
 		  });
 		}
@@ -41,10 +41,10 @@ Router.map(function() {
 			return;
 		  }
 		  SEO.set({
-			title: "The Bipolar Bears | by JL",
+			title: 'The Bipolar Bears | by JL',
 			meta: {
-			  "description":  Session.get('pageDescription') + " created by Jessica Lawshe",
-			  "keywords": Session.get('pageKeywords')
+			  'description':  Session.get('pageDescription') + ' created by Jessica Lawshe',
+			  'keywords': Session.get('pageKeywords')
 			}
 		  });
 		}
@@ -61,10 +61,10 @@ Router.map(function() {
 			return;
 		  }
 		  SEO.set({
-			title: "Landes Bioscience | by JL",
+			title: 'Landes Bioscience | by JL',
 			meta: {
-			  "description":  Session.get('pageDescription') + " created by Jessica Lawshe",
-			  "keywords": Session.get('pageKeywords')
+			  'description':  Session.get('pageDescription') + ' created by Jessica Lawshe',
+			  'keywords': Session.get('pageKeywords')
 			}
 		  });
 		}
@@ -81,10 +81,10 @@ Router.map(function() {
 			return;
 		  }
 		  SEO.set({
-			title: "BIM Cubed | by JL",
+			title: 'BIM Cubed | by JL',
 			meta: {
-			  "description":  Session.get('pageDescription') + " created by Jessica Lawshe",
-			  "keywords": Session.get('pageKeywords')
+			  'description':  Session.get('pageDescription') + ' created by Jessica Lawshe',
+			  'keywords': Session.get('pageKeywords')
 			}
 		  });
 		}
@@ -96,9 +96,9 @@ Router.map(function() {
 			return;
 		  }
 		  SEO.set({
-			title: "Cherrywood Studios | by JL",
+			title: 'Cherrywood Studios | by JL',
 			meta: {
-			  "description": "Cherrywood Studios website, development projects by Jessica Lawshe"
+			  'description': 'Cherrywood Studios website, development projects by Jessica Lawshe'
 			}
 		  });
 		}
