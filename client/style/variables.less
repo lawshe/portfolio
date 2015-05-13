@@ -1,8 +1,8 @@
-@import "mixin.less";	
-	@fadeSpeed: 0.5s;
+	@fadeSpeed: 1s;
 	@maxWidth: 620px;
 	@mobile-menu: 40px;
-	@menu-hidden-width:0px;	
+	@mobile-menu-width: 50%;
+	@menu-hidden-width:0px;
 	/*font size*/
 		@font-xl:	2.9rem;
 		@font-l:	2.4rem;
@@ -21,8 +21,8 @@
 		@marginSM: 10px;
 		@marginMD: 15px;
 		@marginLG: 20px;
-		@marginXL: 30px;	
-		@marginXXL: 60px;	
+		@marginXL: 30px;
+		@marginXXL: 60px;
 	/*border*/
 		@borderSM: 2px;
 		@borderMD: 4px;
@@ -30,92 +30,6 @@
 	/*misc*/
 		@arrowWidth: 15px;
 		@sectionHeader: @font-l*1.5;
-	/*keyframes*/
-		/*move up - indefinite*/
-			.moveUp{
-			    0% {
-			        background-position: 0 0;
-			    }
-			    100% {
-			        background-position: 0 -100%;
-			    }	
-			}
-			@-webkit-keyframes moveUp {
-				.moveUp;
-			}
-			@-moz-keyframes moveUp {
-				.moveUp;
-			}
-			@keyframes moveUp {
-				.moveUp;
-			}	
-		/*move down - indefinite*/
-			.moveDown{
-			    0% {
-			        background-position: 100% 0;
-			    }
-			    100% {
-			        background-position: 100% 100%;
-			    }	
-			}
-			@-webkit-keyframes moveDown {
-				.moveDown;
-			}
-			@-moz-keyframes moveDown {
-				.moveDown;
-			}
-			@keyframes moveDown {
-				.moveDown;
-			}	
-		/*fade in*/
-			.fadeIn{
-				0% {
-					display:none; 
-					.opacity(0);
-			    }
-
-			    1% {
-					display: block ; 
-					.opacity(0);
-			    }
-
-			    100% {
-					display: block ; 
-					.opacity(1);
-			    }				
-			}
-			@-webkit-keyframes fadeIn {
-				.fadeIn;
-			}
-			@-moz-keyframes fadeIn {
-				.fadeIn;
-			}
-			@keyframes fadeTop {
-				.fadeIn;
-			}				
-		
-		/*bounce*/
-			.bouncing{
-				0%, 20%, 50%, 80%, 100% {
-			    	.transform(translateY(0));
-				}
-				40% {
-			   		.transform(translateY(-30px));
-				}
-				60% {
-					.transform(translateY(-15px));
-				}				
-			}
-			@-webkit-keyframes bounce {
-				.bouncing;
-			}
-			@-moz-keyframes bounce {
-				.bouncing;
-			}
-			@keyframes bounce {
-				.bouncing;
-			}
-
 	/*screens*/
 		@phone: 			~"screen and (max-width: 479px)";
 		@phoneLG: 			~"screen and (max-width: 580px)";
