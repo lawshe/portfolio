@@ -608,6 +608,11 @@ if (Meteor.isClient) {
 			url: 'http://grafico.kilianvalkhof.com/',
 			what: 'Grafico.js',
 			icon: 'fa-area-chart'
+		},
+		{
+			url: 'http://threejs.org/',
+			what: 'three.js',
+			icon: 'fa-cube'
 		}
 	];
 
