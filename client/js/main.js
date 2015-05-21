@@ -131,27 +131,19 @@ Meteor.startup(function() {
 	Template.about.events = {
 		'click .scroll-btn': function(e){
 			e.preventDefault();
-			Meteor.fullpage.nextSection();
-		},
-		'click .toSlide': function(e){
-			e.preventDefault();
-			Meteor.fxns.moveToSlide(e);
+			Meteor.fxns.scrollBtn(e);
 		}
 	};
 	Template.work.events = {
 		'click .scroll-btn': function(e){
 			e.preventDefault();
-			Meteor.fullpage.nextSection();
+			Meteor.fxns.scrollBtn(e);
 		}
 	};
 	Template.clientPage.events = {
 		'click .scroll-btn': function(e){
 			e.preventDefault();
-			Meteor.fullpage.nextSection();
-		},
-		'click .toSlide': function(e,t){
-			e.preventDefault();
-			Meteor.fullpage.moveToSlide(e);
+			Meteor.fxns.scrollBtn(e);
 		}
 	};
 //}
