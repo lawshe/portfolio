@@ -43,6 +43,12 @@
   -webkit-animation-iteration-count: @arguments;
   animation-iteration-count: @arguments;
 }
+.animation-fill-mode(@arguments...){
+  -o-animation-fill-mode: @arguments;
+  -moz-animation-fill-mode: @arguments;
+  -webkit-animation-fill-mode: @arguments;
+  animation-fill-mode: @arguments;
+}
 
 
 .transform(@arguments) {
@@ -63,4 +69,10 @@
   -moz-perspective: @arguments; 
   -ms-perspective: @arguments; 
   perspective: @arguments;
+}
+
+.border-radius(@size){
+  -webkit-border-radius:@size;
+  -moz-border-radius:@size;
+  border-radius:@size;
 }
