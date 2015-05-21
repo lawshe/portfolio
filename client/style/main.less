@@ -1,7 +1,7 @@
-@import "mixin.less";
-@import "colors.less";
-@import "variables.less";
-@import "type.less";
+@import url("mixin.less");
+@import url("colors.less");
+@import url("variables.less");
+@import url("type.less");
 /*BODY*/
 	html, body {
 		margin: 0;
@@ -84,6 +84,18 @@
 		padding: @padSM;
 		display: block;
 	}
+	.about{
+		.section:last-child{
+			background:@blue-base;
+			.txt-dark-bg;
+			padding-bottom: 0px!important;
+		}
+	}
+	/*.more-work{
+		background:@blue-base!important;
+		.txt-dark-bg!important;
+		padding-bottom: 0px!important;		
+	}*/
 	.section{
 		position: relative;
 		background-color: @white;
@@ -105,11 +117,6 @@
 					top: 0!important;
 				}
 			}
-		}
-		&:last-child{
-			background:@blue-base;
-			.txt-dark-bg;
-			padding-bottom: 0px!important;
 		}
 		.subproject{
 			display: block;
@@ -135,6 +142,13 @@
 					}
 				}
 			}
+		}
+	}
+	div:not(.creative-work) > .section{
+		&:last-child{
+			background:@blue-base;
+			.txt-dark-bg;
+			padding-bottom: 0px;
 		}
 	}
 	.section-header{
@@ -202,6 +216,7 @@
 			}
 		}
 		.imagepop{
+			.btn;
 			.transition(@fadeSpeed);
 			background: @gray;
 			display: inline-block;
@@ -622,9 +637,6 @@
 	.black-overlay{
 		background: rgba(0,0,0,0.6);
 	}
-	.always_hide{
-		display: none;
-	}
 	.clearfix{
 		clear: both;
 	}
@@ -656,6 +668,12 @@
 	.hidden{
 		display: none;
 	}
+	.round{
+		.border-radius(5px);
+	}
+	.btn{
+		.round;
+	}
 /*PAGES*/
 	/*About*/
 		.degree-box{
@@ -683,6 +701,7 @@
 			list-style: none;
 			float: right;
 			li{
+				.round;
 				display: block;
 				float: right;
 				background: @gray-light;
@@ -700,6 +719,7 @@
 			}
 		}
 		.email-project{
+			.btn;
 			margin-left: 0px;
 			margin-top: @marginLG;
 		}
@@ -802,8 +822,9 @@
 					padding: 0;
 					text-align: center;
 					a{
-						text-align: center;
+						.btn;
 						.outline-link;
+						text-align: center;
 						display: block;
 					}
 				}
@@ -907,6 +928,7 @@
 		}
 		a{
 			.solid-link;
+			.btn;
 			overflow: hidden;
 			display: block;
 			margin: @marginLG;
