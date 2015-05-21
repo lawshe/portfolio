@@ -72,7 +72,7 @@ if (Meteor.isClient) {
 				},
 				{
 					sectionHeader: 'CMS',
-					project: 'cms',
+					anchor: 'cms',
 					headerTwo: 'Custom CMS for eBook & Users',
 					sections: [
 							{
@@ -567,7 +567,7 @@ if (Meteor.isClient) {
 		{
 			url: 'https://nodejs.org/',
 			what: 'Node.js',
-			icon: 'fa-code'
+			icon: 'fa-terminal'
 		},
 		{
 			url: 'https://github.com/',
