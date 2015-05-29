@@ -534,6 +534,36 @@ if (Meteor.isClient) {
 					]
 				}
 			]
+		},
+		{
+			name: 'Cherrywood Studios',
+			thumb: 'Cherrywood<br>Studios',
+			slug: 'cherrywood',
+			headerTwo: 'Mixed<br>Media Studio',
+			description: 'Opening Summer 2015',
+			keywords: 'Meteor.js, Database architecture, MongoDB, jQuery',
+			imageThumb: 'coming_soon.png',
+			image: 'coming_soon.png',
+			projects: [
+				{
+					sectionHeader: 'Coming Soon Page',
+					anchor: 'coming_soon',
+					sections: [
+						{	
+							headerThree: 'CSS3 Animation',
+							headerFour: 'After Page Load',
+							txt: 'The company logo slides out while the coming soon page fades in. A simple responsive one page site until the full site is launched.',
+							images: [
+								{
+									image: 'coming_soon.gif',
+									title: 'Coming Soon',
+									imageClasses: ''
+								}
+							]
+						}
+					]
+				}
+			]
 		}
 	];
 	var api = [
@@ -632,9 +662,12 @@ if (Meteor.isClient) {
 		client: function(){
 			var client = Meteor.fxns.findClient('bim_cubed',clients);
 			return client;
-		},
-		imgSize: function(){
-			return Session.get('imgSize');
+		}
+	});
+	Template.cherrywood.helpers({
+		client: function(){
+			var client = Meteor.fxns.findClient('cherrywood',clients);
+			return client;
 		}
 	});
 	Template.selectedWork.helpers({

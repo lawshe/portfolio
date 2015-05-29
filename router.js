@@ -12,7 +12,7 @@ Router.map(function() {
 			return;
 		  }
 		  SEO.set({
-			title: 'About | JL',
+			title: 'About | Jessica Lawshe',
 			meta: {
 			  'description': 'About Jessica Lawshe, a freelance designer & developer based in Austin, Texas.',
 			  'keywords': 'Jessica Lawshe, Lawshe, designer, developer, Austin, Texas, MongoDB, Meteor, PHP, jQuery, HTML, CSS'
@@ -90,7 +90,7 @@ Router.map(function() {
 		}
 	});
 	this.route('cherrywood', {
-		path: 'work/cherrywood_studios',
+		path: 'work/cherrywood',
 		onAfterAction: function() {
 		  if (!Meteor.isClient) {
 			return;
@@ -98,7 +98,8 @@ Router.map(function() {
 		  SEO.set({
 			title: 'Cherrywood Studios | by JL',
 			meta: {
-			  'description': 'Cherrywood Studios website, development projects by Jessica Lawshe'
+			  'description':  Session.get('pageDescription') + ' created by Jessica Lawshe',
+			  'keywords': Session.get('pageKeywords')
 			}
 		  });
 		}

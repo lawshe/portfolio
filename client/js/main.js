@@ -93,6 +93,19 @@ Meteor.startup(function() {
 			Meteor.fullpage.destroy();
 		}
 	});
+	//cherrywood
+	Template.cherrywood.hooks({
+		created: function () {
+		},
+		rendered: function () {
+			Session.set('page','cherrywood');
+			Meteor.fxns.allPages();
+		},
+		destroyed: function () {
+			Meteor.fullpage.destroy();
+		}
+	});
+	//not found
 	Template.notFound.hooks({
 		created: function () {
 		},
