@@ -540,7 +540,7 @@ if (Meteor.isClient) {
 			thumb: 'Cherrywood<br>Studios',
 			slug: 'cherrywood',
 			headerTwo: 'Mixed<br>Media Studio',
-			description: 'Opening Summer 2015',
+			description: 'Website for a mixed media studio in Austin, Texas',
 			keywords: 'Meteor.js, Database architecture, MongoDB, jQuery',
 			imageThumb: 'coming_soon.png',
 			image: 'coming_soon.png',
