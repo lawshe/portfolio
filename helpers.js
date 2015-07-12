@@ -29,6 +29,23 @@ if (Meteor.isClient) {
 					]
 				},
 				{
+					sectionHeader: 'Panorama',
+					anchor: 'panorama',
+					sections: [
+							{
+								headerFour: 'Jump into a 3D Model',
+								txt: 'Created using three.js, this panorama let\'s users preview a building before construction. The panorama is auto animated, but with the option to pause. Users can click or drag to change the view.',
+								images:[
+									{
+										image: 'panorama.png',
+										imageClasses: 'no-bg',
+										title: 'Interactive Panorama'
+									}
+								]
+							}
+					]
+				},
+				{
 					sectionHeader: 'User Accounts',
 					anchor: 'users',
 					sections: [
@@ -591,7 +608,44 @@ if (Meteor.isClient) {
 			url: 'http://search.crossref.org/help/api',
 			what: 'CrossRef',
 			icon: 'fa-bookmark'
+		},
+		{
+			url: 'http://www.google.com/analytics/',
+			what: 'Google Analytics',
+			icon: 'fa-google'
 		}
+	];
+	var libraries = [
+		{
+			url: 'https://www.meteor.com/',
+			what: 'Meteor.js',
+			icon: 'fa-sitemap'
+		},
+		{
+			url: 'http://grafico.kilianvalkhof.com/',
+			what: 'Grafico.js',
+			icon: 'fa-area-chart'
+		},
+		{
+			url: 'http://threejs.org/',
+			what: 'three.js',
+			icon: 'fa-cube'
+		},
+		{
+			url: 'http://grafico.kilianvalkhof.com/',
+			what: 'jQuery',
+			icon: 'fa-laptop'
+		},
+		{
+			url: 'http://getbootstrap.com/',
+			what: 'Bootstrap',
+			icon: 'fa-file-code-o'
+		},
+		{
+			url: 'http://modernizr.com/',
+			what: 'Modernizr',
+			icon: 'fa-check'
+		},
 	];
 	var experience = [
 		{
@@ -610,11 +664,6 @@ if (Meteor.isClient) {
 			icon: 'fa-cloud'
 		},
 		{
-			url: 'https://www.meteor.com/',
-			what: 'Meteor.js',
-			icon: 'fa-sitemap'
-		},
-		{
 			url: 'https://wordpress.com/',
 			what: 'WordPress',
 			icon: 'fa-wordpress'
@@ -625,24 +674,9 @@ if (Meteor.isClient) {
 			icon: 'fa-envelope'
 		},
 		{
-			url: 'http://www.google.com/analytics/',
-			what: 'Google Analytics',
-			icon: 'fa-google'
-		},
-		{
-			url: 'http://getbootstrap.com/',
-			what: 'Bootstrap',
-			icon: 'fa-file-code-o'
-		},
-		{
-			url: 'http://grafico.kilianvalkhof.com/',
-			what: 'Grafico.js',
-			icon: 'fa-area-chart'
-		},
-		{
-			url: 'http://threejs.org/',
-			what: 'three.js',
-			icon: 'fa-cube'
+			url: 'https://docs.shopify.com/api',
+			what: 'Shopify',
+			icon: 'fa-shopping-cart'
 		}
 	];
 
@@ -701,6 +735,9 @@ if (Meteor.isClient) {
 	Template.about.helpers({
 		api: function(){
 			return api;
+		},
+		libraries: function(){
+			return libraries;
 		},
 		experience: function(){
 			return experience;
