@@ -73,6 +73,22 @@
 
 			{{>scrollTo}}
 		</div>
+		<div data-anchor="libraries" class="section" data-title="Libraries">
+			<div class="section-header"><h2>Libraries</h2></div>
+			<ul class="flips" id="flips-libraries">
+				{{#each libraries}}
+					<li><div class="flip-container"><a href="{{url}}" target="_BLANK" class="{{#if ie}}{{else}}flip{{/if}}">
+						{{#if ie}}
+							<i class="fa {{icon}}"></i><br>{{what}}
+						{{else}}
+							<span class="front"><span><i class="fa {{icon}}"></i> {{what}}</span></span>
+							<span class="back"></span>
+						{{/if}}
+					</a></div></li>
+				{{/each}}
+			</ul>
+			{{>scrollTo}}
+		</div>
 		<div data-anchor="experience" class="section" data-title="Experience">
 			<div class="section-header"><h2>Experience</h2></div>
 			<ul class="flips" id="flips-experience">
