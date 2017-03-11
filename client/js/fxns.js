@@ -2,11 +2,10 @@ Meteor.fxns = {
 	adiosSpam: function(){
 		var me = 'moc [ dot ] ehswalj [ at ] acissej',
 			txt = me.replace(' [ at ] ', '\u0040').replace(' [ dot ] ', '\u002E').split('').reverse().join('');
-
 		$('.email').html('<span><i class="fa fa-envelope-o"></i><br>' + txt + '</span>');
-		$('.email').attr('href','mailto:' + txt );
+		$('.email').attr('href', 'mailto:' + txt );
 
-		$('.email-project').attr('href','mailto:' + txt + '?subject=Project Inquiry');
+		$('.email-project').attr('href', 'mailto:' + txt + '?subject=Project Inquiry');
 	},
 	checkMenu: function(){
 		if($('body').hasClass('menu-open')){
@@ -39,13 +38,13 @@ Meteor.fxns = {
 	imagesSize: function(){
 		var windowWidth = $(window).width();
 		if(windowWidth > 1000){
-			Session.set('imgSize','lg');
+			Session.set('imgSize', 'lg');
 			Meteor.fxns.imagesHeight(windowWidth,2);
 		}else if (windowWidth > 700){
-			Session.set('imgSize','md');
+			Session.set('imgSize', 'md');
 			Meteor.fxns.imagesHeight(windowWidth,2);
 		}else{
-			Session.set('imgSize','sm');
+			Session.set('imgSize', 'sm');
 			Meteor.fxns.imagesHeight(windowWidth,3);
 		}
 	},
@@ -124,11 +123,23 @@ Meteor.fxns = {
 			$(this).css('height',windowHeight+'px');
 		});
 	},
+	processExs: function(examples){
+		examples.forEach(function(ex){
+			ex = Meteor.fxns.processEx(ex);
+		});
+		return examples;
+	},
+	processEx: function(ex){
+		var imgSize = Session.get('imgSize');
+		ex.image.imagePath =  '/img/work/' + ex.client + '/' + imgSize + '/' + ex.image.file;
+		return ex;
+	},
 	processClient: function(client){
+		// console.log('client',client);
 		var imgSize = Session.get('imgSize');
 		client.headerOne = client.name;
 		client.imagePath = '/img/work/' + client.slug + '/' + imgSize + '/' + client.image;
-		client.imageTitle = client.name; 
+		client.imageTitle = client.name;
 		$(client.projects).each(function(i,v){
 			$(v.sections).each(function(index,value){
 				if(value.images){
@@ -180,61 +191,61 @@ Meteor.fxns = {
 	}
 
 };
+
 Meteor.fullpage = {
 	create: function(){
 		var sections = Meteor.fullpage.pageSections(),
 			anchors = sections.anchors,
 			titles = sections.titles,
 			page = Session.get('page');
+
 		$('#fullpage').fullpage({
 			menu: '#sub-menu',
 			autoScrolling: false,
 			paddingTop:'6rem',
-        	paddingBottom: '3.6rem',
+    	paddingBottom: '3.6rem',
 			resize : true,
-        	keyboardScrolling: true,
-        	fitToSection: false,
+      keyboardScrolling: true,
+      fitToSection: false,
 			easing: 'easeInQuart',
 			recordHistory: false,
 			animateAnchor: true,
 			scrollOverflow: false,
 			afterLoad: function(anchorLink, index){
-				//--hide menu if mobile and open and scrolling
-					if($('body').hasClass('menu-open')){
-						Meteor.fxns.toggleMobileMenu();
-					}
 				var sectionAnchor = anchors[index-1];
+				//--hide menu if mobile and open and scrolling
+				if ($('body').hasClass('menu-open')){
+					Meteor.fxns.toggleMobileMenu();
+				}
+				console.log('==',sectionAnchor);
 				if(Session.get('page') === 'about'){
-					if(sectionAnchor === 'about-intro'){
+					if (sectionAnchor === 'intro'){
 						Meteor.about.drawMe();
-					}
-					if(sectionAnchor === 'api' || sectionAnchor === 'experience' ){
-						Meteor.about.flipBoxes(sectionAnchor);
+					} else if (sectionAnchor === 'about') {
+						Meteor.effects.toggleTimeout('skill-span', 'emphasize', 500, 100, 150);
+					} else if (sectionAnchor === 'skills') {
+						Meteor.effects.toggleTimeout('skills-link', 'emphasize', 500, 100, 150);
+					} else if (sectionAnchor === 'work') {
+						Meteor.effects.toggle('work-ex', 'visible');
 					}
 				}
 			},
 			onLeave: function(index, nextIndex, direction){
 				var sectionAnchor = anchors[index-1];
-				if(Session.get('page') === 'about'){
-					if(sectionAnchor === 'api' || sectionAnchor === 'experience' ){
-						Meteor.about.flipBoxes(sectionAnchor);
+				if (Session.get('page') === 'about'){
+					if (sectionAnchor === 'work') {
+						Meteor.effects.toggle('work-ex', 'visible');
 					}
 				}
 			}
 		});
+
 		//--section navigation
-			$(anchors).each(function(i,v){
-				$('#sub-menu').append('<li class="section-nav" data-menuanchor="'+v+'"><a href="#'+v+'" class="menu-item-sub"><span>'+titles[i]+'</span></a></li>');
-			});
-			if(page === 'about' || page === 'work'){
-				$('.section-nav:nth-child(1)').hide();
-			}else{
-				//use this instead, .fp-viewing-#
-				var active = $('.section.active').attr('data-anchor');
-				if(jQuery.inArray(active,anchors) === 0){
-					$('#sub-menu').find('li').first().addClass('active');
-				}					
+		$(anchors).each(function(i,v){
+			if (titles[i]) {
+				$('#sub-menu').append('<li class="section-nav" data-menuanchor="'+v+'"><a href="#'+v+'" class="menu-item"><span>'+titles[i]+'</span></a></li>');
 			}
+		});
 	},
 	destroy: function(){
 		$.fn.fullpage.destroy('all');
@@ -267,6 +278,32 @@ Meteor.fullpage = {
 	}
 };
 
+Meteor.effects = {
+	toggle: function(targetClass, toggleClass){
+		$('.' + targetClass).each(function(i){
+			var item = $(this);
+			item.toggleClass(toggleClass);
+		});
+	},
+	toggleTimeout: function(targetClass, toggleClass, mainTimeout, firstTimeout, secondTimeout){
+		var	mainTimeout = mainTimeout ? mainTimeout : 500;
+		var firstTimeout = firstTimeout ? firstTimeout : 100;
+		var secondTimeout = secondTimeout ? secondTimeout : 200;
+
+		setTimeout(function() {
+			$('.' + targetClass).each(function(i){
+				var item = $(this);
+				setTimeout(function(){
+					item.addClass(toggleClass);
+				}, firstTimeout*i);
+				setTimeout(function(){
+					item.removeClass(toggleClass);
+				}, secondTimeout*i);
+			});
+		}, mainTimeout);
+	}
+}
+
 Meteor.about = {
 	draw: function(path){
 		var length = path.getTotalLength();
@@ -289,20 +326,20 @@ Meteor.about = {
 		var path = document.getElementById('svg-tx');
 		Meteor.about.draw(path);
 	},
-	getFlips: function(section){
-		return $('#flips-'+section).find('.flip');
+	getFlips: function(section, get){
+		return $('#flips-'+section).find(get);
 	},
 	unflipBoxes: function(section){
-		var flips = Meteor.about.getFlips(section);
+		var flips = Meteor.about.getFlips(section, '.flip');
 		setTimeout(function() {
 			$(flips).each(function(){
-				$(this).attr('class','flip');
+				$(this).attr('class', 'flip');
 			});
 		},  300);
 	},
 	flipBoxes: function(section){
 		var flipClass = 'flip-forward',
-			flips = Meteor.about.getFlips(section);
+			flips = Meteor.about.getFlips(section, '.flip');
 		setTimeout(function() {
 			$(flips).each(function(i){
 				var flip = $(this);
@@ -311,6 +348,5 @@ Meteor.about = {
 				}, 100*i);
 			});
 		},  300);
-
 	}
 };
