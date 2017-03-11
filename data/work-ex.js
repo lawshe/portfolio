@@ -27,11 +27,11 @@ workExs = [
     }
   },
   {
-    title: 'React RSVP Manager',
+    title: 'RSVP Manager',
     client: 'boda',
     image: {
-      file: 'guide.png',
-      title: 'City Guide'
+      file: 'rsvp.gif',
+      title: 'RSVP'
     },
     desc: 'Built a wedding RSVP manager using <a href="https://facebook.github.io/react/" target="_BLANK">React</a>, <a href="https://facebook.github.io/flux/docs/in-depth-overview.html#content" target="_BLANK">Flux</a>, & <a href="https://www.rethinkdb.com/" target="_BLANK">RethinkDB</a>. There is a form for entering/updating invites. RSVPs are individualized by URL and guests can easily search for a link via their email. After submitting the RSVP, guests receive an email confirmation and the database is updated.'
   },
