@@ -201,7 +201,7 @@ Meteor.fullpage = {
 					if (sectionAnchor === 'intro'){
 						Meteor.about.drawMe();
 					} else if (sectionAnchor === 'about') {
-						Meteor.effects.toggleTimeout('skill-span', 'emphasize', 500, 100, 150);
+						Meteor.effects.toggleTimeout('skill-span', 'emphasize', 500, 100, 350);
 					} else if (sectionAnchor === 'skills') {
 						Meteor.effects.toggleTimeout('skills-link', 'emphasize', 500, 100, 150);
 					} else if (sectionAnchor === 'work') {
