@@ -1,5 +1,4 @@
-if (Meteor.isClient) {
-	var clients = [
+clients = [
 		{
 			name: 'BIM Cubed',
 			thumb: 'BIM<br>Cubed',
@@ -9,7 +8,7 @@ if (Meteor.isClient) {
 			keywords: 'Database architecture, MongoDB, Meteor.js, JavaScript, Building Information Modeling, Twitter Bootstrap, jQuery',
 			imageThumb: 'home_surface.png',
 			image: 'home.png',
-			imageTitle: 'The Bipolar Bears Homepage',
+			imageTitle: 'Interactive Logo',
 			projects: [
 				{
 					sectionHeader: 'Interactive Logo',
@@ -235,7 +234,7 @@ if (Meteor.isClient) {
 				},
 				{
 					sectionHeader: 'Editor Invite',
-					anchor: 'editor_invite',
+					anchor: 'editor_invite', 
 					sections: [
 						{
 							
@@ -269,12 +268,12 @@ if (Meteor.isClient) {
 								{
 									image: 'editorform_1_2.png',
 									title: 'Editor Invite Form: Steps 1 - 2',
-									imageClasses: 'span_half'
+									imageClasses: 'span-half'
 								},
 								{
 									image: 'editorform_6_7.png',
 									title: 'Editor Invite Form: Steps 5 - 7',
-									imageClasses: 'span_half'
+									imageClasses: 'span-half'
 								}
 							]
 						}
@@ -583,176 +582,3 @@ if (Meteor.isClient) {
 			]
 		}
 	];
-	var api = [
-		{
-			url: 'https://developers.facebook.com/',
-			what: 'Facebook',
-			icon: 'fa-facebook-official'
-		},
-		{
-			url: 'http://www.authorize.net/',
-			what: 'Authorize.net',
-			icon: 'fa-credit-card'
-		},
-		{
-			url: 'https://dev.twitter.com/',
-			what: 'Twitter',
-			icon: 'fa-twitter-square'
-		},
-		{
-			url: 'http://www.ncbi.nlm.nih.gov/pmc/',
-			what: 'PubMed Central',
-			icon: 'fa-book'
-		},
-		{
-			url: 'http://search.crossref.org/help/api',
-			what: 'CrossRef',
-			icon: 'fa-bookmark'
-		},
-		{
-			url: 'http://www.google.com/analytics/',
-			what: 'Google Analytics',
-			icon: 'fa-google'
-		}
-	];
-	var libraries = [
-		{
-			url: 'https://www.meteor.com/',
-			what: 'Meteor.js',
-			icon: 'fa-sitemap'
-		},
-		{
-			url: 'http://grafico.kilianvalkhof.com/',
-			what: 'Grafico.js',
-			icon: 'fa-area-chart'
-		},
-		{
-			url: 'http://threejs.org/',
-			what: 'three.js',
-			icon: 'fa-cube'
-		},
-		{
-			url: 'http://grafico.kilianvalkhof.com/',
-			what: 'jQuery',
-			icon: 'fa-laptop'
-		},
-		{
-			url: 'http://getbootstrap.com/',
-			what: 'Bootstrap',
-			icon: 'fa-file-code-o'
-		},
-		{
-			url: 'http://modernizr.com/',
-			what: 'Modernizr',
-			icon: 'fa-check'
-		},
-	];
-	var experience = [
-		{
-			url: 'https://nodejs.org/',
-			what: 'Node.js',
-			icon: 'fa-terminal'
-		},
-		{
-			url: 'https://github.com/',
-			what: 'GitHub',
-			icon: 'fa-github-square'
-		},
-		{
-			url: 'http://aws.amazon.com/',
-			what: 'Amazon Web Services',
-			icon: 'fa-cloud'
-		},
-		{
-			url: 'https://wordpress.com/',
-			what: 'WordPress',
-			icon: 'fa-wordpress'
-		},
-		{
-			url: 'http://mailchimp.com/',
-			what: 'MailChimp',
-			icon: 'fa-envelope'
-		},
-		{
-			url: 'https://docs.shopify.com/api',
-			what: 'Shopify',
-			icon: 'fa-shopping-cart'
-		}
-	];
-
-	Template.landes.helpers({
-		client: function(){
-			var client = Meteor.fxns.findClient('landes',clients);
-			return client;
-		}
-	});	
-	Template.bpb.helpers({
-		client: function(){
-			var client = Meteor.fxns.findClient('bpb',clients);
-			return client;
-		}
-	});
-	Template.bim.helpers({
-		client: function(){
-			var client = Meteor.fxns.findClient('bim_cubed',clients);
-			return client;
-		}
-	});
-	Template.cherrywood.helpers({
-		client: function(){
-			var client = Meteor.fxns.findClient('cherrywood',clients);
-			return client;
-		}
-	});
-	Template.selectedWork.helpers({
-		clients: function(){
-			return clients;			
-		},
-		imgSize: function(){
-			return Session.get('imgSize');
-		}
-	});
-	Template.moreWork.helpers({
-		work: function(){
-			var currentClient = Session.get('page'),
-			otherClients = $.grep(clients, function(e){ return e.slug !== currentClient; });
-			return otherClients;
-		},
-		imgSize: function(){
-			return Session.get('imgSize');
-		}
-	});
-	Template.clientSection.helpers({
-		imgSize: function(){
-			return Session.get('imgSize');
-		}
-	});
-	Template.work.helpers({
-		imgSize: function(){
-			return Session.get('imgSize');
-		}
-	});
-	Template.about.helpers({
-		api: function(){
-			return api;
-		},
-		libraries: function(){
-			return libraries;
-		},
-		experience: function(){
-			return experience;
-		},
-		ie: function(){
-			return Session.get('ie');
-		}
-	});
-	Template.menu.helpers({
-		isAbout: function(){
-			if(Session.get('page') === 'about'){
-				return true;
-			}else{
-				return false;
-			}
-		}
-	});
-}
