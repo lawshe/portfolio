@@ -1,17 +1,17 @@
 <template name="about">
 	<div class="subpage about">
-		<div data-anchor="about-intro" class="section intro" data-title="Jessica">
-			<div class="page-header">
+		<div data-anchor="intro" class="section intro">
+			<div class="page-header vertical-align">
 				<div class="half">
-					<h1>Jessica Lawshe</h1>
+					<h1>Jessica<br/>Lawshe</h1>
 				</div>
 				<div class="half">
-					<h2>Designer &<br>Developer</h2>
+					<h3>Software<br/>Engineer</h3>
 				</div>
 			</div>
 			<div class="svg-container">
 				<svg viewBox="0 0 829.44 1244.16" preserveAspectRatio="xMidYMin slice" style="width:100%;height:1px;padding-bottom: 150%;overflow:visible;">
-					<path id="svg-me" fill="none" stroke="#BABABA" stroke-width="4" stroke-miterlimit="10" d="M513,643c-5,6-10,12-15,17c-6,4-9,10-15,15
+					<path id="svg-me" fill="none" stroke-miterlimit="10" d="M513,643c-5,6-10,12-15,17c-6,4-9,10-15,15
 								c-5,4-9,7-14,11c-2,1-3,1-5,2c-24,18-50,28-79,25c-10-2-18-5-27-10c-32-21-56-44-77-76c-18-29-30-59-41-90c-16-30-19-65-18-99
 								c0-2,2-4,3-4c8,1,14-3,20-8c1-1,3,0,4-1c11-7,24-11,37-9c16,3,30,4,46,2c17-2,33-5,51-8c6-1,12-1,17-5c4-4,6-9,9-14c1-2,1-4,2-6
 								c7-16,15-32,16-49c-5.248,12.475-0.127,1.272,0,0c-7,17-8,40,7,54c3,3,7,5,10,5c42,4,76,27,108,54c6,6,12,12,18,18
@@ -27,88 +27,68 @@
 			</div>
 			{{>scrollTo}}
 		</div>
+
 		<div data-anchor="about" class="section" data-title="About">
-			<div class="section-header"><h2>About</h2></div>
-			<h3>Freelancer for Hire</h3>
-			<!-- <p class="txt-center" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">Based in <span itemprop="addressLocality">Austin</span>, <span itemprop="addressRegion">Texas</span></p> -->
-			<div class="clearfix"></div>
-			<div class="half txt-right">
-				<ul class="web-skills"><li>PHP</li><li>HTML</li><li>XML</li><li>CSS</li><li>Less</li><li>jQuery</li><li>JavaScript</li><li>JSON</li><li>MongoDB</li><li>MySQL</li></ul>
-			</div>
-			<div class="half txt-left">
-				<h4>I create<br><span class="emph">custom websites</span><br>& content management systems.</h4>
-			</div>
-			<div class="clearfix"></div>
-			<a href="" class="outline-link txt-center email-project"><i class="fa fa-envelope"></i> Email Me About a Project</a>
+			<h2>Full Stack Freelancer</h2>
+			<h4 class="txt-center">I create custom websites<br/>&amp; content management systems</h4>
+			<p class="web-skills">For <span class="skill-span">4.5 years</span> I have built websites from front to back, start to finish. Mostly, I work in isomorphic <span class="skill-span">JavaScript</span> applications, but also write <span class="skill-span">PHP</span>. My applications are styled with <span class="skill-span">CSS</span>, &amp; use pre-processors. When it comes to databases, I've used <span class="skill-span">MongoDB</span>, <span class="skill-span">MySQL</span>, &amp; <span class="skill-span">RethinkDB</span>. I'm also versed in <span class="skill-span">HTML</span>, <span class="skill-span">XML</span>, &amp; <span class="skill-span">JSON</span>. I interact with various <span class="skill-span">APIs</span> daily and also write my own. You can view some of my code on <a href="https://github.com/lawshe" target="_BLANK">Github</a> and <a href="https://bitbucket.org/lawshe/" target="_BLANK">Bitbucket</a></p>
 			{{>scrollTo}}
 		</div>
-		<div data-anchor="api" class="section" data-title="API">
-			<div class="section-header"><h2>API</h2></div>
-			<ul class="flips" id="flips-api">
-				{{#each api}}
-					<li><div class="flip-container"><a href="{{url}}" target="_BLANK" class="{{#if ie}}{{else}}flip{{/if}}">
-						{{#if ie}}
-							<i class="fa {{icon}}"></i><br>{{what}}
-						{{else}}
-							<span class="front"><span><i class="fa {{icon}}"></i> {{what}}</span></span>
-							<span class="back"></span>
-						{{/if}}
-					</a></div></li>
-				{{/each}}
-			</ul>
-			{{>scrollTo}}
-		</div>
+
 		<div data-anchor="education" class="section education" data-title="Education">
-			<div class="section-header"><h2>Education</h2></div>
-			
-			<div class="degree-box">
+			<div class="degree-box vertical-align">
 				<div class="half">
-					<h3 itemprop="alumniOf">The University<br>of Texas<br>2010</h3>
+					<h2 itemprop="alumniOf" style="margin: 0px;">The University<br/>of Texas<br/>2010</h2>
 				</div>
 				<div class="half">
 					<h4>Biochemistry B.S. Honors</h4>
 					<h4>Spanish B.A.</h4>
-				</div>				
+				</div>
 			</div>
+			{{>scrollTo}}
+		</div>
 
-			{{>scrollTo}}
-		</div>
-		<div data-anchor="libraries" class="section" data-title="Libraries">
-			<div class="section-header"><h2>Libraries</h2></div>
-			<ul class="flips" id="flips-libraries">
-				{{#each libraries}}
-					<li><div class="flip-container"><a href="{{url}}" target="_BLANK" class="{{#if ie}}{{else}}flip{{/if}}">
-						{{#if ie}}
-							<i class="fa {{icon}}"></i><br>{{what}}
-						{{else}}
-							<span class="front"><span><i class="fa {{icon}}"></i> {{what}}</span></span>
-							<span class="back"></span>
-						{{/if}}
-					</a></div></li>
+		<div data-anchor="skills" class="section" data-title="Skills">
+			<h2>Skills</h2>
+
+			<ul id="list-skills" class="skills-list">
+				{{#each skills}}
+					<li>
+						<a class="skills-link" href="{{url}}" target="_BLANK">
+							<span class="what">{{what}}</span>
+						</a>
+					</li>
 				{{/each}}
 			</ul>
 			{{>scrollTo}}
 		</div>
-		<div data-anchor="experience" class="section" data-title="Experience">
-			<div class="section-header"><h2>Experience</h2></div>
-			<ul class="flips" id="flips-experience">
-				{{#each experience}}
-					<li><div class="flip-container"><a href="{{url}}" target="_BLANK" class="{{#if ie}}{{else}}flip{{/if}}">
-						{{#if ie}}
-							<i class="fa {{icon}}"></i><br>{{what}}
-						{{else}}
-							<span class="front"><span><i class="fa {{icon}}"></i> {{what}}</span></span>
-							<span class="back"></span>
-						{{/if}}
-					</a></div></li>
-				{{/each}}
-			</ul>
-			{{>scrollTo}}
+
+		<div data-anchor="work" class="section" data-title="Work">
+			<h2>Selected Work</h2>
+			{{#each examples}}
+				<div class="subproject">
+					<div class="half">
+						{{#with image}}
+						<a class="imagepop {{imageClasses}}" href="{{imagePath}}" data-title="{{title}}">
+							<img alt="{{title}}" src="{{imagePath}}" class="work-ex">
+						</a>
+						{{/with}}
+					</div>
+					<div class="half">
+						<h4>{{{title}}}</h4>
+						{{#if subheader}}<h5>{{{subheader}}}</h5>{{/if}}
+						<p>{{{desc}}}</p>
+					</div>
+				</div>
+			{{/each}}
+			<!-- <div class="subproject">
+				<ul class="thumbnails">
+					<li class="thumbnail">
+						<a class="btn" href="{{pathFor 'work'}}">See More</a>
+					</li>
+				</ul>
+			</div> -->
 		</div>
-		<div data-anchor="contact" class="section" data-title="Contact">
-			<h3>Selected Work</h3>
-			{{>selectedWork}}
-			{{>footer}}
-		</div>
+		{{>footer}}
 	</div>
 </template>
