@@ -1,0 +1,25 @@
+@import url("variables.less");
+@import url("mixin.less");
+
+.list_unstyled {
+	.opacity(0);
+	float: left;
+	width: 100%;
+	list-style: none;
+}
+ul {
+	list-style-type: square;
+	margin:0;
+	padding: 0;
+}
+li {
+	font-size: @fontBase;
+	text-align: left;
+	margin: 0px;
+	@media @phone{
+		font-size: @font-xs;
+	}
+}
+.list{
+	margin-left: @marginLG;
+}
