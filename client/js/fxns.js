@@ -169,7 +169,6 @@ Meteor.fxns = {
 				Meteor.fullpage.nextSection(false);
 			}
 	}
-
 };
 
 Meteor.fullpage = {
@@ -302,31 +301,4 @@ Meteor.about = {
 		var path = document.getElementById('svg-me');
 		Meteor.about.draw(path);
 	},
-	drawTx: function(){
-		var path = document.getElementById('svg-tx');
-		Meteor.about.draw(path);
-	},
-	getFlips: function(section, get){
-		return $('#flips-'+section).find(get);
-	},
-	unflipBoxes: function(section){
-		var flips = Meteor.about.getFlips(section, '.flip');
-		setTimeout(function() {
-			$(flips).each(function(){
-				$(this).attr('class', 'flip');
-			});
-		},  300);
-	},
-	flipBoxes: function(section){
-		var flipClass = 'flip-forward',
-			flips = Meteor.about.getFlips(section, '.flip');
-		setTimeout(function() {
-			$(flips).each(function(i){
-				var flip = $(this);
-				setTimeout(function(){
-					flip.toggleClass(flipClass);
-				}, 100*i);
-			});
-		},  300);
-	}
 };
