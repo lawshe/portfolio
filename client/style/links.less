@@ -1,0 +1,66 @@
+@import url("colors.less");
+@import url("mixin.less");
+@import url("type.less");
+@import url("variables.less");
+
+a {
+  color: @link-color;
+  text-decoration: none;
+  .transition(@fadeSpeed);
+  &:visited {
+    color: @link-color;
+  }
+  &:hover {
+    color: @link-color-hover;
+  }
+}
+
+/*
+  solid link
+*/
+.solid-link{
+  background: @link-color;
+  color: @solid-link-text;
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  .transition(@fadeSpeed);
+  span{
+    color: @solid-link-text;
+  }
+  &:visited{
+    color: @solid-link-text;
+    span{
+      color: @solid-link-text;
+    }
+  }
+  &:hover{
+    background: @link-color-hover;
+    color: @blue-dark;
+    span{
+      color: @blue-dark;
+    }
+  }
+  &.active {
+    background: @link-color-active;
+    color: @solid-link-text-hover;
+    cursor: default;
+    span{
+      color: @solid-link-text-hover;
+    }
+  }
+}
+/*external*/
+  .external_link{
+    border: @borderSM solid @link-color;
+    padding: @padSM;
+    width: auto;
+    display: inline-block;
+    margin: @marginXS;
+    clear: both;
+    float: left;
+  }
+  .external_link:hover{
+    border:2px solid @gray;
+  }
