@@ -196,7 +196,7 @@ Meteor.fullpage = {
 				if ($('body').hasClass('menu-open')){
 					Meteor.fxns.toggleMobileMenu();
 				}
-				console.log('==',sectionAnchor);
+
 				if(Session.get('page') === 'about'){
 					if (sectionAnchor === 'intro'){
 						Meteor.about.drawMe();
