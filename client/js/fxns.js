@@ -103,26 +103,6 @@ Meteor.fxns = {
 		result.index  = $('#fullpage').find('.section.active').index();
 		return result;
 	},
-	resizePage: function(){
-		//--image sizes
-			Meteor.fxns.imageHeight();
-		//--hide mobile menu
-			$('body').removeClass('menu-open');
-	},
-	resizeHeights: function(){
-		var section = Meteor.fxns.currentSection(),
-			sectionIndex = section.index,
-			windowHeight = window.innerHeight,
-			top = sectionIndex*windowHeight;
-		top = '-'+top+'px';
-		$('#fullpage').css('top',top);
-		$('.fp-tableCell').each(function() {
-			$(this).css('height',windowHeight+'px');
-		});
-		$('.section').each(function() {
-			$(this).css('height',windowHeight+'px');
-		});
-	},
 	processExs: function(examples){
 		examples.forEach(function(ex){
 			ex = Meteor.fxns.processEx(ex);
