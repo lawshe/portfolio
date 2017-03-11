@@ -30,7 +30,7 @@ workExs = [
     title: 'RSVP Manager',
     client: 'boda',
     image: {
-      file: 'rsvp.gif',
+      file: 'rsvp.png',
       title: 'RSVP'
     },
     desc: 'Built a wedding RSVP manager using <a href="https://facebook.github.io/react/" target="_BLANK">React</a>, <a href="https://facebook.github.io/flux/docs/in-depth-overview.html#content" target="_BLANK">Flux</a>, & <a href="https://www.rethinkdb.com/" target="_BLANK">RethinkDB</a>. There is a form for entering/updating invites. RSVPs are individualized by URL and guests can easily search for a link via their email. After submitting the RSVP, guests receive an email confirmation and the database is updated.'
