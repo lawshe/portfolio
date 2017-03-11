@@ -1,40 +1,60 @@
-	@fadeSpeed: 1s;
-	@maxWidth: 620px;
-	@mobile-menu: 40px;
-	@mobile-menu-width: 50%;
-	@menu-hidden-width:0px;
-	/*font size*/
-		@font-xl:	2.9rem;
-		@font-l:	2.4rem;
-		@font-m:	2.0rem;
-		@font-s: 	1.5rem;
-		@font-base: 1.2rem;
-		@font-xs: 	0.9rem;
-	/*padding*/
-		@padXS: 7px;
-		@padSM: 10px;
-		@padMD: 15px;
-		@padLG: 20px;
-		@padXL: 30px;
-	/*margin*/
-		@marginXS: 5px;
-		@marginSM: 10px;
-		@marginMD: 15px;
-		@marginLG: 20px;
-		@marginXL: 30px;
-		@marginXXL: 60px;
-	/*border*/
-		@borderSM: 2px;
-		@borderMD: 4px;
-		@borderLG: 10px;
-	/*misc*/
-		@arrowWidth: 15px;
-		@sectionHeader: @font-l*1.5;
-	/*screens*/
-		@phone: 			~"screen and (max-width: 479px)";
-		@phoneLG: 			~"screen and (max-width: 580px)";
-		@phoneTablet: 		~"screen and (max-width: 768px)";
-		@tablet: 			~"screen and (min-width: 480px) and (max-width: 768px)";
-		@minTablet: 		~"screen and (min-width: 769px)";
-		@minDesktopS: 		~"screen and (min-width: 1000px)";
-		@desktop: 			~"screen and (min-width: 1279px)";
+@fadeSpeed: 200ms;
+@fadeSpeedSlow: 900ms;
+@maxWidth: 620px;
+@mobile-menu: 40px;
+@mobile-menu-width: 50%;
+@menu-hidden-width:0px;
+
+/*
+	FONT SIZE
+*/
+@font-xl:	2.9rem;
+@font-l:	2.4rem;
+@font-m:	2.0rem;
+@font-s: 	1.4rem;
+@fontBase: 1.2rem;
+@font-xs: 	0.9rem;
+
+/*
+	PADDING
+*/
+@padXXS: 2px;
+@padXS:  7px;
+@padSM:  10px;
+@padMD:  15px;
+@padLG:  20px;
+@padXL:  30px;
+
+/*
+	MARGIN
+*/
+@marginXS: 5px;
+@marginSM: 10px;
+@marginMD: 15px;
+@marginLG: 20px;
+@marginXL: 30px;
+@marginXXL: 60px;
+
+/*
+	BORDER
+*/
+@borderSM: 5px;
+@borderMD: 10px;
+@borderLG: 15px;
+
+/*
+	MISC
+*/
+@arrowWidth: 15px;
+@sectionHeader: @font-l*1.5;
+
+/*
+	SCREENS
+*/
+@phone: ~"screen and (max-width: 479px)";
+@phoneLG: ~"screen and (max-width: 580px)";
+@phoneTablet: ~"screen and (max-width: 768px)";
+@tablet: ~"screen and (min-width: 480px) and (max-width: 768px)";
+@minTablet: ~"screen and (min-width: 769px)";
+@minDesktopS: ~"screen and (min-width: 1000px)";
+@desktop: ~"screen and (min-width: 1279px)";
