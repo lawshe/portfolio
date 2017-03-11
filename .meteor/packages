@@ -6,7 +6,6 @@
 standard-app-packages
 less
 gabrielengel:konecty-magnific-popup
-natestrauser:font-awesome
 iron:router
 zimme:iron-router-active
 reywood:iron-router-ga
@@ -16,3 +15,4 @@ meteorhacks:kadira
 spiderable
 gadicohen:sitemaps
 lawshe:full-page
+natestrauser:font-awesome
