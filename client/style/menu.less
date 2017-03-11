@@ -1,0 +1,162 @@
+@import url("colors.less");
+@import url("mixin.less");
+@import url("type.less");
+@import url("variables.less");
+
+.menu-open{
+	.container{
+		left:  @mobile-menu-width;
+		.opacity(0.5);
+	}
+	.menu-wrap{
+		left: 0;
+		visibility: visible;
+		width: @mobile-menu-width;
+		.menu-item{
+			width: 100%;
+		}
+	}
+}
+
+/*
+	MAIN MENU
+*/
+.initials{
+	border-bottom: @borderSM solid @link-color;
+	border-right: 0!important;
+	border-top: @borderSM solid @link-color;
+	color: @link-color;
+	cursor: pointer;
+	display: inline-block;
+	font-size: @fontBase;
+	margin: 0 0 @marginSM 0;
+	padding: @padSM 0;
+	.sans-bold;
+	text-align: left;
+	text-transform: uppercase;
+	.transition(@fadeSpeed);
+	width: 100%;
+
+	&:hover{
+		border-color: @link-color-hover;
+		color: @link-color-hover;
+	}
+
+	span{
+		float: right;
+	}
+}
+.main-menu{
+	li{
+		width: 100%;
+	}
+}
+
+/*
+	SUB MENU
+*/
+.active-menu{
+	border-color: @active-menu-color!important;
+	color: @active-menu-color!important;
+}
+.menu-item{
+	clear: both;
+	display: inline-block;
+	font-size: @fontBase;
+	letter-spacing: -1px;
+	padding: @padSM 0;
+	text-align: left;
+	text-transform: none;
+}
+.section-nav{
+	a{
+		font-size: @font-xs;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		&:active{
+			color: @gray!important;
+		}
+	}
+	&.active{
+		.menu-item{
+			background: @blue-base;
+			color: @active-menu-color;
+		}
+	}
+}
+#sub-menu{
+	display: block;
+	float: left;
+	margin-bottom: @marginLG;
+}
+.main-menu, #sub-menu{
+	list-style: none;
+	width: 100%;
+	li{
+		float: left;
+		margin: 0;
+		overflow: hidden;
+		padding: 0;
+		width: 100%;
+	}
+	a{
+		display: block;
+		float: right;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+}
+.initials, .menu-item{
+	.sans;
+	a{
+		text-align: left;
+	}
+	span{
+		padding: @padSM;
+	}
+}
+.menu-wrap{
+	background-color: @blue-base;
+	border-right: @borderSM solid @active-menu-color;
+	height: 100%;
+	left: -@borderSM;
+	overflow-x: hidden;
+	overflow-y: scroll;
+	position: fixed;
+	top: 0;
+	.transition(@fadeSpeed);
+	width: 10%;
+	z-index: 1000;
+	@media @phoneTablet {
+		width: 0px;
+	}
+}
+
+/*
+	MOBILE
+*/
+@media @phoneTablet {
+	.main-menu{
+		padding-top: @mobile-menu;
+	}
+	.mobile-menu-toggle {
+		cursor: pointer;
+		height: @mobile-menu;
+		float: right;
+		font-size: @mobile-menu/2;
+		line-height: @mobile-menu;
+		padding: 0;
+		width: @mobile-menu;
+
+		&:hover{
+			color: @link-text-color-hover;
+			background: @link-color-hover;
+		}
+		.fa{
+			line-height: @padXL;
+			text-align: center;
+			width: 100%;
+		}
+	}
+}
