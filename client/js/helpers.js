@@ -21,7 +21,7 @@ if (Meteor.isClient) {
 	});
 	Template.work.helpers({
 		examples: function(){
-			return Meteor.fxns.processExs(workExMore);
+			return Meteor.fxns.processExs(workExs);
 		}
 	});
 }
