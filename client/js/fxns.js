@@ -159,15 +159,17 @@ Meteor.fxns = {
 		return false;
 	},
 	scrollBtn: function(e){
-		var y = e.clientY,
-				windowH = window.innerHeight;
-			var clickPosition = y / windowH;
-
-			if(clickPosition < 0.50){
-				Meteor.fullpage.nextSection(true);
-			}else{
-				Meteor.fullpage.nextSection(false);
-			}
+		$('html, body').animate({
+			scrollTop: $('.section[data-anchor="about"])').offset().top
+		},700);
+	},
+	scrollTo: function(e){
+		var anchorId = e.target.getAttribute('data-menuanchor');
+		if (anchorId && $('.section[data-anchor="' + anchorId + '"]')) {
+			$('html, body').animate({
+				scrollTop: $('.section[data-anchor="' + anchorId + '"]').offset().top
+			},700);
+		}
 	}
 };
 
@@ -222,7 +224,7 @@ Meteor.fullpage = {
 		//--section navigation
 		$(anchors).each(function(i,v){
 			if (titles[i]) {
-				$('#sub-menu').append('<li class="section-nav" data-menuanchor="'+v+'"><a href="#'+v+'" class="menu-item"><span>'+titles[i]+'</span></a></li>');
+				$('#sub-menu').append('<li class="section-nav" data-menuanchor="'+v+'"><a href="#'+v+'" class="menu-item"><span data-menuanchor="'+v+'">'+titles[i]+'</span></a></li>');
 			}
 		});
 	},
@@ -246,7 +248,8 @@ Meteor.fullpage = {
 	},
 	nextSection: function(alreadyCurrent){
 		var current = $('.section.active').index();
-			current = current+1;
+		current = current+1;
+
 		if(alreadyCurrent){
 			$('html, body').animate({
 				scrollTop: $('.section.active').offset().top
