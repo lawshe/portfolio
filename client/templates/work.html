@@ -1,99 +1,34 @@
 <template name="work">
-	<div class="subpage work">
-		<div data-anchor="work" data-title="Work" class="section">
-			<div class="page-header">
-				<div class="half">
-					<h1>Selected Work</h1>
-				</div>
-				<div class="half">
-					<h2>Front & back end development of websites</h2>
-				</div>
-			</div>
-			{{>selectedWork}}
-		</div>
-		<div data-anchor="more" data-title="More" class="section">
-			{{>footer}}
-		</div>		
-	</div>
-</template>
-
-<template name="clientPage">
-	<div class="subpage {{anchor}}">
-		<div class="creative-work" itemscope itemtype="http://schema.org/CreativeWork">
-			<div class="section" data-anchor="{{anchor}}" data-title="{{headerOne}}">
-				<div class="page-header">
-					<div class="half">
-						<h1 itemprop="name">{{headerOne}}</h1>
-					</div>
-					<div class="half">
-						<h2>{{{headerTwo}}}</h2>			
-					</div>
-					<div class="hidden" itemprop="description">{{description}}</div>
-					<meta itemprop="keywords" content="{{keywords}}"/>
-				</div>
-				<a class="imagepop" href="{{imagePath}}" data-title="{{imageTitle}}">
-					<img alt="{{imageTitle}}" src="{{imagePath}}">
-				</a>
-				{{>scrollTo}}
-			</div>
-			{{#each projects}}
-				{{>clientSection}}
-			{{/each}}	
-		</div>
-		{{>moreWork}}
-	</div>	
-</template>
-
-<template name="clientSection">
-	<div class="section" data-anchor="{{anchor}}" data-title="{{sectionHeader}}">
-		<div class="section-header"><h2>{{sectionHeader}}</h2></div>
-		{{#each sections}}
-			<div class="subproject">
-				{{#if headerThree}}<h3>{{headerThree}}</h3>{{/if}}
-				<div class="half">
-					{{#each images}}
-						<div class="image-project {{imageClasses}}">
-							<a class="imagepop" href="{{imagePath}}" data-title="{{title}}">
-								<img class="" src="{{imagePath}}" alt="{{title}}">
-							</a>	
-						</div>
-					{{/each}}							
-				</div>
-				<div class="half">
-					<h4>{{headerFour}}</h4>
-					{{#if txt}}<p>{{{txt}}}</p>{{/if}}
-				</div>			
-			</div>
-		{{/each}}
-	</div>
-</template>
-
-<template name="selectedWork">
-	<ul class="thumbnails-clients">
-		{{#each clients}}
-			<li class="thumbnail">
-				<a href="/work/{{slug}}">
-					<img src="/img/work/{{slug}}/{{imgSize}}/{{image}}" alt="{{name}}">
-					<span>{{{name}}}</span>
-				</a>
-			</li>	
-		{{/each}}		
-	</ul>
-</template>
-
-<template name="moreWork">
-	<div data-anchor="more" data-title="More" class="section more-work">
-		<h3>More Work</h3>
-		<ul class="thumbnails-clients">
-			{{#each work}}
-				<li class="thumbnail">
-					<a href="/work/{{slug}}">
-						<img alt="{{name}}" src="/img/work/{{slug}}/{{imgSize}}/{{image}}">
-						<span>{{name}}</span>
-					</a>	
-				</li>			
-			{{/each}}				
-		</ul>		
-		{{>footer}}	
-	</div>		
+  <div class="subpage work">
+    <div data-anchor="intro" data-title="Work" class="section">
+      <div class="page-header">
+        <div class="half">
+          <h1>Selected Work</h1>
+        </div>
+        <div class="half">
+          <h3>Examples of<br/>development & designs</h3>
+        </div>
+      </div>
+      {{>scrollTo}}
+    </div>
+    <div data-anchor="examples" class="section" data-title="Examples">
+      {{#each examples}}
+        <div class="subproject">
+          <div class="half">
+            {{#with image}}
+            <a class="imagepop {{imageClasses}}" href="{{imagePath}}" data-title="{{title}}">
+              <img alt="{{title}}" src="{{imagePath}}">
+            </a>
+            {{/with}}
+          </div>
+          <div class="half">
+            <h4>{{{title}}}</h4>
+            {{#if subheader}}<h5>{{{subheader}}}</h5>{{/if}}
+            <p>{{{desc}}}</p>
+          </div>
+        </div>
+      {{/each}}
+    </div>
+		{{>footer}}
+  </div>
 </template>
