@@ -1,0 +1,139 @@
+@import url("colors.less");
+@import url("mixin.less");
+@import url("type.less");
+@import url("variables.less");
+
+img{
+  max-width: 100%;
+}
+.icon{
+  text-align: center;
+  width: @font-s;
+}
+
+/*
+  imagepop
+*/
+.no-bg{
+  .imagepop{
+    background: none!important;
+    border-color: transparent;
+    padding: 0px;
+  }
+}
+.imagepop{
+  background: @gray;
+  border: @borderMD solid;
+  border-color: transparent;
+  .border-radius(5px);
+  color: transparent!important;
+  display: inline-block;
+  position: relative;
+  margin: @marginSM auto;
+  max-width: 100%;
+  padding: @padSM;
+  text-decoration: none!important;
+  .transition(@fadeSpeed);
+
+  @media @phoneTablet{
+    margin-right: auto;
+  }
+  img{
+    display: block;
+    max-width: 100%;
+  }
+  &:before{
+    .black-overlay;
+    content: "";
+    position: absolute;
+    display: block;
+    height: 100%;
+    left: 0;
+    top: 0;
+    width: 100%;
+    .opacity(0);
+  }
+  &:after{
+    color: @white;
+    content: "\f002";
+    display: block;
+    font-family: FontAwesome;
+    font-size: @font-l;
+    height: 50%;
+    left: 0;
+    margin-top: -@font-l/2;
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    .opacity(0);
+  }
+  &:hover {
+    border-color: @link-color-hover;
+    &:before{
+      .opacity(1);
+      .transition(@fadeSpeed);
+    }
+    &:after{
+      .opacity(1);
+      .transition(@fadeSpeed);
+    }
+  }
+  &.bg{
+    background: @gray!important;
+  }
+  &.no-bg{
+    background: none;
+  }
+  @media @phone{
+    padding:@padXS;
+  }
+}
+
+/*
+  popup
+*/
+.mfp-zoom-out-cur{
+  position: fixed;
+}
+.mfp-bg{
+  .opacity(0.9);
+}
+.mfp-figure:after{
+  background: none;
+  box-shadow: none;
+}
+.mfp-counter{
+  bottom: 0;
+  color: @gray-med;
+  position: absolute;
+  top: auto;
+}
+.mfp-close{
+  position: fixed;
+  right: 0px;
+  top: 0px;
+}
+.mfp-title{
+  .sans-bold;
+  color: @white;
+  font-size: @fontBase;
+  line-height: @fontBase*1.2;
+  padding: 0 45px;
+  text-align: center;
+}
+.mfp-bottom-bar{
+  bottom: 0px;
+  margin-top:0px;
+  position: fixed;
+  top: auto!important;
+}
+.mfp-counter{
+  .sans-bold;
+  right: 10px;
+}
+figcaption{
+  bottom: 0px;
+  left: 0px;
+  position: fixed;
+  width: 100%;
+}
