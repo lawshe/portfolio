@@ -160,7 +160,7 @@ Meteor.fxns = {
 	},
 	scrollBtn: function(e){
 		$('html, body').animate({
-			scrollTop: $('.section[data-anchor="about"])').offset().top
+			scrollTop: $('.section[data-anchor="about"]').offset().top
 		},700);
 	},
 	scrollTo: function(e){
@@ -207,14 +207,6 @@ Meteor.fullpage = {
 					} else if (sectionAnchor === 'skills') {
 						Meteor.effects.toggleTimeout('skills-link', 'emphasize', 500, 100, 150);
 					} else if (sectionAnchor === 'work') {
-						Meteor.effects.toggle('work-ex', 'visible');
-					}
-				}
-			},
-			onLeave: function(index, nextIndex, direction){
-				var sectionAnchor = anchors[index-1];
-				if (Session.get('page') === 'about'){
-					if (sectionAnchor === 'work') {
 						Meteor.effects.toggle('work-ex', 'visible');
 					}
 				}
