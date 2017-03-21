@@ -66,9 +66,7 @@
 				<div class="subproject">
 					<div class="half">
 						{{#with image}}
-						<a class="imagepop {{imageClasses}}" href="{{imagePath}}" data-title="{{title}}">
-							<img alt="{{title}}" src="{{imagePath}}" class="work-ex">
-						</a>
+						{{>workExImg}}
 						{{/with}}
 					</div>
 					<div class="half">
