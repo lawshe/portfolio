@@ -110,16 +110,21 @@ img{
 }
 .mfp-close{
   position: fixed;
-  right: 0px;
-  top: 0px;
+  right: 0px!important;
+  top: 0px!important;
 }
 .mfp-title{
   .sans-bold;
   color: @white;
   font-size: @fontBase;
-  line-height: @fontBase*1.2;
-  padding: 0 45px;
+  line-height: @fontBase*1.5;
+  padding: 0 @padXL;
   text-align: center;
+  @media @phoneTablet{
+    font-size: @font-xs;
+    line-height: @font-xs*1.5;
+    padding: @padSM @padXL;
+  }
 }
 .mfp-bottom-bar{
   bottom: 0px;
