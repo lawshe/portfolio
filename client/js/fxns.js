@@ -12,6 +12,9 @@ Meteor.fxns = {
 			Meteor.fxns.toggleMobileMenu();
 		}
 	},
+	sendEvent: function(eventCategory, eventAction, eventLabel, eventValue){
+		ga('send', 'event', eventCategory, eventAction, eventLabel, eventValue);
+	},
 	imagesReady: function(){
 		$('#fullpage').removeClass('hidden');
 	},
