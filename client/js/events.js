@@ -32,3 +32,14 @@ Template.menu.events = {
 		Meteor.fxns.scrollTo(e);
 	}
 };
+
+Template.workExImg.events = {
+	'click .imagepop': function(e){
+		if (e) {
+			var currentPage = Router.current().route.getName();
+			var imageTitle = $(e.target).attr('data-title');
+			//arguments- eventCategory, eventAction, eventLabel, eventValue
+			Meteor.fxns.sendEvent('image', 'popup', currentPage, imageTitle);
+		}
+	}
+}
