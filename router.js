@@ -21,6 +21,7 @@ if(webSkills){
 Router.map(function() {
 	this.route('about', {
 		path: '/',
+		trackPageView: true,
 		onAfterAction: function() {
 		  if (!Meteor.isClient) {
 				return;
