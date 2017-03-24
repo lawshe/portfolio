@@ -20,19 +20,19 @@ a {
 */
 .solid-link{
   background: @linkColor;
-  color: @solid-link-text;
+  color: @solidLinkText;
   cursor: pointer;
   display: inline-block;
   text-align: center;
   text-decoration: none;
   .transition(@fadeSpeed);
   span{
-    color: @solid-link-text;
+    color: @solidLinkText;
   }
   &:visited{
-    color: @solid-link-text;
+    color: @solidLinkText;
     span{
-      color: @solid-link-text;
+      color: @solidLinkText;
     }
   }
   &:hover{
@@ -44,10 +44,10 @@ a {
   }
   &.active {
     background: @linkColorActive;
-    color: @solid-link-text-hover;
+    color: @solidLinkTextHover;
     cursor: default;
     span{
-      color: @solid-link-text-hover;
+      color: @solidLinkTextHover;
     }
   }
 }
