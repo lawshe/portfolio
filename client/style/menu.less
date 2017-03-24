@@ -59,8 +59,8 @@
 	SUB MENU
 */
 .active-menu{
-	border-color: @active-menu-color!important;
-	color: @active-menu-color!important;
+	border-color: @activeMenuColor!important;
+	color: @activeMenuColor!important;
 }
 .menu-item{
 	clear: both;
@@ -84,7 +84,7 @@
 	&.active{
 		.menu-item{
 			background: @blueBase;
-			color: @active-menu-color;
+			color: @activeMenuColor;
 		}
 	}
 }
@@ -121,7 +121,7 @@
 }
 .menu-wrap{
 	background-color: @blueBase;
-	border-right: @borderSM solid @active-menu-color;
+	border-right: @borderSM solid @activeMenuColor;
 	height: 100%;
 	left: -@borderSM;
 	overflow-x: hidden;
