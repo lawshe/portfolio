@@ -4,14 +4,14 @@
 @import url("variables.less");
 
 a {
-  color: @link-color;
+  color: @linkColor;
   text-decoration: none;
   .transition(@fadeSpeed);
   &:visited {
-    color: @link-color;
+    color: @linkColor;
   }
   &:hover {
-    color: @link-color-hover;
+    color: @linkColor-hover;
   }
 }
 
@@ -19,7 +19,7 @@ a {
   Solid Link
 */
 .solid-link{
-  background: @link-color;
+  background: @linkColor;
   color: @solid-link-text;
   cursor: pointer;
   display: inline-block;
@@ -36,14 +36,14 @@ a {
     }
   }
   &:hover{
-    background: @link-color-hover;
+    background: @linkColor-hover;
     color: @blueDark;
     span{
       color: @blueDark;
     }
   }
   &.active {
-    background: @link-color-active;
+    background: @linkColor-active;
     color: @solid-link-text-hover;
     cursor: default;
     span{
