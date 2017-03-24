@@ -38,8 +38,8 @@ Template.workExImg.events = {
 		if (e) {
 			var currentPage = Router.current().route.getName();
 			var imageTitle = $(e.target).attr('data-title');
-			//arguments- eventCategory, eventAction, eventLabel, eventValue
-			Meteor.fxns.sendEvent('image', 'popup', currentPage, imageTitle);
+			//arguments- eventCategory, eventLabel, eventValue
+			Meteor.ga.sendEvent('image', currentPage + ' popup', imageTitle);
 		}
 	}
 }
