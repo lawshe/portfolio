@@ -1,3 +1,10 @@
+if (Meteor.isClient){
+	Meteor.ga = {
+		sendEvent: function(eventCategory, eventLabel, eventValue){
+			ga('send', 'event', eventCategory, eventLabel, eventValue);
+		},
+	}
+}
 Meteor.fxns = {
 	adiosSpam: function(){
 		var me = 'moc [ dot ] ehswalj [ at ] acissej',
@@ -11,9 +18,6 @@ Meteor.fxns = {
 		if($('body').hasClass('menu-open')){
 			Meteor.fxns.toggleMobileMenu();
 		}
-	},
-	sendEvent: function(eventCategory, eventAction, eventLabel, eventValue){
-		ga('send', 'event', eventCategory, eventAction, eventLabel, eventValue);
 	},
 	imagesReady: function(){
 		$('#fullpage').removeClass('hidden');
