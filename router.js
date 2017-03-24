@@ -7,12 +7,11 @@ Router.configure({
 /*
 	Meta tag data
 */
-var metaKeywords = 'Jessica Lawshe, Lawshe, designer, developer, software engineer, Austin, Texas';
+var metaKeywords = 'Jessica Lawshe, designer, developer, software engineer, Austin, Texas';
 if(webSkills){
 	webSkills.forEach(function(skill){
 		metaKeywords += ', ' + skill.what;
 	});
-	metaKeywords = metaKeywords.slice(0, metaKeywords.length -1);
 }
 
 /*
