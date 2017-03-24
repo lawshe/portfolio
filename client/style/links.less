@@ -16,7 +16,7 @@ a {
 }
 
 /*
-  solid link
+  Solid Link
 */
 .solid-link{
   background: @link-color;
@@ -55,52 +55,56 @@ a {
 /*
 	Buttons
 */
-  .btn{
-  	.round;
-  	.solid-link;
-  	display: inline-block;
-  	font-size: @fontBase;
-  	margin: @marginLG;
-  	overflow: hidden;
-  	padding: @padLG;
-  	text-overflow: ellipsis;
-  	img{
-  		margin: @marginSM auto;
-  		max-width: 90%;
-  	}
-  	@media @phoneTablet{
-  		margin: @marginSM;
-  	}
+.btn{
+  .round;
+  .solid-link;
+  display: inline-block;
+  font-size: @fontBase;
+  margin: @marginLG;
+  overflow: hidden;
+  padding: @padLG;
+  text-overflow: ellipsis;
+  img{
+    margin: @marginSM auto;
+    max-width: 90%;
   }
-  .btn-lg{
-  	font-size: @font-s!important;
-  	font-weight: bold;
-  	padding: @padLG;
-  	text-transform: uppercase;
+  @media @phoneTablet{
+    margin: @marginSM;
   }
-  .thumbnails{
-  	display: block;
-  	float: left;
-  	font-size: 0;
-  	margin: 0;
-  	width: 100%;
+}
+.btn-lg{
+  font-size: @font-s!important;
+  font-weight: bold;
+  padding: @padLG;
+  text-transform: uppercase;
+}
+
+/*
+	Thumbnails
+*/
+.thumbnails{
+  display: block;
+  float: left;
+  font-size: 0;
+  margin: 0;
+  width: 100%;
+}
+.thumbnail{
+  clear: none;
+  display: inline-block;
+  float: none;
+  list-style: none;
+  margin:0;
+  padding: 0;
+  a{
+    .btn;
+    span{
+      clear: both;
+      float: left;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: normal;
+      width: 100%;
+    }
   }
-  .thumbnail{
-  	clear: none;
-  	display: inline-block;
-  	float: none;
-  	list-style: none;
-  	margin:0;
-  	padding: 0;
-  	a{
-  		.btn;
-  		span{
-  			clear: both;
-  			float: left;
-  			overflow: hidden;
-  			text-overflow: ellipsis;
-  			white-space: normal;
-  			width: 100%;
-  		}
-  	}
-  }
+}
