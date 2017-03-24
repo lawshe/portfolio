@@ -165,9 +165,6 @@ body,.subpage{
 .round{
 	.border-radius(5px);
 }
-.btn{
-	.round;
-}
 .visible{
 	.opacity(1)!important;
 	.transition(@fadeSpeed);
@@ -320,66 +317,54 @@ svg{
 }
 
 /*
-	THUMBNAIL
+	Buttons
 */
+.btn{
+	.round;
+	.solid-link;
+	display: inline-block;
+	font-size: @fontBase;
+	margin: @marginLG;
+	overflow: hidden;
+	padding: @padLG;
+	text-overflow: ellipsis;
+	img{
+		margin: @marginSM auto;
+		max-width: 90%;
+	}
+	@media @phoneTablet{
+		margin: @marginSM;
+	}
+}
+.btn-lg{
+	font-size: @font-s!important;
+	font-weight: bold;
+	padding: @padLG;
+	text-transform: uppercase;
+}
 .thumbnails{
 	display: block;
 	float: left;
 	font-size: 0;
 	margin: 0;
 	width: 100%;
-	li{
-		list-style: none;
-		margin:0;
-		padding: 0;
-	}
-	a{
-		.solid-link;
-		.btn;
-		display: block;
-		font-size: @fontBase;
-		margin: @marginLG;
-		overflow: hidden;
-		padding: @padLG;
-		text-overflow: ellipsis;
-		img{
-			margin: @marginSM auto;
-			max-width: 90%;
-		}
-		@media @phoneTablet{
-			margin: @marginSM;
-		}
-	}
-	span{
-		clear: both;
-		float: left;
-		overflow: hidden;
-		text-overflow: ellipsis;
-		white-space: normal;
-		width: 100%;
-	}
 }
 .thumbnail{
 	clear: none;
 	display: inline-block;
 	float: none;
-	margin: @marginSM;
+	list-style: none;
+	margin:0;
 	padding: 0;
-}
-.thumbnails-clients{
-	li{
-		width: 33.333%;
-		@media @phoneTablet{
-			width: 50%;
-			&:nth-child(3n){
-				clear: both;
-			}
-		}
-	}
 	a{
-		font-size: @font-s;
-		@media @phoneTablet{
-			font-size: @fontBase;
+		.btn;
+		span{
+			clear: both;
+			float: left;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			white-space: normal;
+			width: 100%;
 		}
 	}
 }
