@@ -117,7 +117,7 @@ Meteor.fxns = {
 		return examples;
 	},
 	processEx: function(ex){
-		var imgSize = Session.get('imgSize');
+		var imgSize = ex.image.oneSize ? 'one_size' : Session.get('imgSize');
 		ex.image.imagePath =  '/img/work/' + ex.client + '/' + imgSize + '/' + ex.image.file;
 		return ex;
 	},
@@ -177,6 +177,11 @@ Meteor.fxns = {
 				scrollTop: $('.section[data-anchor="' + anchorId + '"]').offset().top
 			},700);
 		}
+	},
+	scrollToTop: function(e){
+		$('html, body').animate({
+			scrollTop: 0
+		},700);
 	}
 };
 
@@ -184,19 +189,19 @@ Meteor.fullpage = {
 	create: function(){
 		var sections = Meteor.fullpage.pageSections(),
 			anchors = sections.anchors,
-			titles = sections.titles,
-			page = Session.get('page');
+			titles = sections.titles;
+		var page = Router.current().route.getName();
 
 		$('#fullpage').fullpage({
-			menu: '#sub-menu',
+			menu: '#menu',
 			autoScrolling: false,
-			paddingTop:'6rem',
+			paddingTop: '6rem',
     	paddingBottom: '3.6rem',
 			resize : true,
       keyboardScrolling: true,
       fitToSection: false,
 			easing: 'easeInQuart',
-			recordHistory: false,
+			recordHistory: true,
 			animateAnchor: true,
 			scrollOverflow: false,
 			afterLoad: function(anchorLink, index){
@@ -206,11 +211,11 @@ Meteor.fullpage = {
 					Meteor.fxns.toggleMobileMenu();
 				}
 
-				if(Session.get('page') === 'about'){
+				if(Session.get('page') === 'home'){
 					if (sectionAnchor === 'intro'){
-						Meteor.about.drawMe();
+						Meteor.svg.drawMe();
 					} else if (sectionAnchor === 'about') {
-						Meteor.effects.toggleTimeout('skill-span', 'emphasize', 500, 100, 150);
+						Meteor.effects.toggleTimeout('emph', 'emphasize', 500, 100, 150);
 					} else if (sectionAnchor === 'skills') {
 						Meteor.effects.toggleTimeout('skills-link', 'emphasize', 500, 100, 150);
 					} else if (sectionAnchor === 'work') {
@@ -223,13 +228,12 @@ Meteor.fullpage = {
 		//--section navigation
 		$(anchors).each(function(i,v){
 			if (titles[i]) {
-				$('#sub-menu').append('<li class="section-nav" data-menuanchor="'+v+'"><a href="#'+v+'" class="menu-item"><span data-menuanchor="'+v+'">'+titles[i]+'</span></a></li>');
+				$('#menu').append('<li data-menuanchor="'+v+'"><a href="#'+v+'" class="menu-item"><span data-menuanchor="'+v+'">'+titles[i]+'</span></a></li>');
 			}
 		});
 	},
 	destroy: function(){
 		$.fn.fullpage.destroy('all');
-		$('.section-nav').remove();
 	},
 	pageSections:function() {
 		var result = [],
@@ -285,7 +289,7 @@ Meteor.effects = {
 	}
 }
 
-Meteor.about = {
+Meteor.svg = {
 	draw: function(path){
 		var length = path.getTotalLength();
 
@@ -301,6 +305,6 @@ Meteor.about = {
 	},
 	drawMe: function(){
 		var path = document.getElementById('svg-me');
-		Meteor.about.draw(path);
+		Meteor.svg.draw(path);
 	},
 };
