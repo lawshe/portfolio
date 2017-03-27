@@ -27,13 +27,12 @@ Template.layout.hooks({
 });
 
 /*
-	About
+	Home
 */
-Template.about.hooks({
+Template.home.hooks({
 	rendered: function () {
-		Session.set('page','about');
 		Meteor.fxns.allPages();
-		Meteor.about.drawMe();
+		Meteor.svg.drawMe();
 	},
 	destroyed: function () {
 		Meteor.fullpage.destroy();
@@ -45,7 +44,6 @@ Template.about.hooks({
 */
 Template.work.hooks({
 	rendered: function () {
-		Session.set('page','work');
 		Meteor.fxns.allPages();
 	},
 	destroyed: function () {
