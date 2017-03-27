@@ -131,6 +131,12 @@ body,.subpage{
 /*
 	MISC
 */
+.emph{
+	font-weight: bold;
+	&.emphasize{
+		.opacity(0.8);
+	}
+}
 .clearfix{
 	clear: both;
 }
@@ -212,25 +218,9 @@ svg{
 /*
 	About
 */
-.intro{
-	@media @phoneTablet{
-		h1{
-			margin-bottom: @marginSM;
-		}
-		h1, h3{
-			text-align: center!important;
-		}
-	}
-}
 .web-skills{
 	float: none;
 	line-height: @fontBase*1.6;
-}
-.skill-span {
-	font-weight: bold;
-	&.emphasize{
-		.opacity(0.8);
-	}
 }
 .email-project{
 	.btn;
@@ -293,6 +283,9 @@ svg{
 .skills-list{
 	font-size: 0;
 	list-style: none;
+	margin: 0 auto;
+	max-width: @maxWidth;
+	padding: 0 @padLG;
 	li{
 		display: inline-block;
 		margin: @marginXS;
@@ -308,7 +301,7 @@ svg{
 }
 .skills-link{
 	&.emphasize{
-		background-color: @gray!important;
-		color: @blue!important;
+		background: none!important;
+		color: @linkColorHover!important;
 	}
 }
