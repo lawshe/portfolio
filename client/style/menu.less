@@ -19,81 +19,35 @@
 }
 
 /*
-	MAIN MENU
+ MENU
 */
-.initials{
-	border-bottom: @borderSM solid @linkColor;
-	border-right: 0!important;
-	border-top: @borderSM solid @linkColor;
-	color: @linkColor;
-	cursor: pointer;
-	display: inline-block;
-	font-size: @fontBase;
-	margin: 0 0 @marginSM 0;
-	padding: @padSM 0;
-	.sans-bold;
-	text-align: left;
-	text-transform: uppercase;
-	.transition(@fadeSpeed);
-	width: 100%;
-
-	&:hover{
-		border-color: @linkColorHover;
-		color: @linkColorHover;
-	}
-
-	span{
-		float: right;
-	}
-}
-.main-menu{
-	a{
-		border-top: 0px!important;
-	}
-	li{
-		width: 100%;
-	}
-}
-
-/*
-	SUB MENU
-*/
-.active-menu{
-	border-color: @activeMenuColor!important;
-	color: @activeMenuColor!important;
-}
 .menu-item{
 	clear: both;
-	display: inline-block;
-	font-size: @fontBase;
+	display: block;
+	float: right;
+	font-size: @fontXS;
 	font-weight: bold;
+	overflow: hidden;
 	padding: @padSM 0;
 	text-align: left;
+	text-overflow: ellipsis;
 	text-transform: none;
+	white-space: nowrap;
 }
-.section-nav{
-	a{
-		font-size: @fontXS;
-		overflow: hidden;
-		text-overflow: ellipsis;
-		white-space: nowrap;
-		&:active{
-			color: @gray!important;
-		}
-	}
-	&.active{
-		.menu-item{
-			background: @blueBase;
-			color: @activeMenuColor;
-		}
+#home-menu{
+	.menu-item{
+		font-size: @fontBase;
 	}
 }
-#sub-menu{
+#menu{
 	display: block;
 	float: left;
 	margin-bottom: @marginLG;
+	.menu-item{
+		font-size: @fontXS;
+	}
 }
-.main-menu, #sub-menu{
+#home-menu, #menu{
 	list-style: none;
 	width: 100%;
 	li{
@@ -102,15 +56,38 @@
 		overflow: hidden;
 		padding: 0;
 		width: 100%;
-	}
-	a{
-		display: block;
-		float: right;
-		overflow: hidden;
-		text-overflow: ellipsis;
+		&.active{
+			a{
+				border-color: @activeMenuColor;
+				color: @activeMenuColor;
+			}
+		}
 	}
 }
-.initials, .menu-item{
+#home-menu{
+	.menu-item{
+		border-bottom: @borderSM solid @linkColor;
+		border-right: 0!important;
+		color: @linkColor;
+		cursor: pointer;
+		display: inline-block;
+		margin: 0 0 @marginSM 0;
+		padding: @padMD 0 @padMD @padMD;
+		.sans-bold;
+		.transition(@fadeSpeed);
+		width: 100%;
+
+		&:hover{
+			border-color: @linkColorHover;
+			color: @linkColorHover;
+		}
+
+		span{
+			float: right;
+		}
+	}
+}
+.menu-item{
 	.sans;
 	a{
 		text-align: left;
@@ -140,7 +117,7 @@
 	MOBILE
 */
 @media @phoneTablet {
-	.main-menu{
+	#home-menu{
 		padding-top: @mobileMenu;
 	}
 	.mobile-menu-toggle {
