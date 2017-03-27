@@ -15,6 +15,11 @@ Template.layout.events = {
 };
 
 Template.menu.events = {
+	'click .home-link': function(){
+		if (Router.current().route.getName() === 'home') {
+			$.fn.fullpage.silentMoveTo('intro');
+		}
+	},
 	'click .mobile-menu-toggle': function(){
 			Meteor.fxns.toggleMobileMenu();
 	},
