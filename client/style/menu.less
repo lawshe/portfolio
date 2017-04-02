@@ -27,11 +27,12 @@
 	float: right;
 	font-size: @fontXS;
 	font-weight: bold;
+	max-width: 100%;
 	overflow: hidden;
 	padding: @padSM 0;
 	text-align: left;
 	text-overflow: ellipsis;
-	text-transform: none;
+	text-transform: uppercase;
 	white-space: nowrap;
 }
 #home-menu{
@@ -107,7 +108,10 @@
 	top: 0;
 	.transition(@fadeSpeed);
 	width: 10%;
-	z-index: 1000;
+	z-index: 1001;
+	@media @maxDesktopS {
+		width: @medMargin!important;
+	}
 	@media @phoneTablet {
 		width: 0px;
 	}
