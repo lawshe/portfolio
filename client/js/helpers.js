@@ -1,4 +1,7 @@
 if (Meteor.isClient) {
+	Template.registerHelper('imgSize', function(){
+		return Session.get('imgSize');
+	});
 	Template.home.helpers({
 		skills: function(){
 			return webSkills;
