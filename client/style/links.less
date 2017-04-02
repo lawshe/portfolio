@@ -5,6 +5,7 @@
 
 a {
   color: @linkColor;
+  font-weight: bold;
   text-decoration: none;
   .transition(@fadeSpeed);
   &:visited {
@@ -73,10 +74,15 @@ a {
   }
 }
 .btn-lg{
+  border: @padLG solid @greenLight;
   font-size: @fontSM!important;
   font-weight: bold;
   padding: @padLG;
   text-transform: uppercase;
+
+  &:hover{
+    border: @padLG solid @linkColor;
+  }
 }
 
 /*
