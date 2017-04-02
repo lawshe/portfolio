@@ -1,7 +1,9 @@
 <template name="workExImg">
+	{{#if imgSize}}
 	<a class="imagepop {{imageClasses}}" href="{{imagePath}}" data-title="{{title}}">
 		<img alt="{{title}}" src="{{imagePath}}" class="work-ex">
 	</a>
+	{{/if}}
 </template>
 
 <template name="scrollTo">
@@ -13,7 +15,7 @@
 		<h2>Contact</h2>
 		<div class="footer">
 			<span class="hidden" itemprop="name">Jessica Lawshe</span>
-			<span class="hidden" itemprop="jobTitle">Designer &<br>Developer</span>
+			<span class="hidden" itemprop="jobTitle">Designer &amp;<br>Developer</span>
 			<ul class="thumbnails">
 				<li class="thumbnail">
 					<a itemprop="url" href="https://www.linkedin.com/in/lawshe" target="_BLANK">
