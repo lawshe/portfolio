@@ -5,6 +5,9 @@
 
 img{
   max-width: 100%;
+  image-rendering: optimizeQuality;
+  image-rendering: optimizeSpeed;
+  image-rendering: -webkit-optimize-contrast;
 }
 .icon{
   text-align: center;
@@ -21,6 +24,7 @@ img{
     padding: 0px;
   }
 }
+
 .imagepop{
   background: @gray;
   border: @borderMD solid;
@@ -30,13 +34,13 @@ img{
   display: inline-block;
   position: relative;
   margin: @marginSM auto;
-  max-width: 100%;
+  max-width: @maxWidthImg;
   padding: @padSM;
   text-decoration: none!important;
   .transition(@fadeSpeed);
-
   @media @phoneTablet{
     margin-right: auto;
+    max-width: 100%;
   }
   img{
     display: block;
