@@ -15,9 +15,20 @@ Template.layout.events = {
 };
 
 Template.menu.events = {
-	'click .home-link': function(){
+	'click .home-link': function(e){
+		e.preventDefault();
 		if (Router.current().route.getName() === 'home') {
 			$.fn.fullpage.silentMoveTo('intro');
+		} else {
+			Router.go('home');
+		}
+	},
+	'click .menu-item:not(.home-link)': function(e){
+		e.preventDefault();
+		var sectionAnchor = e.target.getAttribute('data-menuanchor');
+		if (sectionAnchor) {
+			Meteor.ga.sendEvent('menu', 'link', sectionAnchor);
+			$.fn.fullpage.moveTo(sectionAnchor);
 		}
 	},
 	'click .mobile-menu-toggle': function(){
