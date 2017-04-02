@@ -42,24 +42,6 @@ Meteor.fxns = {
 			$('.section:nth-child(1)').find('.scroll-to').addClass('bounce');
 		}, 1800);
 	},
-	imagesSize: function(){
-		var windowWidth = $(window).width();
-		if(windowWidth > 1000){
-			Session.set('imgSize', 'lg');
-			Meteor.fxns.imagesHeight(windowWidth,2);
-		}else if (windowWidth > 700){
-			Session.set('imgSize', 'md');
-			Meteor.fxns.imagesHeight(windowWidth,2);
-		}else{
-			Session.set('imgSize', 'sm');
-			Meteor.fxns.imagesHeight(windowWidth,3);
-		}
-	},
-	imagesHeight: function(windowHeight,divideBy){
-		var imgHeight = parseInt(window.innerHeight,10) /parseInt(divideBy,10);
-		$('img').css('max-height', imgHeight+'px');
-		return;
-	},
 	imagesPopup: function(){
 		$('.imagepop').magnificPopup({
 			type:'image',
@@ -97,6 +79,18 @@ Meteor.fxns = {
 			});
 		}else{
 			Meteor.fxns.imagesReady();
+		}
+	},
+	imagesSize: function(){
+		var windowWidth = $(window).width();
+		if(windowWidth > 1000){
+			Session.set('imgSize', 'lg');
+		} else if (windowWidth > 700){
+			Session.set('imgSize', 'md');
+		} else if (windowWidth > 375){
+			Session.set('imgSize', 'sm');
+		} else{
+			Session.set('imgSize', 'xs');
 		}
 	},
 	toggleMobileMenu: function() {
@@ -193,6 +187,7 @@ Meteor.fullpage = {
 		var page = Router.current().route.getName();
 
 		$('#fullpage').fullpage({
+			anchors: anchors,
 			menu: '#menu',
 			autoScrolling: false,
 			paddingTop: '6rem',
@@ -211,7 +206,7 @@ Meteor.fullpage = {
 					Meteor.fxns.toggleMobileMenu();
 				}
 
-				if(Session.get('page') === 'home'){
+				if(page === 'home'){
 					if (sectionAnchor === 'intro'){
 						Meteor.svg.drawMe();
 					} else if (sectionAnchor === 'about') {
@@ -226,6 +221,7 @@ Meteor.fullpage = {
 		});
 
 		//--section navigation
+		$('#menu').html('');
 		$(anchors).each(function(i,v){
 			if (titles[i]) {
 				$('#menu').append('<li data-menuanchor="'+v+'"><a href="#'+v+'" class="menu-item"><span data-menuanchor="'+v+'">'+titles[i]+'</span></a></li>');
