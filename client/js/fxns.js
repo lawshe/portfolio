@@ -208,13 +208,17 @@ Meteor.fullpage = {
 
 				if(page === 'home'){
 					if (sectionAnchor === 'intro'){
-						Meteor.svg.drawMe();
+						Meteor.svg.draw('svg-me');
 					} else if (sectionAnchor === 'about') {
 						Meteor.effects.toggleTimeout('emph', 'emphasize', 500, 100, 150);
 					} else if (sectionAnchor === 'skills') {
 						Meteor.effects.toggleTimeout('skills-link', 'emphasize', 500, 100, 150);
 					} else if (sectionAnchor === 'work') {
 						Meteor.effects.toggle('work-ex', 'visible');
+					}
+				} else if(page === 'work'){
+					if (sectionAnchor === 'work'){
+						Meteor.svg.draw('svg-work');
 					}
 				}
 			}
@@ -286,21 +290,18 @@ Meteor.effects = {
 }
 
 Meteor.svg = {
-	draw: function(path){
-		var length = path.getTotalLength();
+	draw: function(svgId){
+		var elem = document.getElementById(svgId);
+		var length = elem.getTotalLength();
 
-		path.style.transition = path.style.WebkitTransition = 'none';
+		elem.style.transition = elem.style.WebkitTransition = 'none';
 
-		path.style.strokeDasharray = length + ' ' + length;
-		path.style.strokeDashoffset = length ;
-		path.getBoundingClientRect();
+		elem.style.strokeDasharray = length + ' ' + length;
+		elem.style.strokeDashoffset = length ;
+		elem.getBoundingClientRect();
 
-		path.style.transition = path.style.WebkitTransition = 'stroke-dashoffset 5s ease-in-out';
+		elem.style.transition = elem.style.WebkitTransition = 'stroke-dashoffset 5s ease-in-out';
 		// Below line triggers the Animation
-		path.style.strokeDashoffset = '0';
-	},
-	drawMe: function(){
-		var path = document.getElementById('svg-me');
-		Meteor.svg.draw(path);
-	},
+		elem.style.strokeDashoffset = '0';
+	}
 };
