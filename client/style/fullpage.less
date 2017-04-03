@@ -2,20 +2,19 @@
 @import url("variables.less");
 
 #fullpage {
-	margin-left: 10%;
-
-	@media @maxDesktopS {
-		margin-left: @medMargin;
+	margin-left: @pageMargin;
+	.fp-tableCell{
+		height: 100%!important;
+		padding: 0;
+		text-align: center;
 	}
+
 	@media @phoneTablet {
 		border-left: 0px;
 		margin-left: @menu-hidden-width;
-		padding: 0px!important;
 	}
-	.fp-tableCell{
-		height: 100%!important;
-		text-align: center;
-		padding: 0;
+	@media @desktop {
+		margin-left: @pageMarginLG;
 	}
 	&:first-child{
 		@media @phoneTablet{
