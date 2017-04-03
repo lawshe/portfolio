@@ -25,7 +25,6 @@
 	clear: both;
 	display: block;
 	float: right;
-	font-size: @fontXS;
 	font-weight: bold;
 	max-width: 100%;
 	overflow: hidden;
@@ -46,6 +45,9 @@
 	margin-bottom: @marginLG;
 	.menu-item{
 		font-size: @fontXS;
+		@media @minDesktopS {
+			font-size: @fontBase;
+		}
 	}
 }
 #home-menu, #menu{
@@ -107,13 +109,13 @@
 	position: fixed;
 	top: 0;
 	.transition(@fadeSpeed);
-	width: 10%;
+	width: @pageMargin;
 	z-index: 1001;
-	@media @maxDesktopS {
-		width: @medMargin!important;
-	}
 	@media @phoneTablet {
 		width: 0px;
+	}
+	@media @desktop {
+		width: @pageMarginLG;
 	}
 }
 
