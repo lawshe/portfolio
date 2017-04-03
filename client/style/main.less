@@ -197,9 +197,9 @@ body,.subpage{
 svg{
 	.opacity(0);
 	.transition(@fadeSpeed);
-	path{
+	path, polyline{
 		stroke: @gray;
-		stroke-width: @borderMD;
+		stroke-width: @borderSM;
 	}
 }
 .active{
@@ -271,6 +271,9 @@ svg{
 		text-align: right;
 	}
 	@media @phoneTablet{
+		&:before, &:after{
+			background-size: auto 50%;
+		}
 		h2{
 			text-align: center;
 		}
@@ -284,22 +287,24 @@ svg{
 	font-size: 0;
 	list-style: none;
 	margin: 0 auto;
-	max-width: @maxWidth;
+	max-width: 1100px;
 	padding: 0 @padLG;
 	li{
 		display: inline-block;
 		margin: @marginXS;
-		a {
-			background-color: @grayLight;
-			display: block;
-			padding: @padXS;
-			&:hover {
-			 background: none!important;
-			}
-		}
 	}
 }
 .skills-link{
+	background-color: @grayLight;
+	display: block;
+	padding: @padXS;
+	text-align: center;
+	span{
+		margin: 0 auto;
+	}
+	&:hover {
+	 background: none!important;
+	}
 	&.emphasize{
 		background: none!important;
 		color: @linkColorHover!important;
