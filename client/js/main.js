@@ -32,7 +32,7 @@ Template.layout.hooks({
 Template.home.hooks({
 	rendered: function () {
 		Meteor.fxns.allPages();
-		Meteor.svg.drawMe();
+		Meteor.svg.draw('svg-me');
 	},
 	destroyed: function () {
 		Meteor.fullpage.destroy();
