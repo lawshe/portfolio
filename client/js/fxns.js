@@ -87,10 +87,8 @@ Meteor.fxns = {
 			Session.set('imgSize', 'lg');
 		} else if (windowWidth > 700){
 			Session.set('imgSize', 'md');
-		} else if (windowWidth > 375){
+		} else {
 			Session.set('imgSize', 'sm');
-		} else{
-			Session.set('imgSize', 'xs');
 		}
 	},
 	toggleMobileMenu: function() {
@@ -161,7 +159,7 @@ Meteor.fxns = {
 	},
 	scrollBtn: function(e){
 		$('html, body').animate({
-			scrollTop: $('.section[data-anchor="about"]').offset().top
+			scrollTop: $('#fullpage .section:nth-child(2)').offset().top
 		},700);
 	},
 	scrollTo: function(e){
