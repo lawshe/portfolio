@@ -27,7 +27,7 @@ Template.menu.events = {
 		e.preventDefault();
 		var sectionAnchor = e.target.getAttribute('data-menuanchor');
 		if (sectionAnchor) {
-			Meteor.ga.sendEvent('menu', 'link', sectionAnchor);
+			Meteor.ga.sendEvent('menu', 'link', 'menu - ' + sectionAnchor);
 			$.fn.fullpage.moveTo(sectionAnchor);
 		}
 	},
