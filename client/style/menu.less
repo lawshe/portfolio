@@ -12,9 +12,6 @@
 		left: 0;
 		visibility: visible;
 		width: @mobileMenuWidth;
-		.menu-item{
-			width: 100%;
-		}
 	}
 }
 
@@ -24,15 +21,22 @@
 .menu-item{
 	clear: both;
 	display: block;
-	float: right;
 	font-weight: bold;
 	max-width: 100%;
 	overflow: hidden;
-	padding: @padSM 0;
-	text-align: left;
+	padding: @padSM;
+	text-align: right;
 	text-overflow: ellipsis;
 	text-transform: uppercase;
 	white-space: nowrap;
+	.sans;
+	a{
+		text-align: left;
+	}
+	span{
+		display: inline-block;
+		width: 100%;
+	}
 }
 #home-menu{
 	.menu-item{
@@ -73,30 +77,14 @@
 		border-right: 0!important;
 		color: @linkColor;
 		cursor: pointer;
-		display: inline-block;
-		margin: 0 0 @marginSM 0;
-		padding: @padMD 0 @padMD @padMD;
+		padding: @padMD @padSM;
 		.sans-bold;
 		.transition(@fadeSpeed);
-		width: 100%;
 
 		&:hover{
 			border-color: @linkColorHover;
 			color: @linkColorHover;
 		}
-
-		span{
-			float: right;
-		}
-	}
-}
-.menu-item{
-	.sans;
-	a{
-		text-align: left;
-	}
-	span{
-		padding: @padSM;
 	}
 }
 .menu-wrap{
