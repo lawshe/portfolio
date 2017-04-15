@@ -1,6 +1,14 @@
 /*
 	Events
 */
+
+Template.footer.events = {
+	'click .btn-link': function(e){
+		var btnId = e.target.getAttribute('id').replace('link-', '')
+		Meteor.ga.sendEvent('button', 'link', 'button - ' + btnId);
+	}
+}
+
 Template.fullpage.events = {
 	'click #fullpage': function(){
 		Meteor.fxns.checkMenu();
@@ -29,6 +37,7 @@ Template.menu.events = {
 		if (sectionAnchor) {
 			Meteor.ga.sendEvent('menu', 'link', 'menu - ' + sectionAnchor);
 			$.fn.fullpage.moveTo(sectionAnchor);
+			Meteor.fxns.checkMenu();
 		}
 	},
 	'click .mobile-menu-toggle': function(){
