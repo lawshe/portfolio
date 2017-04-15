@@ -10,7 +10,7 @@ Meteor.fxns = {
 		var me = 'moc [ dot ] ehswalj [ at ] acissej',
 			txt = me.replace(' [ at ] ', '\u0040').replace(' [ dot ] ', '\u002E').split('').reverse().join('');
 		$('.email').html('<span><i class="fa fa-envelope-o"></i><br>' + txt + '</span>');
-		$('.email').attr('href', 'mailto:' + txt );
+		$('.email').attr('href', 'mailto:%22Jessica%20Lawshe%22%3c' + txt );
 
 		$('.email-project').attr('href', 'mailto:' + txt + '?subject=Project Inquiry');
 	},
@@ -208,9 +208,9 @@ Meteor.fullpage = {
 					if (sectionAnchor === 'intro'){
 						Meteor.svg.draw('svg-me');
 					} else if (sectionAnchor === 'about') {
-						Meteor.effects.toggleTimeout('emph', 'emphasize', 500, 100, 150);
+						Meteor.effects.toggleTimeout('emph', 'emphasize', 200, 100, 150);
 					} else if (sectionAnchor === 'skills') {
-						Meteor.effects.toggleTimeout('skills-link', 'emphasize', 500, 100, 150);
+						Meteor.effects.toggleTimeout('skills-link', 'emphasize', 200, 100, 150);
 					} else if (sectionAnchor === 'work') {
 						Meteor.effects.toggle('work-ex', 'visible');
 					}
