@@ -291,7 +291,7 @@ Meteor.effects = {
 Meteor.svg = {
 	draw: function(svgId){
 		var elem = document.getElementById(svgId);
-		var length = elem.getTotalLength();
+		var length = elem && elem.getTotalLength ? elem.getTotalLength() : null;
 
 		elem.style.transition = elem.style.WebkitTransition = 'none';
 
