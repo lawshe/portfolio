@@ -52,6 +52,18 @@ Template.work.hooks({
 });
 
 /*
+	Muffi
+*/
+Template.puppy.hooks({
+	rendered: function () {
+		Meteor.fxns.allPages();
+	},
+	destroyed: function () {
+		Meteor.fullpage.destroy();
+	}
+});
+
+/*
 	404
 */
 Template.notFound.hooks({
@@ -60,5 +72,15 @@ Template.notFound.hooks({
 	},
 	destroyed: function () {
 		Meteor.fullpage.destroy();
+	}
+});
+
+/*
+	Partials
+*/
+
+Template.workExImg.hooks({
+	rendered: function () {
+		Meteor.fxns.imagesPopup();
 	}
 });

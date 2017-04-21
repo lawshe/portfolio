@@ -27,7 +27,6 @@ Meteor.fxns = {
 		Meteor.fxns.checkMenu();
 		Meteor.fullpage.create();
 		Meteor.fxns.adiosSpam();
-		Meteor.fxns.imagesPopup();
 		Meteor.fxns.bounce();
 		Meteor.fxns.imagesLoading();
 		Meteor.fxns.orientationListener();
@@ -208,9 +207,9 @@ Meteor.fullpage = {
 					if (sectionAnchor === 'intro'){
 						Meteor.svg.draw('svg-me');
 					} else if (sectionAnchor === 'about') {
-						Meteor.effects.toggleTimeout('emph', 'emphasize', 200, 100, 150);
+						Meteor.effects.toggleTimeout('emph', 'emphasize', 250, 100, 150);
 					} else if (sectionAnchor === 'skills') {
-						Meteor.effects.toggleTimeout('skills-link', 'emphasize', 200, 100, 150);
+						Meteor.effects.toggleTimeout('skills-link', 'emphasize', 250, 100, 150);
 					} else if (sectionAnchor === 'work') {
 						Meteor.effects.toggle('work-ex', 'visible');
 					}
