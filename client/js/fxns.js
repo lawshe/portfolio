@@ -22,8 +22,10 @@ Meteor.fxns = {
 	imagesReady: function(){
 		$('#fullpage').removeClass('hidden');
 	},
-	allPages: function(){
+	allPageBefore: function(){
 		Meteor.fxns.imagesSize();
+	},
+	allPages: function(){
 		Meteor.fxns.checkMenu();
 		Meteor.fullpage.create();
 		Meteor.fxns.adiosSpam();

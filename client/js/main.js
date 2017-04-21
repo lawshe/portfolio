@@ -21,6 +21,9 @@ Meteor.startup(function() {
 	Layout
 */
 Template.layout.hooks({
+	created: function() {
+		Meteor.fxns.allPageBefore();
+	},
 	rendered: function () {
 		$('.container').show();
 	}
@@ -78,7 +81,6 @@ Template.notFound.hooks({
 /*
 	Partials
 */
-
 Template.workExImg.hooks({
 	rendered: function () {
 		Meteor.fxns.imagesPopup();
