@@ -77,6 +77,10 @@ webSkills = [
     url: 'http://foundation.zurb.com/'
   },
   {
+    what: 'JIRA',
+    url: 'https://www.atlassian.com/software/jira'
+  },
+  {
     what: 'jQuery',
     url: 'http://grafico.kilianvalkhof.com/'
   },
@@ -109,6 +113,10 @@ webSkills = [
     url: 'https://facebook.github.io/react/'
   },
   {
+    what: 'Redux',
+    url: 'http://redux.js.org/'
+  },
+  {
     what: 'RethinkDB',
     url: 'https://www.rethinkdb.com/'
   },
@@ -123,6 +131,10 @@ webSkills = [
   {
     what: 'Twitter API',
     url: 'https://dev.twitter.com/'
+  },
+  {
+    what: 'Webpack',
+    url: 'https://github.com/webpack/webpack'
   },
   {
     what: 'WordPress',
