@@ -14,7 +14,7 @@ workExMore = [
       {
         title: 'File Uploader',
         client: 'impact',
-        desc: 'Designed &amp; developed an uploader for article figures, XML, PDF, &amp; supplemental files to <a href="https://aws.amazon.com/s3/" target="_BLANK">AWS S3</a>, as part of a journal publication platform. After upload, files are renamed to standardized naming convention &amp; figures are optimized via <a href="https://aws.amazon.com/lambda/" target="_BLANK">AWS Lambda</a>. If figure optimization fails, staff is notified via email.',
+        desc: 'Designed &amp; developed an uploader for article figures, XML, PDF, &amp; supplemental files to <a href="https://aws.amazon.com/s3/" target="_BLANK">AWS S3</a> as part of a journal publication platform. After upload, files are renamed to standardized naming convention &amp; figures are optimized via <a href="https://aws.amazon.com/lambda/" target="_BLANK">AWS Lambda</a>. If figure optimization fails, staff is notified via email.',
         image: {
           file: 'figure_uploader.png',
           title: 'Figure Uploader'
@@ -28,7 +28,7 @@ workExMore = [
       {
         title: 'Data Submission Manager',
         client: 'impact',
-        desc: 'Demonstrated here is a tool to submit article citation XML to <a href="https://www.ncbi.nlm.nih.gov/pubmed/" target="_BLANK">PubMed</a>, as part of a journal publication platform. The XML is generated from data stored in <a href="https://www.mongodb.com/" target="_BLANK">MongoDB</a> &amp validated before submission against the NCBI <a href="https://www.ncbi.nlm.nih.gov/corehtml/query/DTD/index.shtml" target="_BLANK">PubMed DTD</a>. If valid, the XML is sent via FTP to PubMed, a submission is recorded in the database, &amp; staff are notified via email.',
+        desc: 'Demonstrated here is a tool to submit article citation XML to <a href="https://www.ncbi.nlm.nih.gov/pubmed/" target="_BLANK">PubMed</a> as part of a journal publication platform. The XML is generated from data stored in <a href="https://www.mongodb.com/" target="_BLANK">MongoDB</a> &amp validated before submission using the NCBI <a href="https://www.ncbi.nlm.nih.gov/corehtml/query/DTD/index.shtml" target="_BLANK">PubMed DTD</a>. If valid, the XML is sent via FTP to PubMed, a submission is recorded in the database, &amp; staff are notified via email.',
         image: {
           file: 'pubmed.gif',
           title: 'Data Submission Manager'
@@ -37,7 +37,7 @@ workExMore = [
       {
         title: 'Team Suit Selector',
         client: 'a_gleam',
-        desc: 'Designed &amp; developed webpage to select new team suit. Integrated with client\'s <a href="https://www.shopify.com/" target="_BLANK">Shopify</a> inventory. Click events to filter suits by color, which hide other suit colors &amp; suits without selected color. Links to purchase the suits via online store.',
+        desc: 'Designed &amp; developed webpage to select new team suit. Integrated with client\'s <a href="https://www.shopify.com/" target="_BLANK">Shopify</a> inventory. Clicking color option filters suits by color, which hide other suit colors &amp; suits without selected color. Links to purchase the suits via online store.',
         image: {
           file: 'team-suits.png',
           title: 'Team Suits'
@@ -51,7 +51,7 @@ workExMore = [
       {
         title: 'Chrome Extension',
         client: 'nebulab',
-        desc: 'Save article metadata from PubMed to DropBox via a <a href="https://developer.chrome.com/extensions/api_index" target="_BLANK">Chrome Extension</a>. NCBI\'s <a href="https://www.ncbi.nlm.nih.gov/books/NBK25501/" target="_BLANK">E-utilities</a> is queried based on PMID to retrieve article metadata from PubMed\'s database or the article\'s PMCID to retrieve metadata from PMC. The data is returned as XML &amp; this is parsed via JavaScript to JSON.',
+        desc: 'Developed an extension to save article metadata from PubMed to DropBox via a <a href="https://developer.chrome.com/extensions/api_index" target="_BLANK">Chrome Extension</a>. NCBI\'s <a href="https://www.ncbi.nlm.nih.gov/books/NBK25501/" target="_BLANK">E-utilities</a> is queried based on PMID to retrieve article metadata from PubMed\'s database or the article\'s PMCID to retrieve metadata from PMC. The data is returned as XML &amp; this is parsed via JavaScript to JSON.',
         image: {
               file: 'chrome.gif',
               title: 'Article Saver'
@@ -74,7 +74,7 @@ workExMore = [
       {
         title: 'Solr Search',
         client: 'landes',
-        desc: 'Interface design &amp; integration of <a href="http://lucene.apache.org/solr/" target="_BLANK">Solr</a> queries for peer reviewed research papers. Ability to search author, title, keywords, &amp paper text, as well as filter options for paper type &amp; free publications. The results are paginated &amp; paper type counts are updated in search options as query changes.',
+        desc: 'Designed interface &amp; integrated <a href="http://lucene.apache.org/solr/" target="_BLANK">Solr</a> queries for searching peer reviewed research papers. Ability to search author, title, keywords, &amp paper text, as well as filter options for paper type &amp; free publications. The results are paginated &amp; paper type counts are updated in search options as query changes.',
         image: {
           file: 'search.png',
           title: 'Solr Query'
@@ -122,7 +122,7 @@ workExMore = [
       {
         title: 'Lab Website',
         client: 'kim',
-        desc: 'The first website I built was written in PHP and included an image popup.',
+        desc: 'The first website I built was for the research lab I managed at The University of Texas at Austin and is written in PHP. Creating this site is what started a hobby that turned into my career.',
         image: {
           file: 'lab.png',
           title: 'Lab Website'
