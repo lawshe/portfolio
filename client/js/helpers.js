@@ -23,4 +23,12 @@ if (Meteor.isClient) {
 			return years;
 		}
 	});
+	Template.puppy.helpers({
+		img: function(){
+			return '/img/sizes/' + Session.get('imgSize') + '/muffi.png';
+		},
+		imgMe: function(){
+			return '/img/sizes/' + Session.get('imgSize') + '/muffi_and_me.png';
+		}
+	})
 }

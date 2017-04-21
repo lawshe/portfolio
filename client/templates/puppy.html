@@ -1,0 +1,30 @@
+<template name="puppy">
+  <div class="subpage puppy">
+    <div data-anchor="muffit" class="section" data-title="Muffit">
+      <div class="page-header vertical-align">
+        <div class="half">
+          <h1>Meet<br/>Muffit</h1>
+        </div>
+        <div class="half">
+          <h3>World's<br/>Best Dog</h3>
+        </div>
+      </div>
+      <div class="puppy-img">
+        {{>workExImg imagePath=img title="Muffit the dog"}}
+      </div>
+      {{>scrollTo}}
+    </div>
+    <div data-anchor="muffit-and-me" class="section" data-title="And Me">
+			<div class="subproject">
+        <div class="half">
+          {{>workExImg imagePath=imgMe title="Muffit and me"}}
+        </div>
+        <div class="half">
+          <h4>Muffit &amp; Me</h4>
+          <p>We like to explore the Texas Hill Country or the many greenbelts around Austin. Here we are on top of<br/><a href="http://tpwd.texas.gov/state-parks/enchanted-rock" target="_BLANK">Enchanted Rock</a>.</p>
+        </div>
+      </div>
+    </div>
+		{{>footer}}
+  </div>
+</template>

@@ -51,6 +51,23 @@ Router.map(function() {
 		}
 	});
 
+	this.route('puppy', {
+		path: 'puppy',
+		onAfterAction: function() {
+		  if (!Meteor.isClient) {
+				return;
+		  }
+
+		  SEO.set({
+				title: 'Muffit',
+				meta: {
+					'description': 'Muffit the dog.'
+				}
+		  });
+		}
+	});
+
+
 	this.route('notFound', {
 		path: '/(.*)',
 		template: 'notFound'
