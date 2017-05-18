@@ -209,9 +209,9 @@ Meteor.fullpage = {
 					if (sectionAnchor === 'intro'){
 						Meteor.svg.draw('svg-me');
 					} else if (sectionAnchor === 'about') {
-						Meteor.effects.toggleTimeout('emph', 'emphasize', 250, 100, 150);
+						Meteor.effects.toggleMany('emph', 'emphasize', 250, 50);
 					} else if (sectionAnchor === 'skills') {
-						Meteor.effects.toggleTimeout('skills-link', 'emphasize', 250, 100, 150);
+						Meteor.effects.toggleMany('skills-link', 'emphasize', 250, 20);
 					} else if (sectionAnchor === 'work') {
 						Meteor.effects.toggle('work-ex', 'visible');
 					}
@@ -269,20 +269,19 @@ Meteor.effects = {
 			item.toggleClass(toggleClass);
 		});
 	},
-	toggleTimeout: function(targetClass, toggleClass, mainTimeout, firstTimeout, secondTimeout){
+	toggleMany: function(targetClass, toggleClass, mainTimeout, timeout){
 		var	mainTimeout = mainTimeout ? mainTimeout : 500;
-		var firstTimeout = firstTimeout ? firstTimeout : 100;
-		var secondTimeout = secondTimeout ? secondTimeout : 200;
-
+		var timeout = timeout ? timeout : 100;
 		setTimeout(function() {
 			$('.' + targetClass).each(function(i){
+				var idx = i+1;
 				var item = $(this);
 				setTimeout(function(){
 					item.addClass(toggleClass);
-				}, firstTimeout*i);
+				}, timeout*idx);
 				setTimeout(function(){
 					item.removeClass(toggleClass);
-				}, secondTimeout*i);
+				}, timeout*idx*2);
 			});
 		}, mainTimeout);
 	}
