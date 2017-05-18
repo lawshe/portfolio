@@ -24,7 +24,6 @@ diff-sequence@1.0.7
 ecmascript@0.6.3
 ecmascript-runtime@0.3.15
 ejson@1.0.13
-email@1.1.18
 fastclick@1.0.13
 gabrielengel:konecty-magnific-popup@0.9.9
 gadicohen:robots-txt@0.0.10
@@ -52,8 +51,6 @@ logging@1.1.17
 manuelschoebel:ms-seo@0.4.1
 meteor@1.6.1
 meteor-platform@1.2.6
-meteorhacks:kadira@2.30.3
-meteorhacks:meteorx@1.4.1
 minifier-css@1.2.16
 minifier-js@1.2.18
 minimongo@1.0.21
@@ -64,7 +61,6 @@ modules@0.7.9
 modules-runtime@0.7.9
 mongo@1.1.16
 mongo-id@1.0.6
-mongo-livedata@1.0.12
 natestrauser:font-awesome@4.6.3
 npm-mongo@2.2.24
 observe-sequence@1.0.16
