@@ -1,13 +1,16 @@
 Router.configure({
 	layoutTemplate: 'layout',
 	loadingTemplate: 'loading',
-	trackPageView: true
+	trackPageView: true,
+	link: {
+		manifest: '/jl_manifest.json'
+	}
 });
 
 /*
 	Meta tag data
 */
-var metaKeywords = 'Jessica Lawshe, designer, developer, software engineer, Austin, Texas';
+var metaKeywords = 'Jessica Lawshe, developer, software engineer, designer, Austin, Texas';
 if(webSkills){
 	webSkills.forEach(function(skill){
 		metaKeywords += ', ' + skill.what;
@@ -20,53 +23,84 @@ if(webSkills){
 Router.map(function() {
 	this.route('home', {
 		path: '/',
+		title: 'Jessica Lawshe',
+		meta: {
+			keywords: metaKeywords,
+			url: {
+				property: 'og:url',
+				itemprop: 'url',
+				content: function() {
+					return window.location.href;
+				}
+			}
+		},
+		link: {
+			canonical: function() {
+				return window.location.href;
+			}
+		},
 		trackPageView: true,
 		onAfterAction: function() {
 		  if (!Meteor.isClient) {
 				return;
 		  }
-		  SEO.set({
-				title: 'Jessica Lawshe',
-				meta: {
-				  'description': 'About Jessica Lawshe, a freelance software engineer based in Austin, Texas.',
-				  'keywords': metaKeywords
-				}
-		  });
 		}
 	});
 
 	this.route('work', {
 		path: 'work',
+		title: 'Work by Jessica Lawshe',
+		meta: {
+			description: 'Selected Work by Jessica Lawshe',
+			keywords: metaKeywords + ', selected work, portfolio',
+			url: {
+				property: 'og:url',
+				itemprop: 'url',
+				content: function() {
+					return window.location.href;
+				}
+			}
+		},
+		link: {
+			canonical: function() {
+				return window.location.href;
+			}
+		},
+		after: function() {
+			console.log('..after');
+	    DocHead.setTitle = 'Work | by Jessica Lawshe'
+	  },
 		onAfterAction: function() {
 		  if (!Meteor.isClient) {
 				return;
 		  }
-
-		  SEO.set({
-				title: 'Work | by JL',
-				meta: {
-			  	'description': 'Selected Work by Jessica Lawshe'
-				}
-		  });
 		}
 	});
 
 	this.route('puppy', {
 		path: 'puppy',
+		title: 'Muffit and Jessica',
+		meta: {
+			description: 'Muffit and Jessica Lawshe',
+			url: {
+				property: 'og:url',
+				itemprop: 'url',
+				content: function() {
+					return window.location.href;
+				}
+			}
+		},
+		link: {
+			canonical: function() {
+				return window.location.href;
+			}
+		},
 		onAfterAction: function() {
 		  if (!Meteor.isClient) {
 				return;
 		  }
-
-		  SEO.set({
-				title: 'Muffit',
-				meta: {
-					'description': 'Muffit the dog.'
-				}
-		  });
 		}
 	});
-
 
 	this.route('notFound', {
 		path: '/(.*)',

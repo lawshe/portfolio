@@ -1,20 +1,6 @@
 Meteor.startup(function() {
+	$('html').attr('lang', 'en-us');
 	Meteor.fxns.msIE();
-	return SEO.config({
-			title: 'Jessica Lawshe',
-			meta: {
-				'description': 'Freelance designer & developer based in Austin, Texas.'
-			},
-			og: {
-				'title': 'Jessica Lawshe',
-				'description': 'Freelance designer & developer based in Austin, Texas.'
-			},
-		    auto: {
-		      twitter: false,
-		      og: true,
-		      set: ['description', 'url', 'title']
-		    }
-      });
 });
 
 /*

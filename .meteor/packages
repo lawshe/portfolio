@@ -9,7 +9,6 @@ gabrielengel:konecty-magnific-popup
 iron:router
 zimme:iron-router-active
 reywood:iron-router-ga
-manuelschoebel:ms-seo
 aldeed:template-extension
 spiderable
 gadicohen:sitemaps
@@ -19,3 +18,4 @@ standard-minifier-js
 shell-server
 lawshe:full-page
 mizzao:jquery-ui
+ostrio:iron-router-meta
