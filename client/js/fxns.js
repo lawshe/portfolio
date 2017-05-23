@@ -36,7 +36,7 @@ Meteor.fxns = {
 	orientationListener: function(){
 		window.addEventListener('orientationchange', function() {
 			Meteor.fxns.checkMenu();
-		}, false);
+		}, {passive: true});
 	},
 	bounce: function(){
 		setTimeout(function() {
