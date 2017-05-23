@@ -100,7 +100,7 @@ workExMore = [
         desc: 'Designed &amp; developed a system built on <a href="https://www.meteor.com/" target="_BLANK">Meteor</a> to manage invites to join a journal\'s editorial board. Staff add invites to <a href="https://www.mongodb.com/" target="_BLANK">MongoDB</a> via a CMS &amp; send personalized email invitations, which include a link to an acceptance form that is autofilled with invitee\'s information from the database.',
         image: {
           file: 'editor_invite_table.png',
-          title: '',
+          title: 'Editor invite table',
           imageClasses: ''
         }
       },
