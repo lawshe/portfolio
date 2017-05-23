@@ -3,10 +3,11 @@ workExs = [
     title: 'XML to HTML',
     client: 'impact',
     image: {
-      file: 'fulltxt.gif',
-      title: 'Full Text HTML from XML'
+      file: 'fulltxt.png',
+      title: 'Full Text HTML from XML',
+      gifAvail: true
     },
-    desc: 'Designed &amp; developed an academic journal platform, which extended from a visitor site, a <a href="https://en.wikipedia.org/wiki/Content_management_system" target="_BLANK">CMS</a>, APIs to interact with legacy platforms, &amp; more. Demonstrated here is the conversion of article full text <a href="https://jats.nlm.nih.gov/" target="_BLANK">JATS XML</a> to JSON, which is used in a <a href="https://www.meteor.com/" target="_BLANK">Meteor</a> template to generate HTML. Article figures are served via a proxy &amp; hosted on <a href="https://aws.amazon.com/s3/" target="_BLANK">AWS S3</a>.'
+    desc: 'Designed &amp; developed an academic journal platform, which extended from a visitor site, a <a href="https://en.wikipedia.org/wiki/Content_management_system" target="_BLANK" rel="noopener">CMS</a>, APIs to interact with legacy platforms, &amp; more. Demonstrated here is the conversion of article full text <a href="https://jats.nlm.nih.gov/" target="_BLANK" rel="noopener">JATS XML</a> to JSON, which is used in a <a href="https://www.meteor.com/" target="_BLANK" rel="noopener">Meteor</a> template to generate HTML. Article figures are served via a proxy &amp; hosted on <a href="https://aws.amazon.com/s3/" target="_BLANK" rel="noopener">AWS S3</a>.'
   },
   {
     title: 'RSVP Manager',
@@ -15,7 +16,7 @@ workExs = [
       file: 'rsvp.png',
       title: 'RSVP'
     },
-    desc: 'Built a wedding RSVP manager using <a href="https://facebook.github.io/react/" target="_BLANK">React</a>, <a href="http://redux.js.org/" target="_BLANK">Redux</a>, & <a href="https://www.rethinkdb.com/" target="_BLANK">RethinkDB</a>. There is a form for entering &amp; updating invites. RSVPs are individualized by URL and guests can easily search for their RSVP link by entering their email. After submitting the RSVP, guests receive an email confirmation and the database is updated.'
+    desc: 'Built a wedding RSVP manager using <a href="https://facebook.github.io/react/" target="_BLANK" rel="noopener">React</a>, <a href="http://redux.js.org/" target="_BLANK" rel="noopener">Redux</a>, & <a href="https://www.rethinkdb.com/" target="_BLANK" rel="noopener">RethinkDB</a>. There is a form for entering &amp; updating invites. RSVPs are individualized by URL and guests can easily search for their RSVP link by entering their email. After submitting the RSVP, guests receive an email confirmation and the database is updated.'
   },
   {
     title: 'Payment Processing',
@@ -24,7 +25,7 @@ workExs = [
       file: 'payment.png',
       title: 'Checkout Step 1 using Authorize.net API'
     },
-    desc: 'I built a secure checkout with credit card processing. Payments are processed via <a href="https://www.authorize.net/" target="_BLANK">Authorize.net\'s</a> API. Upon completing, the user receives a confirmation email &amp; access to purchases.'
+    desc: 'I built a secure checkout with credit card processing. Payments are processed via <a href="https://www.authorize.net/" target="_BLANK" rel="noopener">Authorize.net\'s</a> API. Upon completing, the user receives a confirmation email &amp; access to purchases.'
   },
   {
     title: 'Article Tweeting',
