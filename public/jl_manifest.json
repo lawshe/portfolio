@@ -1,0 +1,22 @@
+{
+  "short_name": "Jessica Lawshe",
+  "name": "Portfolio site for Jessica Lawshe",
+  "icons": [
+    {
+      "src": "/img/jl/jl-48.png",
+      "type": "image/png",
+      "sizes": "48x48"
+    },
+    {
+      "src": "/img/jl/jl-96.png",
+      "type": "image/png",
+      "sizes": "96x96"
+    },
+    {
+      "src": "/img/jl/jl-192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    }
+  ],
+  "start_url": "/"
+}
