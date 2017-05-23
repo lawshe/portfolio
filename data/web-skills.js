@@ -41,6 +41,10 @@ webSkills = [
     url: 'https://www.dropbox.com/developers'
   },
   {
+    what: 'Dust.js',
+    url: 'http://www.dustjs.com/'
+  },
+  {
     what: 'Express',
     url: 'http://expressjs.com/'
   },
