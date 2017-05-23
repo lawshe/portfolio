@@ -30,8 +30,9 @@
 	text-transform: uppercase;
 	white-space: nowrap;
 	.sans;
-	a{
-		text-align: left;
+	color: @menuLink;
+	&:visited{
+		color: @menuLink;
 	}
 	span{
 		display: inline-block;
@@ -73,9 +74,9 @@
 }
 #home-menu{
 	.menu-item{
-		border-bottom: @borderSM solid @linkColor;
+		border-bottom: @borderSM solid @menuLink;
 		border-right: 0!important;
-		color: @linkColor;
+		color: @menuLink;
 		cursor: pointer;
 		padding: @padMD @padSM;
 		.sans-bold;
