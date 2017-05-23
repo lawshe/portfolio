@@ -45,7 +45,7 @@
 		<div data-anchor="about" class="section" data-title="About">
 			<h2>Full Stack Freelancer</h2>
 			<h4 class="txt-center">I create custom websites &amp;<br/>content management systems</h4>
-			<p class="web-skills">For over <span class="emph">4.5 years</span> I have built websites front to back, start to finish. Before, I was the lab manager for a cancer research lab at The University of Texas. I mostly work in isomorphic <span class="emph">JavaScript</span> applications, but also write <span class="emph">PHP</span>. My applications are styled with <span class="emph">CSS</span> &amp; use pre-processors. I use <span class="emph">NoSQL</span> and <span class="emph">SQL</span> databases and am versed in <span class="emph">HTML</span>, <span class="emph">XML</span>, &amp; <span class="emph">JSON</span>. I interact with various <span class="emph">APIs</span> daily and also write my own. You can view some of my code on <a href="https://github.com/lawshe" target="_BLANK" class="emph">Github</a>. I also like to step away from the computer &amp; explore the outdoors with my <a href="{{pathFor 'puppy'}}" class="emph">dog</a>.</p>
+			<p class="web-skills">For over <span class="emph">4.5 years</span> I have built websites front to back, start to finish. Before, I was the lab manager for a cancer research lab at The University of Texas. I mostly work in isomorphic <span class="emph">JavaScript</span> applications, but also write <span class="emph">PHP</span>. My applications are styled with <span class="emph">CSS</span> &amp; use pre-processors. I use <span class="emph">NoSQL</span> and <span class="emph">SQL</span> databases and am versed in <span class="emph">HTML</span>, <span class="emph">XML</span>, &amp; <span class="emph">JSON</span>. I interact with various <span class="emph">APIs</span> daily and also write my own. You can view some of my code on <a href="https://github.com/lawshe" target="_BLANK" class="emph" rel="noopener">Github</a>. I also like to step away from the computer &amp; explore the outdoors with my <a href="{{pathFor 'puppy'}}" class="emph">dog</a>.</p>
 		</div>
 
 		<div data-anchor="education" class="section education" data-title="Education">
@@ -66,8 +66,8 @@
 			<ul id="list-skills" class="skills-list">
 				{{#each skills}}
 					<li>
-						<a class="skills-link" href="{{url}}" target="_BLANK">
-							<span class="what">{{what}}</span>
+						<a class="skills-link" href="{{url}}" target="_BLANK" rel="noopener">
+							{{what}}
 						</a>
 					</li>
 				{{/each}}
