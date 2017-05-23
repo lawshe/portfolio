@@ -1,4 +1,6 @@
 {
+  "lang": "en-us",
+  "display": "browser",
   "short_name": "J. Lawshe",
   "name": "Portfolio site for Jessica Lawshe",
   "icons": [
@@ -16,8 +18,14 @@
       "src": "/img/jl/jl-192.png",
       "type": "image/png",
       "sizes": "192x192"
+    },
+    {
+      "src": "/img/jl/jl-512.png",
+      "type": "image/png",
+      "sizes": "512x512"
     }
   ],
   "start_url": "/",
+  "background_color": "#021C34",
   "theme_color": "#021C34"
 }
