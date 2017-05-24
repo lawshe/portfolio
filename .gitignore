@@ -1,7 +1,6 @@
 node_modules/
 public/img/
 public/resume/
-.jshintrc
 .jshintignore
 .csslintrc
 .deploy
