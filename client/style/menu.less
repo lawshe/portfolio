@@ -29,12 +29,9 @@
 	text-overflow: ellipsis;
 	text-transform: uppercase;
 	white-space: nowrap;
-	.sans;
-	color: @menuLink;
-	&:visited{
-		color: @menuLink;
-	}
-	&:hover{
+  .sans;
+  .hover-text();
+	&:hover, &:focus {
 		color: @linkColorHover;
 	}
 	span{
@@ -119,6 +116,7 @@
 		padding-top: @mobileMenu;
 	}
 	.mobile-menu-toggle {
+		color: @linkColor;
 		cursor: pointer;
 		height: @mobileMenu;
 		float: right;
@@ -127,10 +125,7 @@
 		padding: 0;
 		width: @mobileMenu;
 
-		&:hover{
-			color: @linkTextColorHover;
-			background: @linkColorHover;
-		}
+		.hover-text();
 		.fa{
 			line-height: @padXL;
 			text-align: center;

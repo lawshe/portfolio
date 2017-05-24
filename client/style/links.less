@@ -7,13 +7,7 @@ a {
   color: @linkColor;
   font-weight: bold;
   text-decoration: none;
-  .transition(@fadeSpeed);
-  &:visited {
-    color: @linkColor;
-  }
-  &:hover {
-    color: @linkColorHover;
-  }
+  .hover-text();
 }
 
 /*
