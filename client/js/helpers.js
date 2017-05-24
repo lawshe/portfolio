@@ -30,5 +30,5 @@ if (Meteor.isClient) {
 		imgMe: function(){
 			return '/img/sizes/' + Session.get('imgSize') + '/muffi_and_me.png';
 		}
-	})
+	});
 }

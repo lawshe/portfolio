@@ -3,7 +3,7 @@ if (Meteor.isClient){
 		sendEvent: function(eventCategory, eventLabel, eventValue){
 			ga('send', 'event', eventCategory, eventLabel, eventValue);
 		},
-	}
+	};
 }
 Meteor.fxns = {
 	adiosSpam: function(){
@@ -158,7 +158,7 @@ Meteor.fxns = {
 		}
 		return false;
 	},
-	scrollBtn: function(e){
+	scrollBtn: function(){
 		$('html, body').animate({
 			scrollTop: $('#fullpage .section:nth-child(2)').offset().top
 		},700);
@@ -171,7 +171,7 @@ Meteor.fxns = {
 			},700);
 		}
 	},
-	scrollToTop: function(e){
+	scrollToTop: function(){
 		$('html, body').animate({
 			scrollTop: 0
 		},700);
@@ -264,14 +264,14 @@ Meteor.fullpage = {
 
 Meteor.effects = {
 	toggle: function(targetClass, toggleClass){
-		$('.' + targetClass).each(function(i){
+		$('.' + targetClass).each(function(){
 			var item = $(this);
 			item.toggleClass(toggleClass);
 		});
 	},
 	toggleMany: function(targetClass, toggleClass, mainTimeout, timeout){
-		var	mainTimeout = mainTimeout ? mainTimeout : 500;
-		var timeout = timeout ? timeout : 100;
+		mainTimeout = mainTimeout ? mainTimeout : 500;
+		timeout = timeout ? timeout : 100;
 		setTimeout(function() {
 			$('.' + targetClass).each(function(i){
 				var idx = i+1;
@@ -285,7 +285,7 @@ Meteor.effects = {
 			});
 		}, mainTimeout);
 	}
-}
+};
 
 Meteor.svg = {
 	draw: function(svgId){

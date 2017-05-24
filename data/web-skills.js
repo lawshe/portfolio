@@ -29,8 +29,7 @@ webSkills = [
   },
   {
     what: 'Bootstrap',
-    url: 'http://getbootstrap.com/',
-    what: 'Bootstrap'
+    url: 'http://getbootstrap.com/'
   },
   {
     what: 'CrossRef API',

@@ -4,10 +4,10 @@
 
 Template.footer.events = {
 	'click .btn-link': function(e){
-		var btnId = e.target.getAttribute('id').replace('link-', '')
+		var btnId = e.target.getAttribute('id').replace('link-', '');
 		Meteor.ga.sendEvent('button', 'link', 'button - ' + btnId);
 	}
-}
+};
 
 Template.fullpage.events = {
 	'click #fullpage': function(){
@@ -53,7 +53,6 @@ Template.menu.events = {
 	},
 	'click .menu-item': function(e){
 		e.preventDefault();
-		var anchor = $(e.currentTarget).attr('href').replace('#', '');
 		Meteor.fxns.scrollTo(e);
 	}
 };
@@ -67,4 +66,4 @@ Template.workExImg.events = {
 			Meteor.ga.sendEvent('image', currentPage + ' popup', imageTitle);
 		}
 	}
-}
+};

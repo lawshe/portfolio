@@ -66,10 +66,6 @@ Router.map(function() {
 				return window.location.href;
 			}
 		},
-		after: function() {
-			console.log('..after');
-	    DocHead.setTitle = 'Work | by Jessica Lawshe'
-	  },
 		onAfterAction: function() {
 		  if (!Meteor.isClient) {
 				return;
