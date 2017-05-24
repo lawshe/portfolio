@@ -1,7 +1,7 @@
 .animation (@arguments) {
-	-webkit-animation: @arguments;
-	-moz-animation:    @arguments;
-	-ms-animation:     @arguments;
+  -webkit-animation: @arguments;
+  -moz-animation:    @arguments;
+  -ms-animation:     @arguments;
 }
 .animation-name(@arguments...) {
   -o-animation-name: @arguments;
@@ -41,6 +41,15 @@
   -moz-border-radius:@size;
   border-radius:@size;
 }
+.hoverText(){
+  .transition(@fadeSpeed);
+  &:visited {
+    color: @linkColor;
+  }
+  &:hover, &:focus {
+    color: @linkColorHover;
+  }
+}
 .opacity(@opacity: 0.5) {
   -moz-opacity: @opacity;
   -khtml-opacity: @opacity;
@@ -57,7 +66,7 @@
   perspective: @arguments;
 }
 .round{
-	.border-radius(5px);
+  .border-radius(5px);
 }
 .transform(@arguments) {
   -webkit-transform: @arguments;
