@@ -12,9 +12,30 @@
 */
 html {
 	background-color: @blueBase;
-	background-image: url('img/loading.gif');
-	background-repeat: no-repeat;
-	background-position: center center;
+	&:after{
+		background-image: url('img/loading.gif');
+		background-repeat: no-repeat;
+		background-position: center center;
+		color: @white;
+		content: 'Loading...';
+		font-size: 1rem;
+		line-height: 2.5rem;
+		height: 100vh;
+		left: 0;
+		opacity: 1;
+		position: absolute;
+		text-align: center;
+		top: 0;
+		.transition(@fadeSpeed);
+		width: 100vw;
+	}
+}
+html.loaded {
+	&:after{
+		background-image: none;
+		content: '';
+		opacity: 0;
+	}
 }
 html, body {
 	color: @blackDark;
@@ -158,9 +179,7 @@ body,.subpage{
 		color: @linkColor;
 		font-size: @fontXL;
 		cursor: pointer;
-		&:hover{
-			color:@linkColorHover;
-		}
+		.hover-text();
 		@media @phoneTablet and (orientation:landscape) {
 			font-size: @fontMD;
 		}
