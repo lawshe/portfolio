@@ -20,6 +20,7 @@
 */
 .menu-item{
 	clear: both;
+	color: @menuLink;
 	display: block;
 	font-weight: bold;
 	max-width: 100%;
@@ -31,6 +32,9 @@
 	white-space: nowrap;
   .sans;
   .hover-text();
+	&:visited {
+		color: @menuLink;
+	}
 	&:hover, &:focus {
 		color: @linkColorHover;
 	}
@@ -49,7 +53,6 @@
 	float: left;
 	margin-bottom: @marginLG;
 	.menu-item{
-		color: @menuLink;
 		font-size: @fontXS;
 		@media @minDesktopS {
 			font-size: @fontBase;
