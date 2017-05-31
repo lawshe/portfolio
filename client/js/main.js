@@ -1,5 +1,7 @@
+
 Meteor.startup(function() {
-	$('html').attr('lang', 'en-us').addClass('loaded');
+	$('html').attr('lang', 'en-us');
+	$('.loading').addClass('hidden');
 	Meteor.fxns.msIE();
 });
 
