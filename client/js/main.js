@@ -3,6 +3,9 @@ Meteor.startup(function() {
 	$('html').attr('lang', 'en-us');
 	$('.loading').addClass('hidden');
 	Meteor.fxns.msIE();
+
+	// Service Worker
+	navigator.serviceWorker.register('sw.js').then().catch(error => console.log('ServiceWorker registration failed: ', error));
 });
 
 /*
