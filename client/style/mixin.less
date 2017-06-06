@@ -1,8 +1,3 @@
-.animation (@arguments) {
-  -webkit-animation: @arguments;
-  -moz-animation:    @arguments;
-  -ms-animation:     @arguments;
-}
 .animation-name(@arguments...) {
   -o-animation-name: @arguments;
   -moz-animation-name: @arguments;
@@ -14,24 +9,6 @@
   -moz-animation-duration: @arguments;
   -webkit-animation-duration: @arguments;
   animation-duration: @arguments;
-}
-.animation-fill-mode(@arguments...){
-  -o-animation-fill-mode: @arguments;
-  -moz-animation-fill-mode: @arguments;
-  -webkit-animation-fill-mode: @arguments;
-  animation-fill-mode: @arguments;
-}
-.animation-iteration-count(@arguments...){
-  -o-animation-iteration-count: @arguments;
-  -moz-animation-iteration-count: @arguments;
-  -webkit-animation-iteration-count: @arguments;
-  animation-iteration-count: @arguments;
-}
-.animation-timing-function(@arguments...) {
-  -o-animation-timing-function: @arguments;
-  -moz-animation-timing-function: @arguments;
-  -webkit-animation-timing-function: @arguments;
-  animation-timing-function: @arguments;
 }
 .black-overlay{
   background: rgba(0,0,0,0.6);
@@ -59,12 +36,6 @@
   -ms-filter: ~"progid:DXImageTransform.Microsoft.Alpha(opacity=@{opperc})";
   filter: ~"alpha(opacity=@{opperc})";
 }
-.perspective(@arguments) {
-  -webkit-perspective: @arguments;
-  -moz-perspective: @arguments;
-  -ms-perspective: @arguments;
-  perspective: @arguments;
-}
 .round{
   .border-radius(5px);
 }
@@ -74,12 +45,6 @@
   -o-transform: @arguments;
   -ms-transform: @arguments;
   transform: @arguments;
-}
-.transform-style(@arguments) {
-  -webkit-transform-style: @arguments;
-  -moz-transform-style: @arguments;
-  -ms-transform-style: @arguments;
-  transform-style: @arguments;
 }
 .transition(@duration:0.2s, @ease:ease-out) {
   -webkit-transition: all @duration @ease;
