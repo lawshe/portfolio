@@ -10,16 +10,6 @@
 	width: 100%;
 	.transition(@fadeSpeed);
 }
-.third{
-	display: inline-block;
-	float: left;
-	text-align: center;
-	width: 33.333%;
-	.imagepop{
-		margin: @marginSM;
-		width: auto;
-	}
-}
 .half{
 	display: inline-block;
 	float: left;
@@ -34,15 +24,6 @@
 		.imagepop{
 			max-width: 500px;
 		}
-	}
-}
-.span-half{
-	display: inline-block;
-	float: left;
-	width: 50%;
-	.imagepop{
-		margin: @marginSM;
-		width: auto;
 	}
 }
 .section{
@@ -105,21 +86,21 @@
 /*
 	TOGGLE
 */
-	.toggle-container{
-		background: @blueBase;
-		border-bottom: @borderSM solid @activeMenuColor;
-		height: @mobileMenu;
-		position: fixed;
-		right: 0;
-		top: 0px;
-		width: 100%;
-		z-index: 1030;
-	}
+.toggle-container{
+	background: @blueBase;
+	border-bottom: @borderSM solid @activeMenuColor;
+	height: @mobileMenu;
+	position: fixed;
+	right: 0;
+	top: 0px;
+	width: 100%;
+	z-index: 1030;
+}
+.toggle-container,.mobile-menu-toggle{
+	display: none;
+}
+@media @phoneTablet {
 	.toggle-container,.mobile-menu-toggle{
-		display: none;
+		display: block;
 	}
-	@media @phoneTablet {
-		.toggle-container,.mobile-menu-toggle{
-			display: block;
-		}
-	}
+}
