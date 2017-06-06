@@ -1,39 +1,39 @@
 <template name="work">
-    <div data-anchor="work" class="section">
-      <div class="page-header vertical-align">
+  <div data-anchor="work" class="section">
+    <div class="page-header vertical-align">
+      <div class="half">
+        <h1>Selected<br/>Work</h1>
+      </div>
+      <div class="half">
+        <h3>Development<br/>&amp; Designs</h3>
+      </div>
+    </div>
+    <div class="svg-container">
+      <svg x="0px" y="0px" viewBox="-12.087 -16.5 288 215" overflow="visible" enable-background="new -12.087 -16.5 288 215" xml:space="preserve" style="margin-top: 10px;">
+      <polyline id="svg-work" fill="none" stroke-miterlimit="10" points="49.913,123.5 224.913,123.5 224.913,0.5 39.913,0.5
+        39.913,123.5 0.913,184.5 261.913,184.5 227.913,130.5 "/>
+      </svg>
+    </div>
+    {{>scrollTo}}
+  </div>
+  {{#each years}}
+  <div data-anchor="{{id}}" class="section" data-title="{{year}}">
+    <h2>{{{year}}}</h2>
+    {{#each examples}}
+      <div class="subproject">
         <div class="half">
-          <h1>Selected<br/>Work</h1>
+          {{#with image}}
+          {{>workExImg}}
+          {{/with}}
         </div>
         <div class="half">
-          <h3>Development<br/>&amp; Designs</h3>
+          <h4>{{{title}}}</h4>
+          {{#if subheader}}<h5>{{{subheader}}}</h5>{{/if}}
+          <p>{{{desc}}}</p>
         </div>
       </div>
-      <div class="svg-container">
-        <svg x="0px" y="0px" viewBox="-12.087 -16.5 288 215" overflow="visible" enable-background="new -12.087 -16.5 288 215" xml:space="preserve" style="margin-top: 10px;">
-        <polyline id="svg-work" fill="none" stroke-miterlimit="10" points="49.913,123.5 224.913,123.5 224.913,0.5 39.913,0.5
-        	39.913,123.5 0.913,184.5 261.913,184.5 227.913,130.5 "/>
-        </svg>
-      </div>
-      {{>scrollTo}}
-    </div>
-    {{#each years}}
-    <div data-anchor="{{id}}" class="section" data-title="{{year}}">
-      <h2>{{{year}}}</h2>
-      {{#each examples}}
-        <div class="subproject">
-          <div class="half">
-            {{#with image}}
-            {{>workExImg}}
-            {{/with}}
-          </div>
-          <div class="half">
-            <h4>{{{title}}}</h4>
-            {{#if subheader}}<h5>{{{subheader}}}</h5>{{/if}}
-            <p>{{{desc}}}</p>
-          </div>
-        </div>
-      {{/each}}
-    </div>
     {{/each}}
-		{{>footer}}
+  </div>
+  {{/each}}
+  {{>footer}}
 </template>
