@@ -3,6 +3,9 @@ if (Meteor.isClient) {
 		return Session.get('imgSize');
 	});
 	Template.home.helpers({
+		languages: function(){
+			return languages;
+		},
 		skills: function(){
 			return webSkills;
 		},
