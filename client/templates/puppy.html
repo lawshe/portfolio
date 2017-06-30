@@ -1,5 +1,5 @@
 <template name="puppy">
-  <div data-anchor="muffit" class="section" data-title="Muffit">
+  <div data-anchor="muffit" class="section puppy" data-title="Muffit">
     <div class="page-header vertical-align">
       <div class="half">
         <h1>Meet<br/>Muffit</h1>
@@ -8,8 +8,15 @@
         <h3>World's<br/>Best Dog</h3>
       </div>
     </div>
-    <div class="puppy-img">
-      {{>workExImg imagePath=img title="Muffit the dog"}}
+
+		<div class="svg-container">
+			<svg version="1.1" x="0px" y="0px" viewBox="0 0 670.467 592.893" enable-background="new 0 0 670.467 592.893" xml:space="preserve">
+        <path id="svg-muffit" fill="none" d="M206.395,134.893c0,0-42.068,207.977-75,197c-6-2-11-34-11-34
+          s-86-80-84-106s78-78,96-86s105.019-60.452,124-13c2,5,27.268-47.268,129.134-19.634s100.866,51.634,100.866,51.634
+          s40.668-16,97.334,60s56.666,76,56.666,76s25.334,17.507-25.333,71.42s-35.333,73.246-35.333,73.246s-34.667-20.33-34.667-62.832
+          s19.333-104.834-6.667-125.834s-25,146-42,158s-36,48-32,62s11,99-27,105s-108.555,9-141.777-22s-41.223-60-43.223-63
+          s-72-122-77-135"/>
+			</svg>
     </div>
     {{>scrollTo}}
   </div>
@@ -21,6 +28,15 @@
       <div class="half">
         <h4>Muffit &amp; Me</h4>
         <p>We like to explore the Texas Hill Country or the many greenbelts around Austin. Here we are on top of<br/><a href="http://tpwd.texas.gov/state-parks/enchanted-rock" target="_BLANK">Enchanted Rock</a>.</p>
+      </div>
+    </div>
+    <div class="subproject">
+      <div class="half">
+        {{>workExImg imagePath=img title="Muffit the dog"}}
+      </div>
+      <div class="half">
+        <h4>Bluebonnets</h4>
+        <p>We especially enjoy hikes during the spring, when bluebonnets and other wildflowers are in bloom.</p>
       </div>
     </div>
   </div>
