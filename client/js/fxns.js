@@ -220,7 +220,6 @@ Meteor.fullpage = {
 						Meteor.svg.draw('svg-work');
 					}
 				} else if(page === 'puppy') {
-					console.log('sectionAnchor',sectionAnchor);
 					if (sectionAnchor === 'muffit') {
 						Meteor.svg.draw('svg-muffit');
 					}
