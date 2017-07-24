@@ -28,6 +28,8 @@ ecmascript-runtime-client@0.4.1
 ecmascript-runtime-server@0.4.1
 ejson@1.0.13
 fastclick@1.0.13
+force-ssl@1.0.14
+force-ssl-common@1.0.14
 gabrielengel:konecty-magnific-popup@0.9.9
 gadicohen:robots-txt@0.0.10
 gadicohen:sitemaps@0.0.26

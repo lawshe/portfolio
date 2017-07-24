@@ -20,3 +20,4 @@ jshint@1.1.7
 dynamic-import
 reywood:iron-router-ga
 aldeed:template-extension
+force-ssl
