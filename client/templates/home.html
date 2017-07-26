@@ -77,7 +77,7 @@
 		<ul class="skills-list">
 			{{#each skills}}
 				<li>
-					<a class="skills-link" href="{{url}}" target="_BLANK" rel="noopener">
+					<a class="skills-link link" href="{{url}}" target="_BLANK" rel="noopener">
 						{{what}}
 					</a>
 				</li>
@@ -99,6 +99,7 @@
 					<h4>{{{title}}}</h4>
 					{{#if subheader}}<h5>{{{subheader}}}</h5>{{/if}}
 					<p>{{{desc}}}</p>
+					{{#if repo}}<p><a href="{{repo}}" class="link" target="_BLANK" rel="noopener"><i class="fa fa-github" alt="GitHub"></i> View on GitHub</a></p>{{/if}}
 				</div>
 			</div>
 		{{/each}}
