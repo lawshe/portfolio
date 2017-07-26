@@ -1,5 +1,15 @@
 workExs = [
   {
+    title: 'Dogs &amp; Devs',
+    client: 'dogs-and-devs',
+    image: {
+      file: 'home-mobile.png',
+      title: 'Dogs and Devs homepage'
+    },
+    desc: 'I founded a meetup, <a href="https://www.dogsanddevs.com/" target="_BLANK" rel="noopener">Dogs &amp; Devs</a>, and built a website for it with <a href="https://nodejs.org/" target="_BLANK" rel="noopener">Node.js</a>, <a href="https://facebook.github.io/react/" target="_BLANK" rel="noopener">React</a>, <a href="http://redux.js.org/docs/introduction/" target="_BLANK" rel="noopener">Redux</a>, &amp; <a href="https://github.com/webpack/webpack" target="_BLANK" rel="noopener">Webpack</a>. The site is bundled &amp; compressed for production, making the total application under 400 KB. Much thought is continuously put into accessibility, performance, best practices, and creating a progressive web app. The site scores <b>90+</b> on <a href="https://developers.google.com/web/tools/lighthouse/" target="_BLANK" rel="noopener">Google Lighthouse\'s</a> audit.',
+    repo: 'https://github.com/lawshe/dogs-and-devs'
+  },
+  {
     title: 'XML to HTML',
     client: 'impact',
     image: {
@@ -7,16 +17,7 @@ workExs = [
       title: 'Full Text HTML from XML',
       gifAvail: true
     },
-    desc: 'Designed &amp; developed an academic journal platform, which extended from a visitor site, a <a href="https://en.wikipedia.org/wiki/Content_management_system" target="_BLANK" rel="noopener">CMS</a>, APIs to interact with legacy platforms, &amp; more. Demonstrated here is the conversion of article full text <a href="https://jats.nlm.nih.gov/" target="_BLANK" rel="noopener">JATS XML</a> to JSON, which is used in a <a href="https://www.meteor.com/" target="_BLANK" rel="noopener">Meteor</a> template to generate HTML. Article figures are served via a proxy &amp; hosted on <a href="https://aws.amazon.com/s3/" target="_BLANK" rel="noopener">AWS S3</a>.'
-  },
-  {
-    title: 'RSVP Manager',
-    client: 'boda',
-    image: {
-      file: 'rsvp.png',
-      title: 'RSVP'
-    },
-    desc: 'Built a wedding RSVP manager using <a href="https://facebook.github.io/react/" target="_BLANK" rel="noopener">React</a>, <a href="http://redux.js.org/" target="_BLANK" rel="noopener">Redux</a>, & <a href="https://www.rethinkdb.com/" target="_BLANK" rel="noopener">RethinkDB</a>. There is a form for entering &amp; updating invites. RSVPs are individualized by URL and guests can easily search for their RSVP link by entering their email. After submitting the RSVP, guests receive an email confirmation and the database is updated.'
+    desc: 'An academic journal platform, which extended from a visitor site, a <a href="https://en.wikipedia.org/wiki/Content_management_system" target="_BLANK" rel="noopener">CMS</a>, APIs to interact with legacy platforms, &amp; more. Demonstrated here is the conversion of article full text <a href="https://jats.nlm.nih.gov/" target="_BLANK" rel="noopener">JATS XML</a> to JSON, which is used in a <a href="https://www.meteor.com/" target="_BLANK" rel="noopener">Meteor</a> template to generate HTML. Figures are hosted on <a href="https://aws.amazon.com/s3/" target="_BLANK" rel="noopener">AWS S3</a> &amp; served via a proxy.'
   },
   {
     title: 'Payment Processing',

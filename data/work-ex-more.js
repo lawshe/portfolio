@@ -3,22 +3,22 @@ workExMore = [
     year: '2017',
     examples: [
       {
-        title: 'City Guide',
-        client: 'boda',
-        desc: 'Designed &amp; developed guide for attractions, dining &amp; shopping in a city. Built page &amp; map components with <a href="https://facebook.github.io/react/" target="_BLANK">React</a>. Click events update the state via <a href="http://redux.js.org/docs/introduction/" target="_BLANK">Redux</a> actions.',
-        image: {
-          file: 'guide-map.png',
-          title: 'City Guide Map'
-        }
-      },
-      {
         title: 'File Uploader',
         client: 'impact',
-        desc: 'Designed &amp; developed an uploader for article figures, XML, PDF, &amp; supplemental files to <a href="https://aws.amazon.com/s3/" target="_BLANK">AWS S3</a> as part of a journal publication platform. After upload, files are renamed to standardized naming convention &amp; figures are optimized via <a href="https://aws.amazon.com/lambda/" target="_BLANK">AWS Lambda</a>. If figure optimization fails, staff is notified via email.',
+        desc: 'As part of a journal publication platform, designed &amp; developed an uploader for article figures, XML, PDF, &amp; supplemental files to <a href="https://aws.amazon.com/s3/" target="_BLANK">AWS S3</a>. After upload, files are renamed to standardized naming convention &amp; figures are optimized via <a href="https://aws.amazon.com/lambda/" target="_BLANK">AWS Lambda</a>.',
         image: {
           file: 'figure_uploader.png',
           title: 'Figure Uploader'
         }
+      },
+      {
+        title: 'RSVP Manager',
+        client: 'boda',
+        image: {
+          file: 'rsvp.png',
+          title: 'RSVP'
+        },
+        desc: 'Built a wedding RSVP manager using <a href="https://facebook.github.io/react/" target="_BLANK" rel="noopener">React</a>, <a href="http://redux.js.org/" target="_BLANK" rel="noopener">Redux</a>, & <a href="https://www.rethinkdb.com/" target="_BLANK" rel="noopener">RethinkDB</a>. There is a form for entering &amp; updating invites. RSVPs are individualized by URL and guests can easily search for their RSVP link by entering their email. After submitting the RSVP, guests receive an email confirmation and the database is updated.'
       }
     ]
   },
