@@ -19,6 +19,9 @@ Template.layout.events = {
 	'click .scroll-btn': function(e){
 		e.preventDefault();
 		Meteor.fxns.scrollBtn(e);
+	},
+	'click .link': function(e){
+		Meteor.ga.sendEvent('link', 'link', e.target.getAttribute('href'));
 	}
 };
 
