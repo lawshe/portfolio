@@ -97,9 +97,9 @@
 				</div>
 				<div class="half">
 					<h4>{{{title}}}</h4>
+					{{#if repo}}<p style="margin-bottom: 0;"><a href="{{repo}}" class="link" target="_BLANK" rel="noopener"><i class="fa fa-github" alt="GitHub"></i> View on GitHub</a></p>{{/if}}
 					{{#if subheader}}<h5>{{{subheader}}}</h5>{{/if}}
 					<p>{{{desc}}}</p>
-					{{#if repo}}<p><a href="{{repo}}" class="link" target="_BLANK" rel="noopener"><i class="fa fa-github" alt="GitHub"></i> View on GitHub</a></p>{{/if}}
 				</div>
 			</div>
 		{{/each}}
