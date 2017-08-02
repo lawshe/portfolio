@@ -56,6 +56,10 @@ webSkills = [
     url: 'https://facebook.github.io/flux/docs/in-depth-overview.html#content'
   },
   {
+    what: 'Foundation',
+    url: 'http://foundation.zurb.com/'
+  },
+  {
     what: 'GitHub',
     url: 'https://github.com/'
   },
@@ -74,10 +78,6 @@ webSkills = [
   {
     what: 'Grafico.js',
     url: 'http://grafico.kilianvalkhof.com/'
-  },
-  {
-    what: 'Foundation',
-    url: 'http://foundation.zurb.com/'
   },
   {
     what: 'JIRA',
