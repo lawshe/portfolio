@@ -80,6 +80,10 @@ webSkills = [
     url: 'http://grafico.kilianvalkhof.com/'
   },
   {
+    what: 'Heroku',
+    url: 'https://www.heroku.com/'
+  },
+  {
     what: 'JIRA',
     url: 'https://www.atlassian.com/software/jira'
   },
