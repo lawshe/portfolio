@@ -20,6 +20,10 @@ webSkills = [
     url: 'https://aws.amazon.com/s3/'
   },
   {
+    what: 'Apache',
+    url: 'https://www.apache.org/'
+  },
+  {
     what: 'Authorize.net API',
     url: 'http://www.authorize.net/'
   },
@@ -92,6 +96,10 @@ webSkills = [
     url: 'http://grafico.kilianvalkhof.com/'
   },
   {
+    what: 'Linux',
+    url: 'https://www.linux.org/'
+  },
+  {
     what: 'MailChimp',
     url: 'http://mailchimp.com/'
   },
@@ -106,6 +114,14 @@ webSkills = [
   {
     what: 'Modernizr',
     url: 'http://modernizr.com/'
+  },
+  {
+    what: 'MongoDB',
+    url: 'https://www.mongodb.com/'
+  },
+  {
+    what: 'MySQL',
+    url: 'https://www.mysql.com/'
   },
   {
     what: 'Node.js',
