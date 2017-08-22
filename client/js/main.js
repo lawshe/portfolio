@@ -4,7 +4,9 @@ Meteor.startup(function() {
 	Meteor.fxns.msIE();
 
 	// Service Worker
-	navigator.serviceWorker.register('sw.js').then().catch(error => console.log('ServiceWorker registration failed: ', error));
+	navigator.serviceWorker.register('sw.js').then().catch(function(err) {
+	  console.log('ServiceWorker registration failed: ', err);
+	});
 });
 
 /*
