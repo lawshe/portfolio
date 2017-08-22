@@ -1,3 +1,7 @@
+if (Meteor.isClient) {
+  Router.plugin('reywood:iron-router-ga');
+}
+
 Router.configure({
 	layoutTemplate: 'layout',
 	loadingTemplate: 'loading',
@@ -66,6 +70,7 @@ Router.map(function() {
 				return window.location.href;
 			}
 		},
+		trackPageView: true,
 		onAfterAction: function() {
 		  if (!Meteor.isClient) {
 				return;
@@ -91,6 +96,7 @@ Router.map(function() {
 				return window.location.href;
 			}
 		},
+		trackPageView: true,
 		onAfterAction: function() {
 		  if (!Meteor.isClient) {
 				return;
