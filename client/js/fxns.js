@@ -26,6 +26,10 @@ Meteor.fxns = {
 		Meteor.fxns.imagesSize();
 	},
 	allPages: function(){
+		if($('body').hasClass('loading')) {
+			$('body').removeClass('loading');
+			$('body').addClass('loaded');
+		}
 		Meteor.fxns.checkMenu();
 		Meteor.fullpage.create();
 		Meteor.fxns.adiosSpam();

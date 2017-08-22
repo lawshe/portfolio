@@ -25,6 +25,33 @@ html, body {
 body{
 	display: block;
 }
+body *{
+	.opacity(0);
+	.transition(opacity, @fadeSpeedSlow);
+}
+body.loading:after{
+	.serif;
+	content: 'Loading...';
+	background-image: url(/img/loading.gif);
+	background-position: center;
+	background-repeat: no-repeat;
+	color: @gray;
+	font-size: @fontXL;
+	height: 100%;
+	left: 0;
+	line-height: @fontXL;
+	margin: 0 auto;
+	padding: @padXL 0;
+	position: fixed;
+	text-align: center;
+	top: 0;
+	width: 100%;
+	z-index: 2000;
+}
+body.loaded *{
+	.opacity(1);
+	.transition(@fadeSpeedSlow, ease-out, opacity);
+}
 html{
 	overflow-y: visible!important;
 }
@@ -105,17 +132,6 @@ body,.subpage{
 /*
 	LAYOUT
 */
-.loading{
-	margin: 0 auto;
-	.opacity(1);
-	text-align: center;
-	h4, h5{
-		border:0px;
-		color: @gray;
-		margin: @marginLG auto;
-		text-align: center;
-	}
-}
 .page-header{
 	h1, h2{
 		margin: 0px;
