@@ -19,9 +19,6 @@ Meteor.fxns = {
 			Meteor.fxns.toggleMobileMenu();
 		}
 	},
-	imagesReady: function(){
-		$('#fullpage').removeClass('hidden');
-	},
 	allPageBefore: function(){
 		Meteor.fxns.imagesSize();
 	},
@@ -63,28 +60,13 @@ Meteor.fxns = {
 		});
 	},
 	imagesLoading: function(){
-		var imagesCount = 0,
-			imagesLoaded = 0,
-			pageVis = false,
-			images = $('body').find('img');
-		if(images.length > 0){
-			$(images).each(function(){
-				if($(this).attr('src') !== '/img/loading.gif'){
-					imagesCount+= 1;
-					$(this).load(function(){
-						imagesLoaded+= 1;
-						if(imagesLoaded === imagesCount && !pageVis){
-							Meteor.fxns.imagesReady();
-						}else if(imagesCount > 7 && imagesLoaded > 7 && !pageVis){
-							pageVis = true;
-							Meteor.fxns.imagesReady();
-						}
-					});
-				}
-			});
-		}else{
-			Meteor.fxns.imagesReady();
-		}
+		[].forEach.call(document.querySelectorAll('img[data-src]'), function(img) {
+		  img.setAttribute('src', img.getAttribute('data-src'));
+		  img.onload = function() {
+				console.log('loaded');
+		    img.removeAttribute('data-src');
+		  };
+		});
 	},
 	imagesSize: function(){
 		var windowWidth = $(window).width();

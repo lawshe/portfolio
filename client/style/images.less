@@ -8,6 +8,15 @@ img{
   image-rendering: optimizeQuality;
   image-rendering: optimizeSpeed;
   image-rendering: -webkit-optimize-contrast;
+  .opacity(0);
+}
+img {
+  .opacity(0);
+	.transition(@fadeSpeedSlow, ease-out, opacity);
+}
+
+img[data-src] {
+  opacity: 0;
 }
 .icon{
   text-align: center;
